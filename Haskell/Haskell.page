@@ -1,3 +1,9 @@
+---
+toc: no
+...
+
 # Haskell
 
-* [Compilers](Compilers/Compilers)
+## Compilers
+
+* [GHC The Glasgow Haskell Compiler](GHC/GHC)
