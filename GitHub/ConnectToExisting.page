@@ -1,0 +1,13 @@
+---
+toc: no
+...
+
+# How to connect to an existing Github repository
+
+~~~
+mkdir <proj>
+cd <proj>
+git init
+git remote add origin https://github.com/hansroland/<repository>
+git pull origin master
+~~~
