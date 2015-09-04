@@ -2,9 +2,19 @@
 toc: no
 ...
 
-# GitH
+# GitHub
 
 This is the main page about the GitHub service
+
+## Most important commands
+
+#### Fetch all changes from GitHub server
+
+    git pull origin master
+
+#### Send all commits to GitHub Server (do always a pull first !!)
+
+    git push origin master
 
 * [Adding a new feature to a foreign project](AddFeature)
 * [Connect to an existing own Github repository](ConnectToExisting)
