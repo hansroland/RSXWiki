@@ -1,0 +1,37 @@
+---
+toc: no
+...
+
+# Creating a Branch to add a feature to an existing foreign repository
+
+See: [Github: Fork a Reüpository](https://help.github.com/articles/fork-a-repo)
+
+
+* Goto to the repository
+* Use the "Fork" button on the right side
+* On a Terminal window do:
+* Goto the parent directory, where the repo should be stored 
+* Clone the forked repo to your local 
+
+    git clone https://github.com/*MyUsername*/*project*.git
+
+    cd *project*
+
+* connect the local repo to the original repo 
+
+    git remote add upstream https://github.com/*ORIGINAL-OWNER*/*project*.git
+
+    git fetch upstream
+
+* create a new branch and make it the current branch
+
+    git branch *new-branch-name*
+
+    git checkout *new-branch-name*
+
+* Work
+* Commit Changes
+
+* Sending the commited changes to the remote repo
+
+    git push origin *new-branch-name*
