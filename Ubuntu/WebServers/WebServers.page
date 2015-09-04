@@ -1,0 +1,38 @@
+# Webservers
+
+## Webfs
+
+Simple Web Server to transfer files to an other computer. Specially used to transfer gps tracks to the iPhone
+
+
+### Starting stopping webfs
+
+**NOTE: Before starting the web service, change the file attributes of the files to be downloaded!!!**
+
+     sudo /etc/init.d/webfs start
+     sudo /etc/init.d/webfs stop
+
+**NOTE: Before starting the web service, change the file attributes of the files to be downloaded!!!**
+
+
+### Configuration
+The config file is: /etc/webfsd.conf
+
+* Port: 80
+* Directory: Downloads
+
+### Webfs installation
+
+    sudo apt-get install webfs
+
+The Server start automatically. To avoid this do the following
+
+    sudo apt-get install dialog
+    sudo apt-get install rcconf
+
+Use 
+
+    sudo rcconf 
+
+so webfs does not start automatically! (Remove the star!)
+
