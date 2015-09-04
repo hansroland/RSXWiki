@@ -4,4 +4,5 @@ toc: no
 
 # GHC - The Glasgow Haskell Compiler
 
+* [GHC Versions and Library Versions](GHCVersions)
 * [Installation Scripts](InstallationScripts/InstallationScripts)
