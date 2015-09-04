@@ -1,0 +1,61 @@
+---
+toc: no
+...
+
+# Html 5 Header section
+
+## A minimal Header section
+
+~~~ {.html}
+<!DOCTYPE html>
+<meta charset=UTF-8>
+<title>Hello World!</title>
+<p>Hello World!
+~~~
+
+## A standard header section
+
+~~~ {.html}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Hello World!</title>
+</head>
+
+<body>
+	<p>Hello World!</p>
+</body>
+
+</html>
+~~~
+
+For languages use: en, de, en-GB, en-US [for more see here](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+
+## Ultimate support for very old browsers
+
+~~~ {.html}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Insert Your Title Here</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	{
+		display: block;
+	}
+	</style>
+</head>
+
+<body>
+	<p>Insert your content here.</p>
+</body>
+
+</html>
+~~~
