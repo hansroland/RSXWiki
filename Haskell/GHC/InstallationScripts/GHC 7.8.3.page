@@ -7,22 +7,22 @@ toc: no
 ## Installation Script
 
 ~~~
-# get distribution  
-cd $HOME/Downloads  
+# get distribution
+cd $HOME/Downloads
 
-wget https://www.haskell.org/ghc/dist/7.8.3/ghc-7.8.3-x86_64-unknown-linux-deb7.tar.bz2   
-tar xvfj ghc-7.8.3-x86_64-unknown-linux-deb7.tar.bz2  
+wget https://www.haskell.org/ghc/dist/7.8.3/ghc-7.8.3-x86_64-unknown-linux-deb7.tar.bz2
+tar xvfj ghc-7.8.3-x86_64-unknown-linux-deb7.tar.bz2
 
-cd ghc-7.8.3  
+cd ghc-7.8.3
 
-# install to  
-mkdir $HOME/GHC-compiler/bin/ghc-7.8.3  
+# install to
+mkdir $HOME/Software/ghc-7.8.3
 
-./configure --prefix=$HOME/GHC-compiler/bin/ghc-7.8.3  
+./configure --prefix=$HOME/Software/ghc-7.8.3
 make install
 
-# remove temporary files  
-cd $HOME/Downloads  
+# remove temporary files
+cd $HOME/Downloads
 rm -rfv ghc-7.8.3*
 ~~~
 
