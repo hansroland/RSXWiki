@@ -15,4 +15,6 @@ switchghc x.y.z
 * [GHC 7.8.4]()
 * [GHC 7.8.3]()
 
+* [Haskell base software](HaskellBaseSoftware)
+
 Installation is based on [https://gist.github.com/yantonov/10083524](https://gist.github.com/yantonov/10083524)
