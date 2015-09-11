@@ -1,0 +1,27 @@
+---
+toc: no
+...
+
+# Install Haskell base software
+
+~~~
+# Script to install different Haskell packages from Hackage 
+
+cabal update
+
+cd ~/Software/Hackage
+
+mkdir base
+cd base
+
+cabal sandbox init
+
+cabal install cabal-install -j4
+cabal install alex -j4
+cabal install happy -j4
+cabal install haddock -j4
+cabal install hlint -j4
+cabal install pandoc -j4
+
+cp .cabal-sandbox/bin/* ~/Software/bin
+~~~
