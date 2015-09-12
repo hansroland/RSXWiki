@@ -1,0 +1,20 @@
+---
+toc: no
+...
+
+# Installation Script to install GTK
+
+## Prerequistes from Ubuntu
+
+~~~
+sudo apt-get install libghc-glib-dev
+~~~
+
+~~~
+cabal install gtk2hs-buildtools -j4
+cabal install alex
+cabal install happy
+~~~
+
+
+
