@@ -13,5 +13,5 @@ cabal sandbox init
 
 ~~~
 cabal install leksah -j4
-cp ~/Software/Hackage/Leksah/.cabal-sandbox/bin ~/Software/bin
+cp ~/Software/Hackage/Leksah/.cabal-sandbox/bin/* ~/Software/bin
 ~~~
