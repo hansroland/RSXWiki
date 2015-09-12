@@ -18,5 +18,6 @@ switchghc x.y.z
 * [Haskell base software](HaskellBaseSoftware)
 
 * [Install GTK](InstallGTK)
+* [Install Leksah](InstallLeksah)
 
 Installation is based on [https://gist.github.com/yantonov/10083524](https://gist.github.com/yantonov/10083524)
