@@ -10,6 +10,8 @@ To use a GHC version, type
 switchghc x.y.z
 ~~~
 
+Installation is based on [https://gist.github.com/yantonov/10083524](https://gist.github.com/yantonov/10083524)
+
 * [GHC 7.10.2]()
 * [GHC 7.10.1]()
 * [GHC 7.8.4]()
@@ -20,4 +22,6 @@ switchghc x.y.z
 * [Install GTK](InstallGTK)
 * [Install Leksah](InstallLeksah)
 
-Installation is based on [https://gist.github.com/yantonov/10083524](https://gist.github.com/yantonov/10083524)
+* [GHC Head]()
+
+
