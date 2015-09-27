@@ -1,0 +1,44 @@
+---
+toc: no
+...
+
+# Install GHC Head
+
+## References
+
+* [A blog post:](http://rawgit.com/gibiansky/4c54f767bf21a6954b23/raw/67c62c5555f40c6fb67b124307725df168201361/exp.html)
+* [Official Newcomer page](https://ghc.haskell.org/trac/ghc/wiki/Newcomers)
+
+## Installation Script
+
+### Preparation Steps
+
+Install the following additional products:
+
+~~~
+sudo apt-get install dblatex docbook-xsl docbook-utils libxml2-utils texlive-font-utils
+~~~
+
+Set (only once) the following rewrite rule
+
+~~~
+git config --global url."git://github.com/ghc/packages-".insteadOf git://github.com/ghc/packages/ 
+~~~
+
+
+The following software must be available and on the correct version
+
+~~~
+cabal --version
+clang --version
+happy --version
+~~~
+
+### Installation
+
+~~~
+cd ~/Github
+
+
+~~~
+
