@@ -38,7 +38,24 @@ happy --version
 
 ~~~
 cd ~/Github
-
-
+git clone --recursive git://github.com/ghc/ghc ghchead
+cd ghchead
+cd mk
+cp build.mk.sample build.mk
+atom build.mk
 ~~~
 
+Remove the comment marker (#) on the line "BuildFlavor = devel2"
+
+~~~
+cd ..
+./boot
+./configure
+make -j4
+~~~
+
+## Do a first little test
+
+~~~
+./inplace/bin/ghc-stage2 --version
+~~~
