@@ -1,0 +1,15 @@
+---
+toc: no
+...
+
+# Gitit Installation
+
+~~~
+sudo apt-get gitit
+mkdir RSXWiki
+cd RSXWiki
+gitit
+~~~
+
+The files will be created in the working directory.
+
