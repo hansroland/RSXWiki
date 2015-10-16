@@ -1,0 +1,68 @@
+---
+toc: no
+...
+
+# Install GHC and get rid of the Debian GHC packages
+
+This page explains how to install GHC and have an installation without binaries from the Debian distribution.
+
+To build GHC, you need a GHC compiler, so we have to start with the binaries from Debian distribution!
+
+### Install GHC binaries
+
+~~~
+sudo apt-get install haskell-platform
+~~~
+
+### Compile your own GHC
+
+* Install the newest GHC version from the [Installation Scripts](InstallationScripts/InstallationScripts) page.
+
+* Install a cabal library (again use [Installation Scripts](InstallationScripts/InstallationScripts) page).
+
+### Compile additional Haskell Software
+
+In ~/Software/Hackage do the following
+
+~~~
+mkdir base
+cd base
+cabal sandbox init
+cabal install cabal-install
+~~~
+
+* copy the *cabal* binary in .cabal-sandbox/bin to a direcotry in your path: eg *~/bin* or  */usr/local/bin*
+* logout und do a new login, so you will now use the newly built cabal program
+
+In the *~/Software/Hackage/base* install with cabal the followin packages
+
+* alex
+* cpphs
+* haddock
+* happy
+* hlint
+* pandoc
+
+Move the resulting binaries again to the directory in your path.
+
+### Get rid of the Debian binaries
+
+~~~
+sudo apt-get remove haskell-platform
+sudo apt-get autoremove
+~~~
+
+### Install additional compilers and utilities
+
+~~~
+sudo apt-get git
+sudo apt-get automake
+sudo apt-get autoconf
+sudo apt-get libtool
+sudo apt-get make
+sudo apt-get libgmp-dev
+sudo apt-get ncurses-dev
+sudo apt-get g++
+sudo apt-get python
+sudo apt-get bzip2
+~~~
