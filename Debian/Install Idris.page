@@ -1,0 +1,21 @@
+--- 
+toc: no
+...
+
+# Idris Installation
+
+Idris needs the following additional library:
+
+~~~
+sudo apt get install libtinfo-dev
+~~~
+
+Then do
+
+~~~
+cd Software/Hackage
+mkdir Idris
+cd Idris
+cabal sandbox init
+cabal install -j4 idris
+~~~
