@@ -1,0 +1,45 @@
+---
+toc: no
+...
+
+# Debian Post Installation Steps
+
+### Prepare Debian for Packet Installations
+
+~~~
+su -
+<Root Password>
+
+gedit /etc/apt/sources.list
+~~~
+
+comment out the *deb cdrom* line
+
+
+~~~
+apt-get install sudo
+exit
+~~~
+
+### Add user to sudo group
+
+~~~
+su -
+<Root Password>
+
+adduser <user> sudo
+exit
+~~~
+
+the *user* should now do a new login
+
+
+### Install Additional Packages
+
+~~~
+sudo apt-get install <package>
+~~~
+
+* make
+* git
+* gitit
