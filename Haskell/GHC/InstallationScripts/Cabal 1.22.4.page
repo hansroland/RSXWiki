@@ -1,0 +1,24 @@
+# Installation Script Cabal Library 1.22.4
+
+~~~
+
+# Download
+wget "https://www.haskell.org/cabal/release/cabal-1.22.4.0/Cabal-1.22.4.0.tar.gz"
+tar xzvf Cabal-1.22.4.0.tar.gz
+cd Cabal-1.22.4.0
+
+# Build
+ghc --make Setup.hs
+
+./Setup configure --user
+./Setup build
+./Setup install
+
+# Clean up
+cd $HOME/Downloads
+rm -rfv Cabal-1.22.4.0*
+
+
+
+
+~~~
