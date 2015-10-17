@@ -1,0 +1,36 @@
+---
+toc: no
+...
+
+# Installation of XMonad
+
+### Preparation of the  Debian system
+
+~~~
+sudo apt-get install libx11-dev
+sudo apt-get install libXrandr-dev
+sudo apt-gen install dmenu
+~~~
+
+### Installation of XMonad
+
+At the moment, we install the XMonad libraries to the user .cabal dirctory. This should be changed to a sandbox!
+
+~~~
+cabal install xmonad
+cabal install xmonad-contrib --flags="-use_xft"
+cabal isntall xmobar
+~~~ 
+
+### Configuration of the Login Manger
+
+Add the following lines to a file **/usr/share/xsessions/xmonad.desktop**
+
+~~~
+[Desktop Entry]
+Name=XMonad
+Comment=Lightweight tiling window manager
+Exec=/usr/local/bin/xmonad
+Icon=xmonad.png
+Type=XSession
+~~~
