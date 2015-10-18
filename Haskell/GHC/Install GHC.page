@@ -56,6 +56,7 @@ sudo apt-get autoremove
 
 ~~~
 sudo apt-get git
+sudo apt-get make
 sudo apt-get automake
 sudo apt-get autoconf
 sudo apt-get libtool
