@@ -34,3 +34,24 @@ Exec=/usr/local/bin/xmonad
 Icon=xmonad.png
 Type=XSession
 ~~~
+
+### Add Wallpaper support
+
+Install the necessary libraries
+
+~~~
+sudo apt-get install feh
+sudo apt-get install libmagic-dev
+~~~
+
+Install the Haskell library
+
+~~~
+cabal install xmonad-wallpaper
+~~~
+
+Change xmonad.hs
+
+* import XMonad.Wallpaper
+* setRandomWallpaper [...]
+* change defaultConfg to desktopConfig 
