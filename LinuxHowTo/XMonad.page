@@ -1,0 +1,33 @@
+---
+toc:no
+...
+
+# How to use XMonad
+
+## Mod key
+Default is the 'alt' key. Can easily be changed to any other key. Currently it is the Windows key!
+
+## Open and Close windows
+* Open a Terminal: Mod-Shift-Return
+* How to close a Window: Mod-Shift-c
+* Start an application: Mod-p to start dmenu application launcher
+ 
+## Managing Panes
+* Switch focus forward: Mod-j
+* Switch focus backwards: Mod-k
+* Move focused pane forwards: Mod Shift-j 
+* Move focused pane backward: Mod Shift-k
+* Rearrange panes: Mod-Space
+* Make current pane Full Screen: Mod-Space Mod-Space
+
+## Managing Workspaces
+* Switch to workspace n: Mod-n 
+* Send current window to workspace n: Mod-Shift-n
+
+## Managing workspace session
+* Exit XMonad: Mod Shift-Q
+* Reload new xmonad.hs configuration: Mod-q
+
+## Configuration Management
+* Recompile xmonad -- recompile
+* Load new config file: Mod-q
