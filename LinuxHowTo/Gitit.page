@@ -1,0 +1,29 @@
+---
+toc: no
+...
+
+# How To's for gitit Wiki
+
+
+### Recreate MyWiki from the Github save
+
+Replace *MyWiki* with the correct name.
+
+Basic idea:
+
+* everything above the wikidata directory we take from the gitit command
+* everything in the wikidata dirctory we take from the Github repo
+
+~~~
+mkdir MyWiki
+cd MyWiki
+gitit
+^C
+
+rm -rfv wikidata
+mkdir wikidata
+cd wikidata
+git init
+git remote add origin https://github.com/hansroland/MyWiki
+git pull origin master
+~~~
