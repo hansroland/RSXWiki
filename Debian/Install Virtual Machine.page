@@ -1,0 +1,27 @@
+---
+toc: no
+...
+
+# Install Virtual Machine Support for Debian
+
+### Installation
+
+~~~
+sudo apt-get install qemu
+sudo apt-get install libvirt
+sudo apt-get install virt-manager
+~~~
+
+
+### Customization
+
+~~~
+sudo adduser <user> kvm
+sudo adduser <user> libvirt
+~~~
+
+### Usage:
+
+Start program: **virt-manaager**.
+
+See [https://wiki.debian.org/KVM](https://wiki.debian.org/KVM)
