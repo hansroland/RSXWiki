@@ -1,0 +1,15 @@
+---
+toc: no
+...
+
+# How to start special programs under XMonad
+
+### Synaptic Packet Management
+
+Synaptic must be started as root !!
+
+~~~
+su -
+  <password>
+synaptic &
+~~~
