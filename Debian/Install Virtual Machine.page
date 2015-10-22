@@ -25,3 +25,9 @@ sudo adduser <user> libvirt
 Start program: **virt-manaager**.
 
 See [https://wiki.debian.org/KVM](https://wiki.debian.org/KVM)
+
+* Menu File -> New Virtual Machine to create a machine. Allow creation / usage of new connection.
+
+* Menu Edit (Bearbeiten) -> Connection Details (Verbindungsdetails)
+* Tab "Virtual Networks": Check Checkbox "Autostart"
+
