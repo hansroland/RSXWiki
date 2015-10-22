@@ -20,8 +20,6 @@ sudo adduser <user> kvm
 sudo adduser <user> libvirt
 ~~~
 
-### Usage:
-
 Start program: **virt-manaager**.
 
 See [https://wiki.debian.org/KVM](https://wiki.debian.org/KVM)
@@ -30,4 +28,8 @@ See [https://wiki.debian.org/KVM](https://wiki.debian.org/KVM)
 
 * Menu Edit (Bearbeiten) -> Connection Details (Verbindungsdetails)
 * Tab "Virtual Networks": Check Checkbox "Autostart"
+* Click "Apply" button !!
 
+### Usage:
+
+Start program: **virt-manaager**.
