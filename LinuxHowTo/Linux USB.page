@@ -1,0 +1,47 @@
+---
+toc: no
+...
+
+# **This must be improved **
+
+
+# Formatting and Using an USB in with a Linux File System
+
+
+### Get Information
+
+Add the USB stick to the computer:
+
+Show all all external devices
+
+    sudo fdisk -l
+
+Note the device of the USB: eg /dev/sdg1
+
+### Create Partitions
+
+    sudo fdisk <device>
+
+Use the one letter subcommands
+
+* m for menu
+* d to delete a partitions
+* n to add a partition
+* w to write and exit
+
+###  Format
+
+    sudo mkfs.ext2 -L <label> <device>
+
+TheUSB stick is now owned by root.
+
+### Create a directory and change its ownership
+
+Show the rights for the stick
+
+    ls -ld /media/roland
+
+
+Change the ownership of the directory
+
+    sudo chmod -R 777 /dev/sdg1/Software
