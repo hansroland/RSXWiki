@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Alpine Linux: Special commands
+
+Alpine Linux has some special commands to operate the system
+
+* **sudo reboot** - to reboot the system
+* **poweroff** - to shutdown the system
+* **exit** - on a terminal session to logoff
+* **adduser** username - to create a new user
