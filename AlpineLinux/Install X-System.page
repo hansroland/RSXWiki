@@ -1,0 +1,13 @@
+---
+toc: no
+...
+
+# Install XOrg System to Alpine Linux
+
+See: [http://wiki.alpinelinux.org/wiki/XFCE_Setup](http://wiki.alpinelinux.org/wiki/XFCE_Setup)
+
+* Run script **setup-xorg-base**
+* apk add alpine-desktop xfce4
+* apk add xf86-video-qxl
+* apk add xf86-input-mouse xf86-input-keyboard
+* adduser -g 'Roland Senn' roland
