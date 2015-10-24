@@ -4,4 +4,15 @@ toc: no
 
 # Alpine Linux: Install Base System
 
-esslingen.de  was fastest mirror
+### Installation under qemu / virt-manager
+
+* Insert CD Rom and boot 
+* login as root (no pw)
+* run script **setup-alpine** (note - is on ')
+* Keyboard layout **de** / **de_CH-latin** (note _ is on ?)
+* Hostname: **binn**
+* Timezone: **Europe** / **Zurich**
+* Disk: vda
+* Usage of disk: **SYS**
+
+All other prompts: Default
