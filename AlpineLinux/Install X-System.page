@@ -2,12 +2,39 @@
 toc: no
 ...
 
-# Install XOrg System to Alpine Linux
+# Install X-System to Alpine Linux
+
+### Add basic X-System
 
 See: [http://wiki.alpinelinux.org/wiki/XFCE_Setup](http://wiki.alpinelinux.org/wiki/XFCE_Setup)
 
+As **root** user do:
+
 * Run script **setup-xorg-base**
-* apk add alpine-desktop xfce4
 * apk add xf86-video-qxl
 * apk add xf86-input-mouse xf86-input-keyboard
+* apk add setxkbmap
 * adduser -g 'Roland Senn' roland
+* create file /etc/X11/xorg.conf with data
+
+~~~
+Section "InputClass" 
+        Identifier "Keyboard Default" 
+        MatchIsKeyboard "yes" 
+        Option "XkbLayout" "ch"
+        Option "XkbVariant" "de"
+EndSection
+~~~
+
+### Install xfc4 Window Manager
+
+* apk add alpine-desktop xfce4
+* create file .xinitrc with data:
+
+~~~
+exec startxfc4
+~~~
+
+* Test with: rc-service lxdm start
+* Logs are in */var/log/lxdm.log* and */var/log/Xorg.0.log*
+* Attention: On the login screen, switch the Desktop from *default* to **xfce !!** 
