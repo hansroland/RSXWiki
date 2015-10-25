@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# Alpine Linux Packet Manager
+
+### Get the newest package list
+
+~~~
+apk update
+~~~
+
+### Search for packages
+
+~~~
+apk search <part-of-package-name>
+~~~
+
+### Install a package
+
+~~~
+apk add <package>
+~~~
