@@ -48,6 +48,16 @@ sudo apt-get update
 sudo apt-get install firmware-realtek
 ~~~
 
+### Add sources for security updates
+
+~~~
+gedit /etc/apt/sources.list
+~~~
+
+Add the line and save
+
+    deb http://security.debian.org/ jessie/updates main contrib non-free
+
 
 ### Install Additional Packages
 
