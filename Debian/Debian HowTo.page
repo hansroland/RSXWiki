@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Debian HowTo's
+
+### List installed packages
+
+~~~
+sudo dpkg -l | grep <string>
+~~~
