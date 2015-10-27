@@ -22,9 +22,9 @@ apt-get update
 apt-get upgrade
 ~~~
 
-### Deactivate PRC
+### Deactivate RPC (Remote Procedure Calls)
 
 ~~~
-apt-get remove portmap
+apt-get remove rpcbind
 apt-get autoremove
 ~~~
