@@ -1,0 +1,30 @@
+---
+toc: no
+...
+
+
+# Howto add mor Security to Debian
+
+This is for small desktop systems 
+
+### Update regular
+
+Add the following line to /etc/apt/sources.list
+
+~~~
+deb http://security.debian.org/ jessie/updates main contrib non-free
+~~~
+
+Use commands:
+
+~~~
+apt-get update
+apt-get upgrade
+~~~
+
+### Deactivate PRC
+
+~~~
+apt-get remove portmap
+apt-get autoremove
+~~~
