@@ -10,3 +10,12 @@ toc: no
 sudo apt-get remove gnome-games
 sudo apt-get autoremove
 ~~~
+
+
+### Delete FTP Client
+
+**Use SSH!**
+
+~~~
+sudo apt-get remove ftp
+~~~
