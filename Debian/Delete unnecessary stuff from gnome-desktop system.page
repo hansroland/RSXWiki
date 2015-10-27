@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Clean up Debian Desktop System
+
+### Delete Games
+
+~~~
+sudo apt-get remove gnome-games
+sudo apt-get autoremove
+~~~
