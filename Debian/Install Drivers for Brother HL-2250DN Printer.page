@@ -1,0 +1,22 @@
+---
+toc: no
+...
+
+# How to install Drivers for Brother HL-2250DN printer
+
+* Goto [http://www.brother.ch/](http://www.brother.ch/)
+* Goto *Support/Download and Software*
+* Click Downlaods
+* Enter HL-2250DN and check Linux and linux(deb), click *Suchen* (*Search*)
+* Enter Language "English*
+* Download *Driver Install Tool"
+
+* Switch on the printer
+
+* Login as root (not sudo !!)
+* Unpack archive file
+* Change properties of file *linux-brprinter-installer-2.0.0-1* (The version may  vary!!) to executable.
+* Execute the script with *./linux-brprinter-installer-2.0.0-1*
+
+* When installing the printer, choose to specify the device URI
+* From the list, select something like *dssnd://Borther%20HL2250DN...*
