@@ -1,4 +1,8 @@
-# Install a small Debian System
+---
+toc: no
+...
+
+# Installation a small Debian System
 
 Use the standard installation with the first CD-ROM.
 
@@ -18,3 +22,10 @@ sudo apt-get install iceweasel
 sudo apt-get install mousepad
 ~~~
 
+## Some commands 
+
+### Stop the system
+
+~~~
+sudo shutdown -h now
+~~~
