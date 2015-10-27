@@ -1,0 +1,20 @@
+# Install a small Debian System
+
+Use the standard installation with the first CD-ROM.
+
+On the list with the installation options uncheck everything with exception of *Standart System Werkzeuge* (*Standard System Utilities*)
+
+After installing the base system do the following:
+
+~~~
+sudo apt-get install xorg
+sudo apt-get install openbox
+~~~
+
+Add the following products
+
+~~~
+sudo apt-get install iceweasel
+sudo apt-get install mousepad
+~~~
+
