@@ -1,0 +1,34 @@
+---
+toc: no
+...
+
+# Install the Google Photo Viewer / Editor
+
+### Install wine
+
+~~~
+sudo apt-get install wine
+~~~
+
+### Install winetricks
+
+~~~
+wget http://winetricks.org/winetricks
+sudo mv winetricks /usr/local/bin
+sudo chmod +x /usrc/local/bin/winetricks
+~~~
+
+### Install Picasa
+
+~~~
+wget http://dl.google.com/picasa/picasa39-setup.exe
+wine ~/picasa39-setup.exe
+~~~
+
+### Run Picasa
+
+Just type *picasa* in XMonad after Mod-P
+
+### Configure Wine
+
+Use program *winecfg*
