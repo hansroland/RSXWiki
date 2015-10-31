@@ -1,0 +1,19 @@
+---
+toc: no
+...
+
+# Photo Manipulation under Linux
+
+## Simple Photo Editor
+
+### **gthumb**
+
+* Can turn skewed pictures.
+* Does not destroy metadata
+* Allows to add a description, location and keywords 
+
+## Simple Photo Viewer
+
+### **eog** *Eye of Gnome*
+
+* Allows viewing of all pictures in a dictionary
