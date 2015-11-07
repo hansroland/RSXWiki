@@ -8,8 +8,11 @@ Functional Dependencies are an extension to Multi Parameter type Classes
 
 ### Syntax
 
+~~~ { .haskell}
+{-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE FunctionalDependencies #-}
+~~~
 
 ### Motivation
 
@@ -27,4 +30,20 @@ class Eq e => Collection c e where
 
 Here the 2 type parameters c (for collection) and  e (for element) are not independent: if the collection is a list [a] then the element **must** be of type a. Similar for a collection *Map a*.
 
-The Multiparameter Type class does not show this dependencies. For this we need Functional Dependencies 
+The Multiparameter Type class does not show this dependencies. For this we need Functional Dependencies.
+
+~~~ { .haskell}
+class Eq e => Collection c e  | c -> e  where     
+     insert :: c -> e -> c
+     member :: c -> e -> Bool
+~~~
+
+It means,
+
+* that the 2 types c and e are not independent
+* that the type c fully determines the type a, or that the type e is functionally dependend from c.
+
+
+### Additional explanation
+
+This is mainly a hint to the type inferenc engine of GHC. It says, if you have inferred type c don't bother to determine type e
