@@ -40,6 +40,8 @@ class Eq e => Collection c e where
      member = flip elem
 ~~~
 
+Note: To be able to define this instance, we need to specify the *FlexibleInstances* language extension!!
+
 #### Example 2: A Data conversion class
 
 ~~~ { .haskell}
