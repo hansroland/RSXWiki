@@ -1,0 +1,38 @@
+---
+toc: no
+...
+
+# GHC Language Extensions: Multiparameter Type Classes
+
+### Syntax
+
+~~~ { .haskell}
+{-# LANGUAGE MultiParamTypeClasses #-}
+~~~
+
+### Normal Type Classes
+
+Normal Type Classes have one single parameter, as show in this definition:
+
+~~~ { .haskell}
+class Functor f where
+    fmap :: (a -> b) -> f a -> f b
+~~~
+
+
+### Multiparameter Type Classes
+
+Multiparameter Type Classes may have more than one type class.
+Assume we want to define some container class.
+
+To be able to declare the functions *insert* and *member* we need a type for the container and one for the elements
+
+~~~ { .haskell}
+class Eq e => Collection c e where
+     insert :: c -> e -> c
+     member :: c -> e -> Bool
+
+ instance Eq a => Collection [a] a where
+     insert = flip (:)
+     member = flip elem
+~~~
