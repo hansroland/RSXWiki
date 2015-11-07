@@ -1,0 +1,9 @@
+---
+toc: no
+...
+
+# GHC Language extensions
+
+* [Overloaded Strings]()
+* [Multiparameter Type Classes]()
+* [Functional Dependencies]()
