@@ -1,0 +1,30 @@
+---
+toc: no
+...
+
+# GHC Language Extensions: Functional Dependencies
+
+Functional Dependencies are an extension to Multi Parameter type Classes
+
+### Syntax
+
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE FunctionalDependencies #-}
+
+### Motivation
+
+There is the collection example for Multiparameter Type classes:
+
+~~~ { .haskell}
+class Eq e => Collection c e where
+     insert :: c -> e -> c
+     member :: c -> e -> Bool
+
+ instance Eq a => Collection [a] a where
+     insert = flip (:)
+     member = flip elem
+~~~
+
+Here the 2 type parameters c (for collection) and  e (for element) are not independent: if the collection is a list [a] then the element **must** be of type a. Similar for a collection *Map a*.
+
+The Multiparameter Type class does not show this dependencies. For this we need Functional Dependencies 
