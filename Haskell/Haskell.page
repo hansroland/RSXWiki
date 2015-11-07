@@ -4,6 +4,10 @@ toc: no
 
 # Haskell
 
+## Language
+
+* [GHC Language Extensions](GHCExtensions/GHCExtensions)
+
 ## Compilers
 
 * [GHC The Glasgow Haskell Compiler](GHC/GHC)
