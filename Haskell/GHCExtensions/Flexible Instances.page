@@ -1,0 +1,18 @@
+---
+toc: no
+...
+
+# GHC Extension: Flexible Instances
+
+### Syntax
+
+~~~ { .haskell}
+{-# LANGUAGE FlexibleInstances #-}
+~~~
+
+### Motivation
+
+In Haskell we can define type classes like:
+
+
+
