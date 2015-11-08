@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# GHC Language Extensions: Type Families
+
+## Open Type Families
+
+Open Type Families can be extended in other modules, like you can add instances to classes in other modules.
+
+Type Families are somehow similar to aliases. Her we map the alias *AddResult a b* to some type:
+
+~~~ {.haskell}
+
+{-# LANGUAGE MultiParamTypeClass #-}
+{-# LANGUAGE TypeFamilies #-}
+
+type family AddResult a b
+type instance AddResult Double Double = Double
+type instance AddResult Int Double = Double
+type instance AddResult Double Int = Double
+type instance AddResult Int Int = Int
+~~~
