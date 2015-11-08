@@ -21,3 +21,30 @@ type instance AddResult Int Double = Double
 type instance AddResult Double Int = Double
 type instance AddResult Int Int = Int
 ~~~
+
+To use this, we need some class and instance definitions
+
+~~~ {.haskell}
+class MyAdder a b where
+    add :: a -> b -> AddResult a b
+
+instance MyAdder Double Double where
+    add a b = a + b
+instance MyAdder Int Double where
+    add a b = realToFrac a + b
+instance MyAdder Double Int where
+    add a b = a + realToFrac b
+instance MyAdder Int Int where
+    add a b = a + b
+~~~
+
+Now we can use this in an intractive GHCi session. Note: we have to specify the type of the inputs.
+
+~~~
+let i5 = 5 :: Int
+let d5 = 5 :: Double
+
+add i5 i5
+add d5 d5
+add i5 d5
+~~~
