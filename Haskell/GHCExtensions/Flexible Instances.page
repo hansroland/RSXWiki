@@ -14,5 +14,41 @@ toc: no
 
 In Haskell we can define type classes like:
 
+~~~ {.haskell}
+-- A simple class to simulate Gupta/Centura behaviour
+class IsTrue a where
+    isTrue :: a -> Bool
+~~~
+
+We can now define instances like
+
+~~~ {.haskell}
+instance IsTrue Bool where
+    isTrue = id
+instance IsTrue Int where
+    isTrue x = x /= 0
+instance IsTrue Char where
+    isTrue x = x /= '0'
+~~~
+
+
+However in Haskell 98 or 2010 we cannot define an instance for String
+
+~~~ {.haskell}
+instance IsTrue String where
+    isTrue x = x /= "0"    
+~~~
+
+~~~
+    Illegal instance declaration for ‘IsTrue String’
+      (All instance types must be of the form (T t1 ... tn)
+       where T is not a synonym.
+~~~
+
+The reason is that *String* is *[Char]* or *[] Char* and this is a more complicated type. 
+
+In all these cases, we must activate the **FlexibleInstances** extension!
+
+Note: The *TypeSynonymInstances* extension does something similar
 
 
