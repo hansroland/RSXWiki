@@ -1,0 +1,8 @@
+---
+toc: no
+...
+
+# Haskell Code Examples
+
+* [Avoid Monadic Assignement Use Applicative]()
+* [ReaderMonad Example]()
