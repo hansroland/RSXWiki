@@ -11,3 +11,12 @@ toc: no
 ## Compilers
 
 * [GHC The Glasgow Haskell Compiler](GHC/GHC)
+
+## IDEs and Editors
+
+* [Atom](Atom/Atom)
+* [Leksah](Leksah/Leksah)
+
+## Programming
+
+* [Code Examples](CodeExamples/CodeExamples)
