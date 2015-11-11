@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Atom Editor: Customization for Haskell
+
+Install the following atom packages:
+
+* language-haskell
+* haskell-ghc-mod  (needs the corresponding Haskell package ghc-mod)
+* haskell-hoogle
