@@ -1,0 +1,59 @@
+---
+toc: no
+...
+
+# Haskell Example Avoid Monadic Assignement - Use Applicative Style
+
+See [https://www.reddit.com/r/haskell/comments/3s7n8c/reader_aha_moment/](https://www.reddit.com/r/haskell/comments/3s7n8c/reader_aha_moment/)
+
+### Example with Monadic Assignement
+
+~~~ {.haskell}
+import Control.Monad
+import Control.Monad.Trans
+import Control.Monad.Trans.Reader
+
+data ConfigFile = ConfigFile {screenWidth :: Int, farewellText :: [String] }
+
+main :: IO()
+main = runReaderT farewell $ ConfigFile 100 ["Goodbye", "human"]
+
+farewell :: ReaderT ConfigFile IO ()
+farewell = do
+  maxLineLength <- asks screenWidth
+  message <- asks farewellText
+  let formatted = formatMessage message maxLineLength
+  liftIO $ forM_ formatted putStrLn
+
+formatMessage ::  [String] -> Int -> [String]
+formatMessage message width = filter ((< width) . length) message
+~~~
+
+Here in the *farewell* function, the values for *screeWidth* and *farewellText* are read out of the ConfigFile and assigned / binded to "monadic" variables with the **<-** syntax. 
+These values are then passed to the *formatMessage* function.
+
+### Example with Applicative Style
+
+This can be written much shorter:
+
+~~~ {.haskell}
+import Control.Monad
+import Control.Monad.Trans
+import Control.Monad.Trans.Reader
+import Control.Applicative
+
+data ConfigFile = ConfigFile {screenWidth :: Int, farewellText :: [String] }
+
+main :: IO()
+main = runReaderT farewell $ ConfigFile 100 ["Goodbye", "human"]
+
+farewell :: ReaderT ConfigFile IO ()
+farewell = do
+  formatted <- formatMessage <$> asks farewellText
+                             <*> asks screenWidth
+  liftIO $ forM_ formatted putStrLn
+
+formatMessage ::  [String] -> Int -> [String]
+formatMessage message width = filter ((< width) . length) message
+
+~~~ 
