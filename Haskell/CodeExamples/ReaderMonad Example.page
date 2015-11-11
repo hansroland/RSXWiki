@@ -1,0 +1,62 @@
+---
+toc: no
+...
+
+# Example: How to use ReaderT Monad
+
+See [https://www.reddit.com/r/haskell/comments/3s7n8c/reader_aha_moment/](https://www.reddit.com/r/haskell/comments/3s7n8c/reader_aha_moment/)
+
+### Example with a lot of Paramter Passing
+
+This example shows a basic usage of the ReaderT Monad
+
+~~~ {.haskell}
+import Control.Monad
+import Control.Monad.Trans
+import Control.Monad.Trans.Reader
+
+data ConfigFile = ConfigFile {screenWidth :: Int, farewellText :: [String] }
+
+main :: IO()
+main = runReaderT farewell $ ConfigFile 100 ["Goodbye", "human"]
+
+farewell :: ReaderT ConfigFile IO ()
+farewell = do
+  maxLineLength <- asks screenWidth
+  message <- asks farewellText
+  let formatted = formatMessage message maxLineLength
+  liftIO $ forM_ formatted putStrLn
+
+formatMessage ::  [String] -> Int -> [String]
+formatMessage message width = filter ((< width) . length) message
+~~~
+
+However, the ReaderT Monad is only used on the first function level: The values are extracted from the ConfigFile and the passed as normal parameters to the *formatMessage* function. If there are several nesting levels, this gives a lot of parameter passing to the lower level functions.
+
+### Avoid Parameter Passing - Put the functions into the ReaderT Monad
+
+We can take the *formatMessage* function into the ReaderT Monad
+
+~~~ {.haskell}
+import Control.Monad
+import Control.Monad.Trans
+import Control.Monad.Trans.Reader
+
+data ConfigFile = ConfigFile { screenWidth :: Int, farewellText :: [String] }
+
+main :: IO ()
+main = runReaderT farewell $ ConfigFile 100 ["Goodbye", "human"]
+
+farewell :: ReaderT ConfigFile IO ()
+farewell = do
+  formatted <- formatMessage
+  liftIO $ forM_ formatted putStrLn
+
+formatMessage :: ReaderT ConfigFile IO [String]
+formatMessage = do
+  maxLineLength <- asks screenWidth
+  message <- asks farewellText
+  return $ filter ((< maxLineLength) . length) message
+~~~
+
+Note: In the type of the function *formatMessage* you can see, that it has access to the ConfigFile with the ReaderT Monad.
