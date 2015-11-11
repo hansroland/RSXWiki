@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Install the Atom Editor
+
+See [https://atom.io/docs/latest/getting-started-installing-atom](https://atom.io/docs/latest/getting-started-installing-atom)
+
+* Goto [https://github.com/atom/atom/releases](https://github.com/atom/atom/releases)
+* Download the .deb package
+* Install with: sudo dpkg -i atom-amd64.deb
+
+Inside Atom, install the following customization themes:
+
+* UI-Theme: One Light
+* Syntax Theme: One Light
