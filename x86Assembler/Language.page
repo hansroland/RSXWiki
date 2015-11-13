@@ -1,0 +1,59 @@
+---
+toc: no
+...
+
+# x86 Assembler Language
+
+## Data Definitions
+
+### Comments
+
+On every line, the comment is after a semicolon
+
+~~~ {.asm}
+; I am a comment
+~~~
+
+### Labels
+
+Name points in the program. Canbe used to calculate length of definitions.
+
+Start in col 1, end with a colon:
+
+~~~ {.asm}
+mylabel1:
+~~~
+
+### Globals
+
+Globals export labels for the linker
+
+~~~ {.asm}
+global maylabel
+~~~
+
+### Sections
+
+Programs are structured with sections. Every assembly starts with a section. Section names strart with a point
+
+~~~ {.asm}
+section .mysectionname
+~~~
+
+### Define Double dd
+
+Defines a double word constant
+
+~~~ {.asm}
+    dd x'e85250d6'
+    dd 0
+~~~
+
+### Define Word dw
+
+Defines a word constant
+
+~~~ {.asm}
+    dw x'ffff'
+    dw 0
+~~~
