@@ -1,0 +1,18 @@
+---
+toc: no
+...
+
+# x86 Assembler Installation
+
+### Debian
+
+~~~
+sudo apt-get install nasm
+sudo apt-get install xorriso
+~~~
+
+Note: xorriso is used to create iso files
+
+### Atom
+
+Install package *language-x86asm*
