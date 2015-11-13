@@ -1,0 +1,34 @@
+---
+toc: no
+...
+
+# x86 Assembler - Utility Programs
+
+### Assembler nasm
+
+    nasm <file>
+    nasm -f elf64 <file>
+
+
+### Loader ld
+
+The loader needs a linker script
+
+    ld -n -o <outputfile> -T <linker script> <list of *.o files from the assembler>
+
+
+### Hexdump hexdump
+
+A simple hex viewer. It writes to stdout, eg on the console-
+
+    hexdump -x <file>
+
+
+### Disasembler
+
+    ndisasm <file>
+
+For 32 bit files use
+
+    ndisasm -b 32 <file>
+
