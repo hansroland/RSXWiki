@@ -1,0 +1,37 @@
+---
+toc: no
+...
+
+# General Reading List with interesting posts to study
+
+### Haskell
+
+* [Vector](https://github.com/commercialhaskell/haskelldocumentation/blob/master/content/vector.md)
+* [Haskell String types](http://www.alexeyshmalko.com/2015/haskell-string-types/)
+* [Haskell Time Library Tutorial](http://two-wrongs.com/haskell-time-library-tutorial)
+
+
+* [Web Services in Haskell with Servant](http://taylor.fausak.me/2015/08/23/type-safe-web-services-in-haskell-with-servant/)
+* [Minimal Servant implementation](http://www.well-typed.com/blog/2015/11/implementing-a-minimal-version-of-haskell-servant/)
+* [Servant Documentation](https://haskell-servant.github.io/tutorial/server.html)
+
+
+* [Functional Reactive Programming with Reflex](https://github.com/ryantrinkle/reflex)
+
+* [The Genuine Sieve of Eratosthenes](http://vicarie.in/posts/sieve-of-eratos.html)
+
+* [Hacking on GHC](https://rawgit.com/gibiansky/4c54f767bf21a6954b23/raw/67c62c5555f40c6fb67b124307725df168201361/exp.html)
+
+* [Creating a BitTorrent client in Haskell](https://blog.chaps.io/2015/10/05/torrent-client-in-haskell-1.html)
+
+
+
+### Atom
+
+* [From Vim to Atom](http://www.edsko.net/2015/03/07/vim-to-atom/)
+* [Snowdrift on Atom](https://github.com/snowdriftcoop/snowdrift/blob/master/TEXTEDITORS.md)
+
+### Other
+
+* [New Ideas on databases](http://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/)
+
