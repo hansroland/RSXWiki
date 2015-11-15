@@ -9,6 +9,8 @@ toc: no
 * [Vector](https://github.com/commercialhaskell/haskelldocumentation/blob/master/content/vector.md)
 * [Haskell String types](http://www.alexeyshmalko.com/2015/haskell-string-types/)
 * [Haskell Time Library Tutorial](http://two-wrongs.com/haskell-time-library-tutorial)
+* [A Taste of State: parsers are easy](https://nikita-volkov.github.io/a-taste-of-state-parsers-are-easy/)
+* [git-vogue - a pre commit check framework](http://anchor.github.io/git-vogue/)
 
 
 * [Web Services in Haskell with Servant](http://taylor.fausak.me/2015/08/23/type-safe-web-services-in-haskell-with-servant/)
@@ -19,6 +21,11 @@ toc: no
 * [Functional Reactive Programming with Reflex](https://github.com/ryantrinkle/reflex)
 
 * [The Genuine Sieve of Eratosthenes](http://vicarie.in/posts/sieve-of-eratos.html)
+* [Fixpoints in Haskell](http://harold.hotelling.net/gcdfix.lhs)
+* [Applicatives in Math vs Code](http://begriffs.com/posts/2015-08-30-applicative-functors.html)
+* [The Algebra of Algebraic Data Types](http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/)
+* [Data vs Codata](http://www.tac-tics.net/blog/data-vs-codata)
+* [Introduction to Recursion Schemes](http://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/)
 
 * [Hacking on GHC](https://rawgit.com/gibiansky/4c54f767bf21a6954b23/raw/67c62c5555f40c6fb67b124307725df168201361/exp.html)
 
