@@ -11,6 +11,18 @@ DataKinds make the kind system extensible and we can lift our data constructors 
     With DataKinds, GHC automatically promotes every suitable datatype to be a kind,
     and its value constructors to be type constructors
 
+### Kinds
+
+kinds are the types of the types.
+
+    *> :k Int
+    Int :: *
+
+    *> :k Maybe
+    Maybe :: * -> *
+
+
+
 ### Example
 
     data Nat = Ze | Su Nat
