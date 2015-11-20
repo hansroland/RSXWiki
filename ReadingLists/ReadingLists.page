@@ -4,7 +4,9 @@ toc: no
 
 # General Reading List with interesting posts to study
 
-### Haskell
+## Haskell
+
+### Basics
 
 * [Vector](https://github.com/commercialhaskell/haskelldocumentation/blob/master/content/vector.md)
 * [Haskell String types](http://www.alexeyshmalko.com/2015/haskell-string-types/)
@@ -13,32 +15,50 @@ toc: no
 * [git-vogue - a pre commit check framework](http://anchor.github.io/git-vogue/)
 
 
+### Web Services
+
 * [Web Services in Haskell with Servant](http://taylor.fausak.me/2015/08/23/type-safe-web-services-in-haskell-with-servant/)
 * [Minimal Servant implementation](http://www.well-typed.com/blog/2015/11/implementing-a-minimal-version-of-haskell-servant/)
 * [Servant Documentation](https://haskell-servant.github.io/tutorial/server.html)
 
+### Functional Reactive Programming
 
 * [Functional Reactive Programming with Reflex](https://github.com/ryantrinkle/reflex)
 
+### Advanced Haskell
+
+* [Template Haskell Is Not Scary](http://www.parsonsmatt.org/programming/2015/11/15/template_haskell.html)
+
+### Math Related
 * [The Genuine Sieve of Eratosthenes](http://vicarie.in/posts/sieve-of-eratos.html)
 * [Fixpoints in Haskell](http://harold.hotelling.net/gcdfix.lhs)
 * [Applicatives in Math vs Code](http://begriffs.com/posts/2015-08-30-applicative-functors.html)
 * [The Algebra of Algebraic Data Types](http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/)
 * [Data vs Codata](http://www.tac-tics.net/blog/data-vs-codata)
 * [Introduction to Recursion Schemes](http://blog.sumtypeofway.com/an-introduction-to-recursion-schemes/)
+* [Free and Freer Monads: Putting Monads Back into Closet](http://okmij.org/ftp/Computation/free-monad.html)
+
+### Geometry and Graphics
+
+* [Comonadic Cellular Automata with Comonads](http://nbviewer.ipython.org/urls/gist.githubusercontent.com/miguel-negrao/571be4120ebecdbb3e26/raw/b740adc557fe097f9c6ff66ff7349bbf0a095091/gistfile1.txt)
+* [Simple Mandelbrot Set Animation](http://inf.ufrgs.br/~morprates/code/mandelbrot/)
+
+### GHC
 
 * [Hacking on GHC](https://rawgit.com/gibiansky/4c54f767bf21a6954b23/raw/67c62c5555f40c6fb67b124307725df168201361/exp.html)
+
+### Different topics
 
 * [Creating a BitTorrent client in Haskell](https://blog.chaps.io/2015/10/05/torrent-client-in-haskell-1.html)
 
 
 
-### Atom
+## Atom
 
 * [From Vim to Atom](http://www.edsko.net/2015/03/07/vim-to-atom/)
 * [Snowdrift on Atom](https://github.com/snowdriftcoop/snowdrift/blob/master/TEXTEDITORS.md)
 
-### Other
+## Other
 
 * [New Ideas on databases](http://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/)
 
