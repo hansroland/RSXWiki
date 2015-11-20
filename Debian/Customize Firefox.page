@@ -4,8 +4,22 @@ toc: no
 
 # Customize Firefox
 
+### Add-Ons
+
 Install the following Add-Ons:
 
 * Addblock Plus
 * WOT
 * Ghostery
+
+
+### Customizing PDF Viewers
+
+I use the *evince* PDF browser, because it allows me to choose the printer, when I wnat to print a document
+
+* open Firefox (Iceweasel)
+* Clock on the menu button (far right with 3 horizontal lines)
+* Choose *Preferences*
+* Choose *Anwendung / Application*
+* Set standard for both PDF applications to *usr/bin/evince*
+
