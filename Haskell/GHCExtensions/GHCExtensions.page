@@ -4,8 +4,26 @@ toc: no
 
 # GHC Language extensions
 
-* [Overloaded Strings]()
-* [Flexible Instances]()
-* [Multiparameter Type Classes]()
-* [Functional Dependencies]()
-* [Type Families]()
+### Language Extensions in GHCi
+
+Language Extensions can be switched on or off in GHCi.  Use:
+
+    :set -X<Extension>       -- Switch the <Extension> on
+    :set -NoX<Extension>     -- Switch the >Extension> off
+
+### Language Extensions in Haskell Source Code
+
+Put the following lines before the module-header or before the imports if there is no module header. 
+
+    {-# LANGUAGE <Extension1>, <Extension2>, ... #-}
+
+Note: the extensions are coma separated
+
+### Some Haskell Extensions
+
+* [OverloadedStrings]()
+* [FlexibleInstances]()
+* [MultiparameterTypeClasses]()
+* [DataKinds]()
+* [FunctionalDependencies]()
+* [TypeFamilies]()
