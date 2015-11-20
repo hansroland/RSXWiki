@@ -1,0 +1,39 @@
+---
+toc: no
+...
+
+# Haskell Extensions - DataKinds
+
+### Basics
+
+DataKinds make the kind system extensible and we can lift our data constructors to the type level.
+
+    With DataKinds, GHC automatically promotes every suitable datatype to be a kind,
+    and its value constructors to be type constructors
+
+### Example
+
+    data Nat = Ze | Su Nat
+
+In GHCi we get:
+
+    *> :k Nat
+    Nat :: *
+
+    *> :k Ze
+    Not in scope: type constructor or class ‘Ze’
+    A data constructor of that name is in scope; did you mean DataKind
+
+However if we activate the extension, we get the following
+
+    *> :set -XDataKinds
+
+    *> :k Nat
+    Nat :: *
+
+    *> :k Ze
+    Ze :: Nat
+
+This means, our data constructors are now valid at the type level
+
+ 
