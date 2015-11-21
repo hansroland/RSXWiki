@@ -1,0 +1,32 @@
+---
+toc: no
+...
+
+# Haskell Language Extensions: TypeOperators
+
+Type Operator allow to define operators at the type level
+
+### Addition of Natural Numbers without TypeOperators
+
+~~~ {.haskell}
+{-# LANGUAGE DataKinds, TypeFamilies #-}
+
+data Nat = Z | S Nat
+
+type family   Plus (n :: Nat) (m :: Nat) :: Nat
+type instance Plus Z     m = m
+type instance Plus (S n) m = S (Plus n m)
+~~~
+
+### Additon of Nautural Numbers with Type Operators
+
+~~~ {.haskell}
+{-# LANGUAGE DataKinds, TypeFamilies, TypeOperators #-}
+data Nat = Z | S Nat
+
+infixl 6 :+
+
+type family   (n :: Nat) :+ (m :: Nat) :: Nat
+type instance Z     :+ m = m
+type instance (S n) :+ m = S (n :+ m)
+~~~
