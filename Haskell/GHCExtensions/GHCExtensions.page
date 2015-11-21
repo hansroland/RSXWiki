@@ -27,3 +27,4 @@ Note: the extensions are coma separated
 * [DataKinds]()
 * [FunctionalDependencies]()
 * [TypeFamilies]()
+* [TypeOperators]()
