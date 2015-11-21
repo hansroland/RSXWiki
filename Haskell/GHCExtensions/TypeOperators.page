@@ -22,6 +22,7 @@ type instance Plus (S n) m = S (Plus n m)
 
 ~~~ {.haskell}
 {-# LANGUAGE DataKinds, TypeFamilies, TypeOperators #-}
+
 data Nat = Z | S Nat
 
 infixl 6 :+
