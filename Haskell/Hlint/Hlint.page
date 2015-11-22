@@ -1,0 +1,20 @@
+---
+toc: no
+...
+
+# Haskell Tools Hlint
+
+Hlint is a style checking tool. Together with *apply-refact* it updates haskell source files automatically.
+
+### Usage
+
+~~~
+hlint --refactor myfile.hs
+~~~
+
+Add an refactor option of -s to be prompted for each change
+
+~~~
+hlint -- refactor --refactor-options="-s" myfile.hs
+~~~
+
