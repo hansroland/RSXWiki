@@ -1,0 +1,26 @@
+---
+toc: no
+...
+
+# Idris Strings
+
+*String*  is a primitive data type - **not** a list of characters
+
+### String Escape Sequences
+
+    \' - quote
+    \" - double quote
+    \\ - back slash
+    \n - new line
+    \t - Tab character
+
+### Functions on Sttrings
+
+* length
+* reverse
+* substr start length string     -- start is 0 relative
+* ++                             -- concatenate
+* words
+* unwords
+* toLower
+  
