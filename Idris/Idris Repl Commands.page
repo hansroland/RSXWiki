@@ -1,0 +1,48 @@
+---
+toc: no
+...
+
+# Idris REPL Commands
+
+### Basic Operations
+
+Loading a file
+
+    :l <filename.idr>
+
+Reloading a modified  file
+
+    :r
+
+Exiting the PEPL
+
+    :q
+
+Running the main program
+
+    :exec 
+
+### Getting Information
+
+Displaying the documentation
+
+    :doc <item>    <item> is function or type etc
+
+Asking wherher a function is total
+
+    :total <function_name>
+
+
+### Testing
+
+Define a variables
+
+    :let n = 300               -- 300 : Integer
+    :let a = the Bits8 300     -- 44 : Bits8
+
+## Idris REPL Colors
+
+* blue - Types
+* red  - Values
+* green - Functions
+* magneta - Variable
