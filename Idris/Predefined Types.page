@@ -1,0 +1,27 @@
+---
+toc: no
+...
+
+# Idris Predefined Types
+
+### Standard Types
+
+* [Bool]()
+* [Integer]()
+* [Nat]() Natural Numbers
+* [Fin]() Finite Numbers
+* [Float]()
+* [Double]()
+* Characters [Char]()
+* [String]()
+* [Lists]()
+
+
+
+### Low Level Types
+
+* [Bits8]()
+* [Bits16]()
+* [Bits32]()
+* [Bits64]()
+
