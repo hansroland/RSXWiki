@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# Idris Compiler
+
+### Starting the Interactive Compiler
+
+Open the IDris REPL
+
+    idris
+
+Open the Idris REPL on a file
+
+    idris <filename>
+
+
+
+### Using the Batch Compiler
+
+Compiling a single Idris file
+
+    idris <filename.idr> 
