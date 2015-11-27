@@ -1,0 +1,30 @@
+---
+toc: no
+...
+
+# Idris Support for the Atom Editor
+
+### Package:
+
+    language-idris
+
+### Getting Information
+
+These key-bindings normally work for the item under the cursor
+
+    Alt-Ctrl-D   Get documentation for the item 
+    Alt-Ctrl-T   Display the type
+
+
+### General
+
+    Alt_Ctrl-R   Reload + type check
+
+### Programming Support for Function Definitions
+
+    Alt-Ctrl-A   Add a definition to a type declaration
+    Alt-Ctrl-C   Case Split
+    Alt-Ctrl-L   Lift a hole to the top level
+    Alt-Ctrl-S   Search
+    Alt-Ctrl-M   Match - Replace a hole with a case expression
+    
