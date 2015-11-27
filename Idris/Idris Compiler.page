@@ -14,10 +14,16 @@ Open the Idris REPL on a file
 
     idris <filename>
 
+### Idris Repl Commands
+
+See [Idris Repl Commands]()
+
 
 
 ### Using the Batch Compiler
 
 Compiling a single Idris file
 
-    idris <filename.idr> 
+    idris <filename.idr> -o <filename>
+
+Note: The output filename **must** be specified
