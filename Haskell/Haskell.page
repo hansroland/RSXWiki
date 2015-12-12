@@ -12,6 +12,10 @@ toc: no
 
 * [GHC The Glasgow Haskell Compiler](GHC/GHC)
 
+## Libraries
+
+* [GHC Libraries](GHCLibraries/GHCLibraries)
+
 ## IDEs and Editors
 
 * [Atom](Atom/Atom)
