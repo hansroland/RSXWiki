@@ -1,0 +1,86 @@
+---
+toc: no
+...
+
+# Monad Loops - A library to do loops in a monadic context
+
+## Motivating example
+
+### Prompt and loop until the user enters the correct password
+
+See [Avoiding writing recursive functions by refactoring](http://conscientiousprogrammer.com/blog/2015/12/11/24-days-of-hackage-2015-day-11-monad-loops-avoiding-writing-recursive-functions-by-refactoring/) 
+
+~~~ {.haskell}
+import Control.Monad.Loops
+
+logIn :: IO ()
+logIn = do
+  putStrLn "Enter password:"
+  whileM_ ((/= "secret") <$> getLine) $ do
+    putStrLn "Wrong password!"
+    putStrLn "Try again:"
+  putStrLn "Congratulations!"
+~~~
+
+Instead of *whileM_ ((/= "secret") <$> getLine) $ do* you could also use
+
+~~~ {.haskell}
+whileM_ (liftM (\guess -> guess /= "secret") getLine) $ do
+~~~
+
+## Different flavors of a library function
+
+* foo   collects the result in a normal Haskell list
+* foo_  discards the result
+* foo'  collects the results in a MonadPlus
+
+Examples of types for whileM
+
+~~~ {.haskell}
+whileM :: Monad m => m Bool -> m a -> m [a]
+~~~ 
+
+## Most important functions of the library
+
+### whileM
+
+Execute an action repeatedly as long as the given boolean expression returns True. The condition is evaluated before the loop body. Collects the results into a list.
+
+~~~ {.haskell}
+whileM :: Monad m => m Bool -> m a -> m [a]
+
+whileM_ :: Monad m => m Bool -> m a -> m ()
+
+whileM' :: (Monad m, MonadPlus f) => m Bool -> m a -> m (f a)
+~~~ 
+
+### forkMapM 
+
+Like mapM, but run all the actions in parallel threads, collecting up the results and returning them all. Does not return until all actions finish.
+
+~~~ {.haskell}
+forkMapM :: (a -> IO b) -> [a] -> IO [Either SomeException b]
+~~~ 
+
+### whileJust 
+
+As long as the supplied Maybe expression returns "Just _", the loop body will be called and passed the value contained in the Just. Results are collected into a list.
+
+~~~ {.haskell}
+whileJust :: Monad m => m (Maybe a) -> (a -> m b) -> m [b]
+~~~
+
+### iterateWhile 
+
+Execute an action repeatedly until its result fails to satisfy a predicate, and return that result (discarding all others)
+
+~~~ {.haskell}
+iterateWhile :: Monad m => (a -> Bool) -> m a -> m a
+~~~ 
+
+## Other interesting functions
+
+* unitlM
+* untilJust
+* takeWhileM
+* drop WhileM
