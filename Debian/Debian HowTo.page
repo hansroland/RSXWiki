@@ -9,3 +9,10 @@ toc: no
 ~~~
 sudo dpkg -l | grep <string>
 ~~~
+
+### Create a PDF from a website
+
+~~~
+cd ~/Downloads
+wkhtmltopdf http://address.of.page  filename.pdf
+~~~
