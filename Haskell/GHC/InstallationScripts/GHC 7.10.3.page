@@ -10,8 +10,8 @@ toc: no
 # get distribution  
 cd $HOME/Downloads  
 
-wget https://www.haskell.org/ghc/dist/7.10.3/ghc-7.10.3-i386-deb8-linux.tar.bz2
-tar xvfj ghc-7.10.3-i386-deb8-linux.tar.bz2
+wget https://www.haskell.org/ghc/dist/7.10.3/ghc-7.10.3-x86_64-deb8-linux.tar.bz2
+tar xvfj ghc-7.10.3-x86_64-deb8-linux.tar.bz2
 cd ghc-7.10.3  
 
 # install to  
