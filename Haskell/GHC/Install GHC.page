@@ -42,7 +42,6 @@ In the *~/Software/Hackage/base* install with cabal the followin packages
 * happy
 * hlint
 * pandoc
-* cabal-install
 
 Move the resulting binaries again to the local binary directory **/usr/local/bin** (use *sudo*)
 
