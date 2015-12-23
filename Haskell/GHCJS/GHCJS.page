@@ -1,0 +1,16 @@
+# GHCJS - The Haskell to JavaScript Compiler
+
+### Installation
+
+This installs directly into my local binary directory /usr/local/bin
+
+For GHCJS there is only one version active.
+
+~~~
+cd ~/Software
+mkdir ghcjs
+cd ghcjs
+cabal sandbox init
+sudo env "PATH=$PATH" cabal install --bindir=/usr/local/bin http://ghcjs.luite.com/master.tar.gz
+ghcjs-boot
+~~~
