@@ -11,6 +11,7 @@ toc: no
 ## Compilers
 
 * [GHC The Glasgow Haskell Compiler](GHC/GHC)
+* [GHCJS The Haskell to JavaScript Compiler](GHCJS/GHCJS)
 
 ## Libraries
 
