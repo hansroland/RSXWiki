@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Cabal Packet Manager
+
+### Main Subcommands
+
+* cabal sandbox - manage sandboxes to isolate package versions
+* cabal get - Download and Extract package source
+* cabal install - Install packages
