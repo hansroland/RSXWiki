@@ -18,3 +18,7 @@ cabal sandbox init
 cabal install --bindir=/home/roland/bin http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 ~~~
+
+### Documentation
+
+There is an index over all functions at file:///home/roland/.ghcjs/x86_64-linux-0.2.0-7.10.3/ghcjs/doc/html/doc-index.html
