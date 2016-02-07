@@ -13,25 +13,34 @@ See: [Github: Fork a Reüpository](https://help.github.com/articles/fork-a-repo)
 * Goto the parent directory, where the repo should be stored 
 * Clone the forked repo to your local 
 
-    git clone https://github.com/*MyUsername*/*project*.git
+~~~
+    git clone https://github.com/MyUsername/project.git
 
-    cd *project*
+    cd project
+~~~
+
 
 * connect the local repo to the original repo 
 
-    git remote add upstream https://github.com/*ORIGINAL-OWNER*/*project*.git
+~~~
+    git remote add upstream https://github.com/ORIGINAL-OWNER/project.git
 
     git fetch upstream
+~~~
 
 * create a new branch and make it the current branch
 
-    git branch *new-branch-name*
+~~~
+    git branch <new-branch-name>
 
-    git checkout *new-branch-name*
+    git checkout <new-branch-name>
+~~~
 
 * Work
 * Commit Changes
 
 * Sending the commited changes to the remote repo
 
-    git push origin *new-branch-name*
+~~~
+    git push origin <new-branch-name>
+~~~
