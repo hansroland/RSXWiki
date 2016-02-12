@@ -4,8 +4,34 @@ toc: no
 
 # Cabal Packet Manager
 
-### Main Subcommands
+## Sandboxes
 
-* cabal sandbox - manage sandboxes to isolate package versions
-* cabal get - Download and Extract package source
-* cabal install - Install packages
+I generally advise to use **always** sandboxes. This is (with exception of stack), the best way to avoid cabal or dependeny hell.
+
+cabal sandbox init
+:   Initialize a sandbox
+
+cabal sandbox add-source path/to/project/dir
+:   Make the local project available for this project
+
+cabal sandbox repl
+:   Fire up GHC. Note that we are on base directory of the project. Load files with :l src/file.hs
+
+cabal install -dependencies-only
+:   Install all the dependencies in the .cabal project file
+
+cabal build
+:   Builds the project
+
+cabal test
+:   Run the tests (if any ...)
+
+cabal exec
+:   Run the executable
+
+
+
+## Other Cabal subcommands
+
+cabal get
+:   Download and Extract package source
