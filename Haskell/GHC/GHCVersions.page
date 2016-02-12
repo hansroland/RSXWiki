@@ -4,6 +4,9 @@ toc: no
 
 # GHC Versions and Library Versions
 
+GHC 7.10.3
+:   base: 4.8.2
+
 GHC 7.10.2
 :   base: 4.8.1
 
