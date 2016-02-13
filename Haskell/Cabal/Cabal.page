@@ -14,8 +14,11 @@ cabal sandbox init
 cabal sandbox add-source path/to/project/dir
 :   Make the local project available for this project
 
-cabal sandbox repl
-:   Fire up GHC. Note that we are on base directory of the project. Load files with :l src/file.hs
+cabal repl
+:   Fire up GHCi. Note that we are on base directory of the project. Load files with :l src/file.hs
+
+cabal repl test
+:   Fire up GHCi with teh libraries of the test cabal section
 
 cabal install -dependencies-only
 :   Install all the dependencies in the .cabal project file
