@@ -16,3 +16,13 @@ sudo dpkg -l | grep <string>
 cd ~/Downloads
 wkhtmltopdf http://address.of.page  filename.pdf
 ~~~
+
+### Take a screen shot of the active window
+
+In a consol window type
+
+~~~
+xwd | convert - capture.png
+~~~
+
+then go to the window to capture. Click with the cross-hair mouse pointer. The screen shot is in the home (~) directory
