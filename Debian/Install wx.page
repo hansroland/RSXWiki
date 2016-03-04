@@ -1,0 +1,9 @@
+# Install the wx-Widgets for Haskell
+
+Install the following libraries
+
+* sudo apt-get update
+* sudo apt-get install wx-common
+* sudo apt-get install libwxgtk3.0-dev
+* sudo apt-get install libwxgtk-media3.0-dev
+* sudo apt-get install libwxgtk-webview3.0-dev
