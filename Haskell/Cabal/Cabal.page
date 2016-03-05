@@ -41,3 +41,6 @@ cabal exec
 
 cabal get
 :   Download and Extract package source
+
+cabal init
+:   Initializes a *.cabal project file
