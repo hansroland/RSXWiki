@@ -1,0 +1,25 @@
+---
+toc: no
+...
+
+#Install PostgreSQL
+
+Install the database product:
+
+~~~
+sudo apt-get install postgresql postgresql-client
+sudo apt-get install postgresql-doc
+~~~
+
+
+To create client side applications
+
+~~~
+sudo apt-get install libpq-dev     ; to create 
+~~~
+
+For Haskell:
+
+~~~
+cabal install  opaleye
+~~~
