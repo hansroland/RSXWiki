@@ -4,7 +4,9 @@ toc: no
 
 #Install PostgreSQL
 
-Install the database product:
+## Installation
+
+### Install the database product:
 
 ~~~
 sudo apt-get install postgresql postgresql-client
@@ -12,14 +14,49 @@ sudo apt-get install postgresql-doc
 ~~~
 
 
-To create client side applications
+### Install library to create client side applications
 
 ~~~
 sudo apt-get install libpq-dev     ; to create 
 ~~~
 
-For Haskell:
+### Install Haskell Package
 
 ~~~
 cabal install  opaleye
+~~~
+
+## Create Non-Admin user
+
+### Connect to the databse as Admin
+
+~~~
+sudo -u postgres psql
+~~~
+
+### Create a User
+
+Note the semicolon (;) at the end
+
+~~~
+CREATE ROLE roland PASSWORD '******';
+ALTER ROLE roland LOGIN CREATEDB;
+~~~
+
+### Login as a user
+
+~~~
+psql
+~~~
+or
+
+~~~     
+psql <dbname>
+~~~
+
+### Create and Drop a database
+
+~~~
+CREATE DATABASE testdb;
+DROP DATABASE testdb;
 ~~~
