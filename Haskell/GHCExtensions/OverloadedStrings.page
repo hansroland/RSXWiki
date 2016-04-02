@@ -1,8 +1,12 @@
+---
+toc: no
+...
+
 # GHC Extension: OverloadedStrings
 
 {-# LANGUAGE OverloadedStrings #-}
 
-### All Numeric Literals are Polymorphic over the
+### All Numeric Literals are Polymorphic over the Numeric Types
 
 ~~~ {.haskell}
 a :: Int
