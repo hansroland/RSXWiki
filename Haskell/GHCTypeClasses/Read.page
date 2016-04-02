@@ -1,0 +1,20 @@
+---
+toc: no
+...
+
+# Haskell Type Class Read
+
+## GHC specific proposal
+
+
+
+
+## Haskell 98 Standard
+
+### read
+
+~~~ { .haskell }
+read :: Read a => String -> a
+~~~
+
+The read function reads input from a string, which must be completely consumed by the input process, and converts it to a value of type a.
