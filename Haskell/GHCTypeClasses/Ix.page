@@ -1,0 +1,40 @@
+---
+toc: no
+...
+
+# The Ix class
+
+## Introduction
+
+The Ix class is used to map a contiguous subrange of values in type onto integers. It is used primarily for array indexing.
+
+## Definition
+
+~~~ { .haskell }
+class Ord a => Ix a where
+
+-- The list of values in the subrange defined by a bounding pair
+range :: (a,a) -> [a]
+
+-- The position of a subscript in the subrange
+index :: (a,a) -> a -> Int
+
+-- Return True, if the given subscript lies in the range defined by the bounding pair
+inRange :: (a,a) -> a -> Bool
+
+-- The size of the subrange defined by a bounding paor
+rangeSize :: (a,a) -> Int
+~~~
+
+## Examples
+
+~~~ { .haskell }
+
+range (2,10)        -- -> [2,3,4,5,6,7,8,9,10]
+
+range (10,2)        -- -> []
+
+index (2,10) 3      -- -> 1   (0 - relative !!)
+
+rangeSize (2,10)    -- -> 9
+~~~
