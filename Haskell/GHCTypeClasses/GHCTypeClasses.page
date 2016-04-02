@@ -1,0 +1,32 @@
+---
+toc: no
+...
+
+# Haskell Type Classes
+
+## Getting more information about a type class
+
+In ghci use the **:i[nfo]** Command eg: *:i Functor*
+
+## Basic classes
+
+* [Eq]()
+* [Ix]()
+* [Ord]()
+* [Read]()
+* [Show]()
+
+## Standard Classes
+
+* [Functor]()
+* [Applicative]()
+* [Monoid]()
+* [Monad]()
+* [Monad Instances]()
+* [Predefined Monads]()
+* [MonadPlus]()
+
+## Special Classes
+* [Comonad]()
+* [Typeable]()
+* [Data]()
