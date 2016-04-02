@@ -4,7 +4,7 @@ toc: no
 
 # GHC Extension: OverloadedStrings
 
-{-# LANGUAGE OverloadedStrings #-}
+**{-# LANGUAGE OverloadedStrings #-}**
 
 ### All Numeric Literals are Polymorphic over the Numeric Types
 
@@ -29,4 +29,8 @@ s2 :: Text
 s2 = "I'm a Text"            -- compiles only with OverloadedStrings
 ~~~
 
-### Note: The IsString Typeclass is used
+### Remarks
+
+* **With OverloadedStrings manually packing and unpacking is not necessary!!**
+
+* The *IsString* Typeclass is used
