@@ -1,0 +1,97 @@
+---
+toc: no
+...
+
+# Haskell Class Functor
+
+## Definition
+
+The Functor class is used for types that can be mapped over.
+
+    class Functor f where
+       fmap :: (a -> b) -> f a -> f b
+
+A nice introduction can be found in [Haskell in Pictures](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)
+
+
+## Laws
+
+Instances of functors should satisfy the following laws:
+
+    fmap id = id
+    fmap (f . g) = fmap f . fmap g
+
+
+## Additional Functions
+
+### (<$>) Infix version of fmap
+
+    (<$>) :: (Functor f) => (a -> b) -> f a -> f b
+    (<$>)  = fmap
+
+This is just a synonym: Instead of
+
+    fmap f a
+
+we can write
+
+    f <$> a
+
+### (<$)
+Replace all locations in the input with the same value.
+The default definition is fmap . const, but this may be
+overridden with a more efficient version.
+
+     (<$)        :: a -> f b -> f a
+     (<$)        =  fmap . const
+
+Example:
+
+     a = [2,3,4,6]
+     4 <$ a          -> [4,4,4,4]
+
+## Instances
+
+Instances of Functors are normally either containers or computations.
+fmap does not change the structure of the container.
+
+###   Lists
+
+   instance Functor [] where
+     fmap = map
+
+
+### Maybe
+
+    instance Functor Maybe where
+      fmap Nothing = Nothing
+      fmap (Just a) = Just (fmap a)
+
+The function f is only applied to the Just part.
+The fmap of the functor clas can be used to avoid case expressions or pattern matching
+
+### Either
+
+   The function is only applied to the Right part!
+
+### Tupel
+
+   The function is only applied to the right element of the tuple.
+
+
+### Functor IO
+
+   --> Investigate !!!
+
+## Useful Applications of the Functor class
+
+For the Maybe and Either instances, the fmap function of the Functor class can be used to avoid case expressions or
+pattern matching:
+
+
+    instance Functor (Either a b) where
+      fmap (Left a)  = Left a
+      fmap (Right b) = Right (fmap b)
+
+Normally, if one has values of type Maybe or Either a function should be applied only to the Just or the Right values.
+So using fmap reduces the case expression or pattern matching to a one liner!
