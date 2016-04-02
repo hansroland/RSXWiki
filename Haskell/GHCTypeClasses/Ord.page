@@ -1,0 +1,40 @@
+---
+toc: no
+...
+
+# Haskell Class Ord
+
+Class *Ord*  inherits all the operations in Eq, but in it addition has a set of comparison operations and minimum and maximum functions:
+
+~~~ { .haskell }
+data Ordering = LT | EQ | GT
+
+class  (Eq a) => Ord a  where
+  (<), (<=), (>=), (>)  :: a -> a -> Bool
+  max, min              :: a -> a -> a
+  compare :: a -> a -> Ordering
+
+-- Minimal complete definition:
+   -- (<=) or compare
+   -- Using compare can be more efficient for complex types.
+
+compare x y
+     | x == y    =  EQ
+     | x <= y    =  LT
+     | otherwise =  GT
+
+x <= y =  compare x y /= GT
+x <  y =  compare x y == LT
+x >= y =  compare x y /= LT
+x >  y =  compare x y == GT
+
+max x y
+     | x >= y    =  x
+     | otherwise =  y
+
+min x y
+     | x <  y    =  x
+     | otherwise =  y
+~~~
+
+Class Ord has many, many instances
