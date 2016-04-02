@@ -1,0 +1,28 @@
+# GHC Extension: OverloadedStrings
+
+{-# LANGUAGE OverloadedStrings #-}
+
+### All Numeric Literals are Polymorphic over the
+
+~~~ {.haskell}
+a :: Int
+a = 7
+
+b :: Integer
+b = 255
+
+c :: Float
+c = 5
+~~~
+
+### Problem: String Literals are non Polymorphic, Always String
+
+~~~ {.haskell}
+s1 :: String
+s1 = "I'm a String"
+
+s2 :: Text
+s2 = "I'm a Text"            -- compiles only with OverloadedStrings
+~~~
+
+### Note: The IsString Typeclass is used
