@@ -1,0 +1,5 @@
+# Programming Hints
+
+##  Text processing
+
+For text processing use the *text* library. Import Data.Text. See: [The text package](http://hackage.haskell.org/package/text)
