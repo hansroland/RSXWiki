@@ -1,0 +1,292 @@
+---
+toc: no
+...
+# Haskell Class Applicative
+
+The class Applicative describes structure between a Functor and a Monad.
+
+Applicative functors are useful when you need sequencing of actions, but don't need to name any intermediate results.
+
+> import Control.Applicative
+
+A nice introduction can be found in [Haskell in Pictures](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html).
+
+There is a [fameous paper](<http://www.soi.city.ac.uk/~ross/papers/Applicative.html>) by Conor McBride and Ross Paterson.
+
+## Definition
+
+    class (Functor f) => Applicative f where
+      pure  :: a -> f a
+      (<*>) :: f (a -> b) -> f a -> f b
+
+### Explanations
+
+There are no default implementations for the 2 functions pure and <*>
+
+* pure is "lift a value in the context f"
+* <*>  is "sequential application", is infix, is left associative
+
+ f (a -> b) is a function wrapped in context f.
+
+In <*> the function in the context is applied to a variable in the same type of context giving a new variable in thsi type of context.
+
+If f is a function with 3 parameters eg f x y z = ... we can write:
+
+~~~ {.haskell}
+pure f <*>  pure x <*> pure y <*> pure z
+~~~
+
+Some little program algebra:
+Assume our applicative container is called A and we have a function f: a -> b
+
+~~~ {.haskell}
+pure f <*>  pure x <*> pure y
+ A f   <*>  M x    <*> A y              -- Now apply the first <*> A f  <*> A x = A f x
+ A (f x)           <*> A y              -- Now A (f x) is fmap f (A x)
+ fmap (A x)        <*> A y              -- Now fmap f (A x) is f <$> A x
+ f <$>  A x        <*> A y
+~~~
+
+Interpretation:
+
+~~~ {.haskell}
+ f <$>  A x  <*> A y
+
+means: Lift the function f into the context A and apply it the arguments separated by the <*>
+~~~
+
+## Laws
+
+~~~ {.haskell}
+pure f <*> x = fmap f x
+pure id <*> v = v
+pure (.) <*> u <*> v <*> w = u <*> (v <*> w)
+pure f <*> pure x = pure (f x)
+u <*> pure y = pure ($ y) <*> u
+~~~
+
+## Instances
+
+### Maybe
+
+    instance Applicative Maybe where
+        pure = Just
+        Nothing <*> _ = Nothing
+        (Just f) <*> something = fmap f something
+
+So for Maybe, <*> extracts the function from the left value if it's a Just and maps it over the right value.
+If any of the parameters is Nothing, Nothing is the result.
+
+Example:
+
+~~~ {.haskell}
+Just(+) <*>  Just 6 <*> Just 9
+-> Just 15
+~~~
+
+<*> is function application in context. It applies the function in the context of the left side to the argument in context on the right side.
+
+### Lists
+
+    instance Applicative [] where
+        pure x = [x]
+        fs <*> xs = [f x | f <- fs, x <- xs]
+
+In <*> apply each function from the left list to each element from the right list. (Kind of a multiplication)
+
+Examples:
+
+~~~ {.haskell}
+[(+)] <*>  [6] <*> [9]
+-> [15]
+
+[(*)] <*> [1,2] <*> [3,5]
+-> [3,5,6,10]
+~~~
+
+Exercices: What is the output of:
+
+~~~ {.haskell}
+[(*0),(+100),(^2)] <*> [1,2,3]
+[(+),(*)] <*> [1,2] <*> [3,4]
+(++) <$> ["ha","heh","hmm"] <*> ["?","!","."]
+(*) <$> [2,5,10] <*> [8,10,11]
+filter (>50) $ (*) <$> [2,5,10] <*> [8,10,11]
+~~~
+
+### ZipLists
+
+In the above List instance of the Applicative type class, the functions in the first list are each applied to all elements of the second list.
+
+
+~~~ { .haskell }
+[f1, f2, f3] <*> [x, y, z]  -> [f1 x, f2 x, f3 x,   f1 y, f2 y, f3 y,   f1 z, f2 z, f3 z]
+~~~
+
+An alternative would be to apply the first function to the first element, the second function to the second element.
+
+~~~ { .haskell }
+[f1, f2, f3] <*> [x, y, z]  -> [f1 x, f2 y, f3 z]
+~~~
+
+There is one problem: There can only be one instance declaration for a type to a class.
+Solution: Use the **newtype** keyword:
+
+~~~ { .haskell }
+newtype ZipList a = ZipList
+   { getZipList :: [a] }
+
+instance Functor ZipList where
+   fmap f (ZipList xs) = ZipList (map f xs)
+
+instance Applicative ZipList where
+        pure x = ZipList (repeat x)
+        ZipList fs <*> ZipList xs = ZipList (zipWith id fs xs)
+~~~
+
+A ZipList is nothing else than a (compile time) wrapped list with a newtype wrapper.
+
+Example:
+
+~~~~ { .haskell }
+getZipList $ ZipList [(+1), (+5), (+30)] <*> ZipList [ 10, 20, 30]
+-> [11,25,60]
+~~~~
+
+Notes:
+
+* pure creates an infinitive list !!
+* ZipLists live in Control.Applicative
+* To wrap in you must use *ZipList* to wrap out *getZipList*
+
+
+### IO
+~~~~ { .haskell }
+instance Applicative IO where
+    pure = return
+    a <*> b = do
+       f <- a
+       x <- b
+       return (f x)
+~~~~
+or
+
+~~~ { .haskell }
+    instance Applicative IO where
+        pure = return
+        <*> = ap
+~~~
+This means: The function in the monad on the left side of <\*> is applied to the value in the monad on the right side of the <*>
+
+The type of <*> specialized for IO would be
+
+    (<*>) :: IO (a -> b) -> IO a -> IO b
+
+
+Example:
+
+    exampleM :: IO(String)
+    exampleM = do
+       l1 <- getLine
+       l2 <- getLine
+       return $ l1 ++ l2
+
+
+This can be written in the so called applicative style shorter and without the variables.
+
+    exA :: IO(String)
+    exA = pure (++) <*> getLine <*> getLine
+
+    exAA :: IO(String)
+    exAA (++) ($) getLine <*> getLine
+
+### Function Application (->)
+
+~~~ { .haskell }
+instance Applicative  ((->) r) where
+    pure x = (\_ -> x)
+    f <*> g = \x -> f x (g x)
+~~~
+
+pure takes a value and creates a function that ignores its parameter and always returns that value,
+this is a const function.
+
+If we look at the type for pure, but specialized for the (->) r instance, it's
+
+    pure :: a -> (r -> a).
+
+    k <$> f <*> g
+
+creates a function that will call k on the results of f and g
+
+Examples:
+
+   (+) <$> (+3) <*> (*100)
+
+Apply (*3) and (*100) to the parameter and combine the result with (*)
+
+### Either
+
+
+## Additional Functions
+
+### liftA
+
+~~~ { .haskell }
+liftA :: (Applicative f) => (a -> b) -> f a -> f b
+liftA f a  = f <$> a
+~~~
+
+So liftA is just a synonym for f <$> a  or pure f <*> a
+
+### liftA2
+
+~~~ { .haskell }
+liftA2 :: (Applicative f) => (a -> b -> c) -> f a -> f b -> f c
+liftA2 f a b = f <$> a <*> b
+~~~
+
+So liftA2 f a b is just a shortcut for f <$> a <*> b. It applies a binary function to 2 applicatives without the applicative style.
+
+This shows that Applicatives are more powerfull than Functors. With Functors we can just map a function over one functor. But with Applicative Functors with can apply a function between several functors.
+
+There is a additional function liftA3
+
+### sequenceA
+
+Note: **sequenceA is no longer in Control.Applicative**. It is in **Data.Foldable** or **Data.Traversable**
+
+~~~ { .haskell }
+sequenceA :: (Applicative f) => [f a] -> f [a]
+sequenceA [] = pure []
+sequenceA (x:xs) = (:) <$> x <*> sequenceA xs
+~~~
+
+sequenceA takes a list of applicative functors and creates a single applicative functor that contains a list.
+Instead of defining sequenceA recursively, it could be defined with fold:
+
+~~~ { .haskell }
+sequenceA :: (Applicative f) => [f a] -> f [a]
+sequenceA = foldr (liftA2 (:)) (pure [])
+~~~
+
+The trick is to lift the (:) function with liftA2
+
+Examples
+
+~~~ { .haskell }
+sequenceA [Just 3, Just 2, Just 1]   -> Just [3, 2, 1]
+sequenceA [Just 3, Nothing, Just 1]  -> Nothing
+sequenceA [(+3),(+2),(+1)] 3         -> [6,5,4]
+sequenceA [[1,2,3],[4,5,6]]          ->
+        [[1,4],[1,5],[1,6],[2,4],[2,5],[2,6],[3,4],[3,5],[3,6]]
+~~~
+
+## Additional Examples
+
+    foo =  (+) <$> (*2) <*> (+10)
+
+The expression foo is a function that takes a number, gives that number to (*2) and (+10) and then adds together the results.
+
+    foo 7 = (*2) 7  +  (+10) 7  = 31
+
