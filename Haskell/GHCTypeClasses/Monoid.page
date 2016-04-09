@@ -1,0 +1,113 @@
+---
+toc: no
+...
+# Type Class Monoid
+
+## Overview
+
+The class Monoid is defined in Data.Monoid
+
+A type with a function wih two parameters.
+The parameters and the returned value have the same type.
+There exists  a value that doesn't change other values when used with the binary function.
+
+Or more algebraically: An associative binary operation with a neutral element.
+
+## Definition
+~~~~ {.haskell}
+    class Monoid m where
+        mempty :: m
+        mappend :: m -> m -> m
+~~~~
+## Laws
+
+* mempty is an identy.
+* mappend is associative
+
+~~~~ {.haskell}
+mempty `mappend` x = x
+x `mappend` mempty = x
+(x `mappend` y) `mappend` z = x `mappend` (y `mappend` z)
+~~~~
+
+## Additional functions
+
+    mconcat :: [m] -> m
+    mconcat = foldr mappend mempty
+
+## Instances
+
+### Lists
+
+~~~~ {.haskell}
+instance Monoid [a] where
+    mempty = []
+    mappend = (++)
+~~~~
+
+### Numbers
+Numbers can be considered as monoids in two ways:
+
+* Numbers form a Monoid under addition (+)
+* Numbers form a Monoid under multiplication
+
+~~~~ {.haskell}
+newtype Product a =  Product { getProduct :: a }
+    deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Num a => Monoid (Product a) where
+    mempty = Product 1
+    Product x `mappend` Product y = Product (x * y)
+~~~~
+
+Usage:
+
+~~~~ {.haskell}
+getProduct . mconcat . map Product $ [3,4,2]
+~~~~
+
+A function
+
+~~~~ {.haskell}
+product :: Num a => [a] -> a
+product = getProduct . mconcat . map Product
+~~~~
+could be defined. However, there is already a product function in Data.List
+
+### Bool
+
+Also for boleans there are two opeartions, that make booleans a Monoid.
+
+*Any* returns true, if any of a list of Booleans is true.
+
+*All* returns true, if all of a list of Booleans are true
+
+~~~ {.haskell}
+newtype Any = Any { getAny :: Bool}
+   deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Monoid Any where
+    mempty  = False
+    Any x `mappend` Any y = Any (x || y)
+
+newtype All = All { getAll :: Bool}
+    deriving (Eq, Ord, Read, Show, Bounded)
+
+instance Monoid All where
+    mempty = True
+    All x `mappend` All y = All (x && y)
+~~~
+
+### Ordering
+
+This models the way we compare words: First we compare the first character, then the second etc
+
+~~~ {.haskell}
+data Ordering = LT | EQ | GT
+
+instance Monoid Ordering where
+    mempty = EQ
+    LT `mappend` _ = LT
+    EQ `mappend` y = x == x
+    GT `mappend` _ = GT
+~~~
