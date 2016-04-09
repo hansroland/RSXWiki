@@ -1,0 +1,214 @@
+---
+toc: no
+...
+# Haskell Class Monad
+
+See [Monads in Comics](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html) or
+[Three Useful Monads](http://adit.io/posts/2013-06-10-three-useful-monads.html)
+
+
+## Definition
+
+### Standard definiton
+
+~~~ { .haskell }
+class Applicative m => Monad m  where
+
+    -- | Inject a value into the monadic type.
+    return      :: a -> m a
+
+   -- | Sequentially compose two actions, passing any value produced
+   -- by the first as an argument to the second. ("Bind"
+   (>>=)       :: m a -> (a -> m b) -> m b
+~~~
+These 2 functions must be defined for all Monads!
+
+In addition, the instance definition for monads list the following additional functions
+
+~~~ { .haskell }
+    (>>) :: m a -> m b -> m b
+    x >> y = x >>= \_ -> y
+
+    fail :: String -> m a
+    fail msg = error msg
+~~~
+
+*(>>)* ignores the first parameter and returns the second
+
+*fail* is used internally by Haskell and very rarely redefined by new Monad instances
+
+### Alternate definition (not used in the Prelude, but equivalent)
+
+~~~ { .haskell }
+class Applicative m => Monad m  where
+    - | Join - Remove one level of monadic nesting
+    join :: Monad m => m (m a) -> m a
+
+    -- | Inject a value into the monadic type.
+    return      :: a -> m a
+~~~
+
+For the list Monad, *join* is *concat*
+
+### Equivalence of the two definitons
+
+Express bind with join and fmap
+
+~~~ { .haskell }
+ (>>=) :: m a -> (a -> m b) -> m b
+ xs >>= f = join (fmap f xs)
+~~~
+
+Explanation:
+
+    f has type (a -> m b)
+    fmap f xs gives therefore a result type of m (m b)
+    join removes on level of monadic binding. Hence m (m b) is reduced by join to m b
+
+Express Join with Bind
+
+~~~ { .haskell }
+join :: m (m b) -> m b
+join xss = xss >>= id
+~~~
+
+Explanation:
+
+    Joining is equivalent to binding a container with the identity map.
+    Id is applied to elements of type m b (Type a is m b)
+
+## Laws
+
+### Left Identitiy
+
+    return x >>= f  is the same as: f x
+
+*Wrap value x  and bind with f equals to applying f x directly*
+
+### Right Identity
+
+    m >>= return   is the same as: m
+*Take out a value and wrap it again*
+
+
+### Associativity
+
+    (m >>= f) >>= g is the same as: m >>= (\x -> f x >>= g)
+
+## Instances
+
+See: [Monad Instances]()
+
+* Identity Monad
+* Maybe
+* Either
+* IO
+* Array
+
+## Additional Functions
+
+### (>>)
+
+This operator is essentially the same as (>>=), but does not pass the contents of the monad to the function specified as second parameter. It can be used to define the order in which actions take place.
+
+### Apply
+
+Apply a function contained in a Monad to a value contained in a Monad giving a new value containd in a monad
+
+~~~ { .haskell }
+ap :: (Monad m) => m(a -> b) -> m a -> m b
+~~~
+
+### Backward bind:
+
+The same as bind, but from right to left!
+
+~~~ { .haskell }
+(=<<) :: (Monad m) => m(a -> b) -> m a -> m b
+~~~
+
+ap and backward bind are the same
+
+### Composition of monadic functions
+
+~~~ { .haskell }
+(>=>) :: (Monad m) => (a -> m b) -> (b -> m c) -> (a -> m c)
+f >=> g  = \x -> f x >>= g
+
+(<=<) :: (Monad m) => (b -> m c) -> (a -> m b) -> (a -> m c)
+f <=< g = (\x -> g x >>= f)
+~~~
+
+    (>=>) is called Left-to-right Kleisli composition of monads.
+    (<=<) is called Right-to-left Kleisli composition of monads.
+    (<=<) corresponds to (.) for normal functions
+
+    The functions (>=>) and (<=<) are associative
+
+
+### liftM
+
+Promote a function to a monad
+
+~~~ { .haskell }
+liftM :: Monad M => (a -> b) -> m a -> m b
+~~~
+
+The function is executed in (lifted into) the monad. *liftM* is just fmap.
+
+Note: Compared to (>>=) bind, here the function has nothing to do with monads. In *bind* the function returns  already a monadic value.
+
+Similar, functions like *liftM2, liftM3* etc are defined.
+
+## Monadic Functions with Lists
+
+### sequence
+
+Evaluate each action of a list of actions and collect its result in a list. sequence_ ignores the results
+
+~~~ { .haskell }
+sequence :: Monad m => [m a] - > m [a]
+
+sequence_ :: Monad m => [m a] - > m()
+~~~
+
+### filterM
+
+Select all elements of xs that do  fulfill the *predicate* p
+
+~~~ { .haskell }
+filterM :: Monad m => (a -> m Bool) -> [a] -> m [a]
+~~~
+
+Note: The predicate p is of type a -> m Bool
+
+    filterM (\x -> Just (x > 0)) [2, 1, 0, -1]
+
+### mapM
+
+mapM f is equivalent to sequence . map f
+
+~~~ { .haskell }
+mapM :: Monad m => (a -> m b) -> [a] -> m [b]
+~~~
+
+### forM
+forM is mapM with its arguments swapped
+
+~~~ { .haskell }
+forM :: Monad m => [a] -> (a -> m b) -> m [b]
+~~~
+
+## Basic Operations
+
+Making pure values monadic
+:   Use return
+
+Getting at a pure value inside the monad
+:   Use do-notation or use liftM
+
+Chaining multiple monadic operations
+:   Use >>= (bind) or =<< (ap)
+
+Monads and lists
+:   Use sequence, mapM or filterM
