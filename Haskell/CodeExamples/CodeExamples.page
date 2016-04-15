@@ -4,5 +4,6 @@ toc: no
 
 # Haskell Code Examples
 
+* [Simple Loops]()
 * [Avoid Monadic Assignement Use Applicative]()
 * [ReaderMonad Example]()
