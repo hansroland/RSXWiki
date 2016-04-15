@@ -1,0 +1,19 @@
+---
+toc: no
+...
+
+# Simple Loops
+
+There is a collection. Every element of the collection is feeded to a function.
+
+Note: You can also use **map** / **MapM** for this
+
+## Looping Over a Collection
+
+~~~ { .haskell }
+
+import Control.Monad (forM)
+
+forM [1..10] $ \n -> do
+   print $ show n
+~~~
