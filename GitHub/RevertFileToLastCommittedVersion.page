@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Git: Revert a single file to the last committed version
+
+Revert all local changes to a single file:
+
+    git checkout filename
+
+**Note: The relative directories must be given too**
+
+
+### Example
+
+    git checkout Scotty/src/DirectoryViewer.hs
