@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Look at an Earlier Version 
+
+git log --pretty=oneline
+:    list the changes (- - in front of pretty)
+   
+git checkout <checksum>
+:    revert your working directories to the selected git-version
+
+* look at the restored files
+
+git checkout master
+:    restore the current head version    
