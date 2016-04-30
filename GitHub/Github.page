@@ -22,3 +22,4 @@ This is the main page about the GitHub service
 * [Connect to an existing own Github repository](ConnectToExisting)
 * [Look at an earlier version](EarlierVersion)
 * [Revert a single file to the last committed version](RevertFileToLastCommittedVersion)
+* [Cloning a Repository](CloneGitRepo)
