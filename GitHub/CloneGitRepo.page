@@ -1,0 +1,36 @@
+---
+toc: no
+...
+
+# Cloning a Github Repository
+
+By cloning a repository the repository will be copied to the local disk.
+
+Cloning is **not forking**.
+
+## Use cases for a cloned repository
+
+* Look at the project
+* Install the project
+* Follow the changes
+
+## What you cannot do with a cloned repo
+
+* **You cannot create pull requests !!** 
+
+## Git Commands
+
+### Cloning
+
+    git clone https://github/user/project
+
+The clone command creates a new subdirectory and copies the project into this subdirectory
+
+
+### Getting Information
+
+    git remote -v
+
+### Getting Updates from the remote repository
+
+    git fetch origin
