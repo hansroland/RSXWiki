@@ -1,0 +1,7 @@
+---
+toc: no
+...
+
+# GHC Project Directory Structure
+
+* [compiler](GHCDirCompiler) contains the source code for the compiler 
