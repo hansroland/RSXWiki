@@ -7,3 +7,4 @@ toc: no
 * [Simple Loops]()
 * [Avoid Monadic Assignement Use Applicative]()
 * [ReaderMonad Example]()
+* Extend Monads for Logging [MonadDebug]()
