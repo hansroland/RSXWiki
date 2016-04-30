@@ -1,0 +1,53 @@
+---
+toc: no
+...
+
+# MonadDebug - Extending Monads for Debugging
+
+See: [http://blog.aloni.org/posts/extending-monads-for-debugging-in-haskell/](http://blog.aloni.org/posts/extending-monads-for-debugging-in-haskell/)
+
+## Example for extending monads with additional functionality
+
+~~~ {.haskell}
+
+import Data.Functor.Identity (runIdentity, Identity)
+
+class Monad m => MonadDebug m where
+  logDebug :: String -> m ()
+
+instance MonadDebug IO where
+  logDebug = putStrLn
+
+instance MonadDebug Identity where
+  logDebug _ = return ()
+
+computation :: MonadDebug m => Integer -> Integer -> m Integer
+computation x y = do
+   let t1 = x * 2 + y
+   logDebug  $ "t1: " ++ show t1
+   let t2 = t1 * 3 + x
+   logDebug $ "t2: " ++ show t2
+   return t2
+
+main :: IO()
+main = do
+  putStrLn "Run computation as pure"
+  let r1 = runIdentity $ computation 2 3
+  putStrLn $ "Result " ++ show r1
+  putStrLn ""
+  putStrLn "Run computation with logging"
+  r2 <- computation 2 3
+  putStrLn $ "Result " ++ show r2
+~~~
+
+## Generated Output
+
+~~~
+Run computation as pure
+Result 23
+
+Run computation with logging
+t1: 7
+t2: 23
+Result 23
+~~~
