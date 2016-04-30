@@ -7,3 +7,4 @@ toc: no
 * [GHC Versions and Library Versions](GHCVersions)
 * [Install GHC](Install GHC)
 * [Installation Scripts](InstallationScripts/InstallationScripts)
+* [GHC Internals](GHCInternals/GHCInternals)
