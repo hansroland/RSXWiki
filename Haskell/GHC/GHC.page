@@ -8,3 +8,4 @@ toc: no
 * [Install GHC](Install GHC)
 * [Installation Scripts](InstallationScripts/InstallationScripts)
 * [GHC Internals](GHCInternals/GHCInternals)
+* [Hacking GHC](HackingGHC)
