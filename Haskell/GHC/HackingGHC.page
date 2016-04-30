@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# Hacking GHC
+
+### Installation
+
+See section [Installation Scripts](InstallationScripts/GHC Head)
+
+### Getting the newest Updates
+
+    git fetch origin
+
+### Running Tests
+
+    cd testuite/tests
+
+    cd <directory to test>
+
+    make THREADS=4
+
+   
