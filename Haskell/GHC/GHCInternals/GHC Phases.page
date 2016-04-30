@@ -1,0 +1,15 @@
+---
+toc: no
+...
+
+# GHC Phases
+
+* [Parse]
+* [Rename]
+* [Typecheck
+* Desugar
+* Simplyfy (Optimize)
+* CoreTidy
+* CorePrep
+* Convert to STG
+* Code Generation
