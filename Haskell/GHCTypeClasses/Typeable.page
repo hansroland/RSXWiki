@@ -1,0 +1,46 @@
+---
+toc: no
+...
+
+# Type Class Typeable
+
+This is part of generic / dynamic programming in Haskell
+
+## Definition
+
+~~~ { .haskell }
+-- Defined in `Data.Typeable.Internal'
+class Typeable a where
+  typeOf :: a -> TypeRep
+~~~
+
+TypeRep is a normal data type.
+
+
+## Instances
+
+~~~ { .haskell }
+instance [overlap ok] (Typeable1 s, Typeable a) => Typeable (s a)
+
+instance [overlap ok] Typeable TypeRep
+
+instance [overlap ok] Typeable TyCon
+
+instance [overlap ok] Typeable Ordering
+
+instance [overlap ok] Typeable Integer
+
+instance [overlap ok] Typeable Int
+
+instance [overlap ok] Typeable Float
+
+instance [overlap ok] Typeable Double
+
+instance [overlap ok] Typeable Char
+
+instance [overlap ok] Typeable Bool
+
+instance [overlap ok] Typeable ()
+
+instance Typeable DataType
+~~~
