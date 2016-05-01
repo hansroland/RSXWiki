@@ -1,0 +1,61 @@
+---
+toc: no
+...
+
+# Monad Instances
+
+## Identity Monad
+
+The Identity monad is the simplest monad. It is just a simple wrapper.
+It  applies the bound function to its input value without any modification.
+
+Computationally, there is no reason to use the Identity monad instead of the much simpler act of simply applying functions to their arguments. The purpose of the Identity monad is its fundamental role in the theory of monad transformers.
+
+Any monad transformer applied to the Identity monad yields a non-transformer version of that monad.
+
+The Identity Monad lives in import Control.Monad.Identity
+
+~~~ { .haskell }
+newtype Identity a = Identity { runIdentity :: a }
+
+instance Monad Identity where
+    return a = Identity a
+    m >>= k  = k (runIdentity m)
+~~~
+
+## Maybe
+
+The maybe Monad supports calculations with failures, where the type of failure is unspecified. It's simpyly **Nothing**
+
+~~~ { .haskell }
+instance Monad Maybe where
+    return x = Just x
+    Nothing >>= f = Nothing
+    Just x >>= f  = f x
+    fail _ = Nothing
+~~~
+
+## Lists
+
+The List Monad suppoprts *nondeterministic* or *multi valued* calculations. All the multiple values are stored in the list.
+
+~~~ { .haskell }
+instance Monad [] where
+    return x = [x]
+    xs >>= f = concat (map f xs)
+    fail _ = []
+~~~
+
+Example:
+
+~~~ { .haskell }
+[3,4,5] >>= \x -> [x,-x]
+[3,-3,4,-4,5,-5]
+~~~
+
+## Either a
+
+~~~ { .haskell }
+
+~~~
+
