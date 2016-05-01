@@ -1,0 +1,72 @@
+---
+toc: no
+...
+# Predefined Monads
+
+## Writer Monad
+
+Main application idea: collect additional information during processing of functions, eg log.
+
+The fameous cartoon tutorial is [here](http://adit.io/posts/2013-06-10-three-useful-monads.html#the-writer-monad).
+
+### Definiton
+
+WriterMonad lives in *Control.Monad.Writer*
+
+~~~ { .haskell }
+newtype Writer w a = Writer { runWriter :: (a, w) }
+
+instance (Monoid w) => Monad (Writer w) where
+    return x = Writer (x, mempty)
+    (Writer (x,v)) >>= f = let (Writer (y, v')) = f x in Writer (y, v `mappend` v')
+~~~
+
+The type variable for the writer is called *monoid value*.
+
+Note, that in the newtype definiton the type variable for themonoid value (writer) comes first and the type variable for the data comes second. In the tuple the sequence of data and writer type s is reversed!!
+
+The *writer* or *logger* part must be a Monoid, so we can start with an empty value and accumulate with *mappend*.
+Note that *return* creates an empty writing part.
+
+### Additiona functions
+
+tell :: MonadWriter w a  =>
+
+### Simple Example
+
+~~~ { .haskell }
+import Control.Monad.Writer
+
+logNumber :: Int -> Writer [String] Int
+logNumber x = writer (x, ["Got number: " ++ show x])
+
+multWithLog :: Writer [String] Int
+multWithLog = do
+    a <- logNumber 3
+    b <- logNumber 5
+    return (a*b)
+~~~
+
+Note: In this example the array is the Monoid
+
+### Example: Add logging to a function
+
+~~~ { .haskell }
+myGcd :: Int -> Int -> Int
+myGcd a b
+    | b == 0    = a
+    | otherwise = myGcd b (a `mod` b)
+
+
+~~~
+
+## Reader Monad
+
+[See here](http://lambdaman.blogspot.ch/2007/10/monadreader.html)
+
+The reader monad is for passing (implicit) configuration information through a computation.
+
+Any time you have a "constant"  (or several constants) in a computation that you need at various points, but really you would like to be able to perform the same computation with different values, than you should use a reader monad.
+
+## State Monad
+
