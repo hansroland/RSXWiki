@@ -1,0 +1,76 @@
+---
+toc: no
+...
+
+# Type Class Data
+
+See [http://www.cs.uu.nl/wiki/bin/view/GenericProgramming/SYB](http://www.cs.uu.nl/wiki/bin/view/GenericProgramming/SYB)
+
+~~~ { .haskell }
+class Typeable a => Data a where
+  gfoldl ::
+    (forall d b. Data d => c (d -> b) -> d -> c b)
+    -> (forall g. g -> c g) -> a -> c a
+  gunfold ::
+    (forall b r. Data b => c (b -> r) -> c r)
+    -> (forall r. r -> c r) -> Constr -> c a
+  toConstr :: a -> Constr
+  dataTypeOf :: a -> DataType
+  dataCast1 ::
+    Typeable1 t => (forall d. Data d => c (t d)) -> Maybe (c a)
+  dataCast2 ::
+    Typeable2 t =>
+    (forall d e. (Data d, Data e) => c (t d e)) -> Maybe (c a)
+  gmapT :: (forall b. Data b => b -> b) -> a -> a
+  gmapQl ::
+    (r -> r' -> r) -> r -> (forall d. Data d => d -> r') -> a -> r
+  gmapQr ::
+    (r' -> r -> r) -> r -> (forall d. Data d => d -> r') -> a -> r
+  gmapQ :: (forall d. Data d => d -> u) -> a -> [u]
+  gmapQi :: Int -> (forall d. Data d => d -> u) -> a -> u
+  gmapM :: Monad m => (forall d. Data d => d -> m d) -> a -> m a
+  gmapMp ::
+    Control.Monad.MonadPlus m =>
+    (forall d. Data d => d -> m d) -> a -> m a
+  gmapMo ::
+    Control.Monad.MonadPlus m =>
+    (forall d. Data d => d -> m d) -> a -> m a
+  	--Defined in `Data.Data'
+instance Data Stmt -- Defined at uniplate00.hs:22:23
+instance Data Expr -- Defined at uniplate00.hs:17:23
+instance Data a => Data [a] -- Defined in `Data.Data'
+instance Data Ordering -- Defined in `Data.Data'
+instance Data a => Data (Maybe a) -- Defined in `Data.Data'
+instance Data Integer -- Defined in `Data.Data'
+instance Data Int -- Defined in `Data.Data'
+instance Data Float -- Defined in `Data.Data'
+instance (Data a, Data b) => Data (Either a b)
+  -- Defined in `Data.Data'
+instance Data Double -- Defined in `Data.Data'
+instance Data Char -- Defined in `Data.Data'
+instance Data Bool -- Defined in `Data.Data'
+instance (Data a, Data b, Data c, Data d, Data e, Data f,
+          Data g) =>
+         Data (a, b, c, d, e, f, g)
+  -- Defined in `Data.Data'
+instance (Data a, Data b, Data c, Data d, Data e, Data f) =>
+         Data (a, b, c, d, e, f)
+  -- Defined in `Data.Data'
+instance (Data a, Data b, Data c, Data d, Data e) =>
+         Data (a, b, c, d, e)
+  -- Defind in `Data.Data'
+instance (Data a, Data b, Data c, Data d) => Data (a, b, c, d)
+  -- Defined in `Data.Data'
+instance (Data a, Data b, Data c) => Data (a, b, c)
+  -- Defined in `Data.Data'
+instance (Data a, Data b) => Data (a, b) -- Defined in `Data.Data'
+instance Data () -- Defined in `Data.Data'
+instance Data TypeRep -- Defined in `Data.Generics.Instances'
+instance Data TyCon -- Defined in `Data.Generics.Instances'
+instance Typeable a => Data (IO a)
+  -- Defined in `Data.Generics.Instances'
+instance Data DataType -- Defined in `Data.Generics.Instances'
+instance (Data a, Data b) => Data (a -> b)
+  -- Defined in `Data.Generics.Instances'
+
+~~~
