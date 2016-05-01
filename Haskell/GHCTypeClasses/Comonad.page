@@ -1,0 +1,26 @@
+---
+toc: no
+...
+# Comonads
+
+## Definition
+
+They are the categoric dual of monads, which means that the type signatures of comonadic functions look like monadic functions, but with the arrow reversed.
+
+~~~ { .haskell }
+class Functor w => Comonad w where
+  extract :: w a -> a
+  extend :: (w a -> b) -> w a -> w b
+  duplicate :: w a -> w (w a)
+~~~
+*extend* or *duplicate* are optional. They can be written in terms of the other one.
+
+Duality: *extract* ist the dual of *return*. *extend* is the dual of *(=<<)*. *duplicate* the dual of *join*.
+
+Note: If the Comonad may contain several elements of type a. With the extract function, we return just one.
+
+## Laws
+
+## Additional Functions
+
+## Instances
