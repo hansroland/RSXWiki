@@ -19,6 +19,7 @@ Installation is based on [https://gist.github.com/yantonov/10083524](https://gis
 * [GHC 7.8.3]()
 
 * [Cabal 1.22.4]()
+* [Cabal 1.24.0]()
 
 * [Haskell base software](HaskellBaseSoftware)
 
