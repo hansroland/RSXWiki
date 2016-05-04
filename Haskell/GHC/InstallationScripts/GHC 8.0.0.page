@@ -1,0 +1,35 @@
+---
+toc: no
+...
+
+# Installation of GHC 8.0.0
+
+## Installation Script
+
+~~~
+# get distribution  
+cd $HOME/Downloads  
+
+-- wget https://www.haskell.org/ghc/dist/7.10.3/ghc-7.10.3-x86_64-deb8-linux.tar.bz2
+
+wget http://downloads.haskell.org/~ghc/8.0.1-rc4/ghc-8.0.0.20160421-x86_64-deb8-linux.tar.xz    
+
+tar xvfj ghc-8.0.0.20160421-x86_64-deb8-linux.tar.bz2
+cd ghc-7.10.3  
+
+# install to  
+mkdir $HOME/Software/ghc-7.10.3  
+
+./configure --prefix=$HOME/Software/ghc-7.10.3  
+make install
+
+# cleanup: remove temporary files  
+cd $HOME/Downloads  
+rm -rfv ghc-8.0.0*
+~~~
+
+## Activation Script
+
+~~~
+switchghc 7.10.3 
+~~~
