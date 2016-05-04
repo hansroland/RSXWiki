@@ -4,10 +4,12 @@ toc: no
 
 # Installation Script to install GTK
 
-## Prerequistes from Ubuntu
+## Prerequistes from Debian
 
 ~~~
 sudo apt-get install libghc-glib-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install pkg-config
 ~~~
 
 ~~~
