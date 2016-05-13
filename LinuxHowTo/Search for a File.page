@@ -1,0 +1,14 @@
+---
+toc: no
+...
+
+# Search for a File
+
+
+Search for a file in the current directory or in one of its subdirectories
+
+    find . -name "*.txt*
+
+searches for all text files. The dot (.) means: Start the search in the current directory
+
+
