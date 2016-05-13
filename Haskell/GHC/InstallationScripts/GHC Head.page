@@ -36,9 +36,11 @@ happy --version
 
 ### Installation
 
+Note: The *ghchead* at the end of the clone command, is the name of the target directory.
+
 ~~~
-cd ~/Github
-git clone --recursive git://github.com/ghc/ghc ghchead
+cd ~/Projekte
+git clone --recursive git://git.haskell.org/ghc.git ghchead
 cd ghchead
 cd mk
 cp build.mk.sample build.mk
