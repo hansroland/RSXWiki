@@ -30,6 +30,8 @@ The clone command creates a new subdirectory and copies the project into this su
 ### Getting Information
 
     git remote -v
+    git branch -a
+    git tag
 
 ### Getting Updates from the remote repository
 
