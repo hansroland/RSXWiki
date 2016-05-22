@@ -13,7 +13,6 @@ switchghc x.y.z
 Installation is based on [https://gist.github.com/yantonov/10083524](https://gist.github.com/yantonov/10083524)
 
 * [GHC 8.0.1]()
-* [GHC 8.0.0]()
 * [GHC 7.10.3]()
 * [GHC 7.10.2]()
 * [GHC 7.10.1]()
