@@ -4,6 +4,21 @@ toc: no
 
 # Cabal Packet Manager
 
+## Nix Style Builds
+
+Nix-style cabal builds allow to have multiple versions of a package in the local Haskell package store.
+
+The packages are build into the directory ~/.cabal/store.
+
+cabal new-configure
+:    Configures the package
+
+cabal new-build
+:    Builds the package. This is also used to install packages
+
+cabal new-repl
+:    Starts the ghci, which load the packages from ~/.cabal/store
+
 ## Sandboxes
 
 I generally advise to use **always** sandboxes. This is (with exception of stack), the best way to avoid cabal or dependeny hell.
