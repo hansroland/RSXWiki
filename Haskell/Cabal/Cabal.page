@@ -48,7 +48,8 @@ cabal test
 :   Run the tests (if any ...)
 
 cabal exec
-:   Run the executable
+:   Run the executable.
+    Use **cabal exec myprog** to run the programm myprog. Use **cabal exec myprog -- --myparam** to pass the parameter myparam to the program myprog.  (note -- are to hyphens...)
 
 
 
