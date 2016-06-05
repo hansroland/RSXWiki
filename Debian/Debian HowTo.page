@@ -26,3 +26,9 @@ xwd | convert - capture.png
 ~~~
 
 then go to the window to capture. Click with the cross-hair mouse pointer. The screen shot is in the home (~) directory
+
+### Login with root without gdm
+
+With gdm root cannot login!
+
+If you need to login with root do **Alt-Ctrl-F1**. This gives the non-graphcal linux login pompt
