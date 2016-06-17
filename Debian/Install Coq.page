@@ -25,8 +25,12 @@ Coq is a proof assistant
 
 ### Install Coq and Coq-IDE
 
-    opam install -j4 -v coq
-    opam install -j4 -v coqide
+    opam install -j4 -v coq.8.4.6
+    opam install -j4 -v coqide.8.4.6
+
+Versions 8.4 is required for the tutorial of  [Benjamin Pierce: Software Foundations](https://www.cis.upenn.edu/~bcpierce/sf/current)
+
+Version 8.5 is required for the book [Ilya Sergey: Programs and Proofs](http://ilyasergey.net/pnp/)
 
 ### Try
 
@@ -39,4 +43,4 @@ If it does not work, add the following lines to your .profile
 
 ### Note:
 
-The compiler (coqc) aund the IDE (coqide) cannot be started over XMonad. You must open a terminal.
+The compiler (coqc) and the IDE (coqide) cannot be started over XMonad. You must open a terminal.
