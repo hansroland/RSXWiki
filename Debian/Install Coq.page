@@ -1,0 +1,42 @@
+---
+toc: no
+...
+
+# Install Coq
+
+Coq is a proof assistant
+
+## OPAM Packet Manager and OCAML Compiler 
+
+### Install
+
+    sudo apt-get install opam
+
+### Initialize the Environment
+
+    opam init
+    (Answer yes to the question)
+
+## Coq
+
+### Add the Coq Repositories to OPAM
+
+    opam repo add coq-released https://coq.inria.fr/opam/released
+
+### Install Coq and Coq-IDE
+
+    opam install -j4 -v coq
+    opam install -j4 -v coqide
+
+### Try
+
+    coqc --version
+
+If it does not work, add the following lines to your .profile
+
+    # Magic to activate OPAM installed software
+    . /home/roland/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+### Note:
+
+The compiler (coqc) aund the IDE (coqide) cannot be started over XMonad. You must open a terminal.
