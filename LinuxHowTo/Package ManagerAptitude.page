@@ -4,22 +4,30 @@ toc: no
 
 # Aptitude Packet Manager
 
-## Basic operation of the Aptitude Package Manager
+
 
 apt-get: A simple command line tool to install linux (debian / ubuntu) software packages.
 
 apt-get update : Updates the local list of packages in etc/apt/sources.list 
 
-#### Simulating withour installing:
-Use option -s after apt-get
+## Searching
 
-#### Searching for a packet:
+#### Search for an installed pakage
 
-    sudo apt-cache search <name>   
+    dpkg --get-selections | grep <name>
+
+#### Search for an available packet:
+
+    sudo apt-cache search <name>  
+
+## Installing 
 
 #### Installation of a packet
 
    sudo apt-get install <packet>
+
+#### Simulating withour installing:
+Use option -s after apt-get
 
 #### Removal of a packet
 
@@ -31,12 +39,9 @@ After removal of a packages, some prerequistes are orpahn and should be removed:
 
 #### Installing Updates
 
-     apt-get update
-     apt-get upgrade
+     apt-get update       -> Updates the local list of packages in etc/apt/sources.list 
+     apt-get upgrade      -> upgrades the system
 
-## Search for available packages
-
-    apt-cache search <part-of-packagename>
 
 ## Add a new source to the Aptitude Package Manager
 
