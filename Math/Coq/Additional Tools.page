@@ -5,4 +5,5 @@ toc: no
 # Coq Additional Tools
 
 * Packet Manager [OPAM]()
+* [Coq IDE](CoqIDE)
 
