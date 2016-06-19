@@ -1,0 +1,20 @@
+---
+toc: no
+...
+
+# OPAM
+
+OPAM is the packet manager for OCAML and Coq.
+
+### Search for a package
+
+    opam search <name>
+
+### Get additional info  about a package
+
+    opam show <packet-name>
+
+### Install a package
+
+    opam install  -j4 <packet-name>
+   
