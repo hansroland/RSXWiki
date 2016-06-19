@@ -1,0 +1,13 @@
+---
+toc: no
+...
+
+# Coq IDE
+
+## Keybindings
+
+    Ctrl-Alt-Down  Validate next command
+    Ctrl_Alt-Up    Allow editing of last command
+    Ctrl-Alt-End   Validate all commands
+    Ctrl-Alt-Home  Allow editing of all commands
+    Ctrl-Alt-Right Validate till cursor
