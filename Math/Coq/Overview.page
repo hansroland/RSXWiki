@@ -17,7 +17,7 @@ coqtop
 ## File Types
 
 name.v
-:    Source Files
+:    Source Files. They contain **v**ernacular commands.
 
 name.v0
 :    Compiled Libraries
