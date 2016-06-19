@@ -7,10 +7,13 @@ toc: no
 ## Commands
 
 Inductive
-:    Define a Set
+:    Define a Set. [Syntax](SyntaxInductive)
 
 Definiton
-:    Define a Function
+:    Define a Function. [Syntax](SyntaxDefiniton)
 
 Fixpoint
-:    Define a recursive Function
+:    Define a recursive Function. [Syntax](SyntaxFixpoint)
+
+Theorem
+:    Define a theorem to be proofed. Synonyms are *Lemma* and *Example*. [Syntax](SyntaxTheorem)
