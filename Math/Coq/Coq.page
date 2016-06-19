@@ -4,6 +4,7 @@ toc: no
 
 # Coq Proving Assistant
 
+* [Overview](*)
 * [Mathematical Language Gallina](Gallina)
-* [Tactics]()
+* [Tactics](Tactics/Tactics)
 * [Additional Tools]()
