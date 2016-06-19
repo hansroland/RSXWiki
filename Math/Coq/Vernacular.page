@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Verancular
+
+## Commands
+
+Inductive
+:    Define a Set
+
+Definiton
+:    Define a Function
+
+Fixpoint
+:    Define a recursive Function
