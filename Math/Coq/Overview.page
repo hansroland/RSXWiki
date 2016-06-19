@@ -1,0 +1,27 @@
+---
+toc: no
+...
+
+# Coq Overview
+
+The coq command are not available under th XMonad command. They must be started from a terminal window.
+
+## Commands
+
+coqide
+:    Start the graphical IDE
+
+coqtop
+:    Command line IDE (Use Ctrl-D to exit)
+
+## File Types
+
+name.v
+:    Source Files
+
+name.v0
+:    Compiled Libraries
+
+## Comments
+
+Comments are between (* and *). They may be nested
