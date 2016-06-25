@@ -4,6 +4,11 @@ toc: no
 
 # GHC Versions and Library Versions
 
+See also: [https://wiki.haskell.org/Base_package](https://wiki.haskell.org/Base_package)
+
+GHC 8.0.1
+:   base: 4.9.0
+
 GHC 7.10.3
 :   base: 4.8.2
 
