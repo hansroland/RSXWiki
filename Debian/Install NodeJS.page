@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+
+# Install Node JS
+
+# Update / Upgrade NodeJS
+
+Use module n to install the newest stable version
+
+    sudo npm install n -g
+    sudo n stable
+
+   
+
