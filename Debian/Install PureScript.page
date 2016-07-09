@@ -1,0 +1,12 @@
+# Install PureScript
+
+Here we install PureScript with npm. There are alternate methods as downloading a binary from the PureScript home page, installing a Debian package, compiling from source with GHC etc.
+
+### Prerequisites
+ 
+* Install NodeJS
+
+### Installation commands
+
+    sudo npm install -g purescript
+    sudo npm install -g pulp bower
