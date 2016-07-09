@@ -1,0 +1,12 @@
+---
+toc: no
+...
+# Install SSH Server
+
+
+    sudo apt-get install openssh-server
+
+
+### Connect to SSH
+
+    ssh userid@192.168.1.44
