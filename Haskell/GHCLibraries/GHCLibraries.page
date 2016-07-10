@@ -6,8 +6,7 @@ toc: no
 ## GHC Base Libraries
 
 * [either]()
-
-
+* Monad Transfomer Library [mtl]()
 
 
 ## Hackage Libraries
@@ -15,4 +14,4 @@ toc: no
 Pointers to some interesting Haskell libraries
 
 * [monad-loops]()
-* [optparse-declarative]()
+* Parse Command Line Options [optparse-declarative]()
