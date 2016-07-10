@@ -15,3 +15,4 @@ toc: no
 Pointers to some interesting Haskell libraries
 
 * [monad-loops]()
+* [optparse-declarative]()
