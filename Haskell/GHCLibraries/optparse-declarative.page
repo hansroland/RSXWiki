@@ -24,7 +24,7 @@ toc: no
 data Options = Options
    { oMyOption1 :: Bool
    , oMyOption2 :: Bool
-   , oFileName  :: maybe String }
+   , oFileName  :: Maybe String }
 ~~~
 
 ### Create the parser functions
