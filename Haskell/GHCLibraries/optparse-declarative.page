@@ -1,0 +1,53 @@
+---
+toc: no
+...
+
+# optparse-declarative - A library to parse command line options
+
+### Hackage
+
+[http://hackage.haskell.org/package/optparse-applicative](http://hackage.haskell.org/package/optparse-applicative)
+
+### Cabal
+
+    optparse-declarative
+
+### Import
+
+    import Options.Applicative
+
+## Example
+
+### Create a record with all possible options
+
+~~~ { .haskell }
+data Options = Options
+   { oMyOption1 :: Bool
+   , oMyOption2 :: Bool
+   , oFileName  :: maybe String }
+~~~
+
+### Create the parser functions
+
+~~~ { .haskell }
+parseCLI :: IO Options
+parseCLI = execParser (withInfo parseOption "MyProgram-Name")
+
+parseOptions :: Parser Options
+parseOptions = Options
+   <$> (switch $ long "option1" <> short "op1")
+   <*> (switch $ long "option2" <> short "op2")
+   <*> (optional $ strOption $ long "file" <> file)
+~~~ 
+
+### Main Program
+
+~~~ { .haskell }
+main :: IO ()
+main = runProgram =<< parseCLI
+
+runProgram :: Options -> IO ()
+runProgram opts = do
+   ...
+
+~~~
