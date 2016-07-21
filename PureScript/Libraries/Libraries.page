@@ -1,0 +1,19 @@
+---
+toc: no
+...
+
+# PureScript Libraries
+
+
+## Basic Datatypes
+
+* [purescript-strings]()
+* [purescript-lists]()
+* [purescript-arrays]()
+* [purescript-maybe]()
+
+## System Libraries
+
+* [purescript-math]()
+
+* [purescript-foldable-traversable]()
