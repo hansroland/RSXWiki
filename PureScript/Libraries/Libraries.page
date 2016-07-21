@@ -10,10 +10,38 @@ toc: no
 * [purescript-strings]()
 * [purescript-lists]()
 * [purescript-arrays]()
+* [purescript-tuples]()
 * [purescript-maybe]()
+* [purescript-either]()
 
 ## System Libraries
 
+* [purescript-prelude]()
+* [purescript-globals]()
 * [purescript-math]()
+* [purescript-parallel]()
+
+## Idiomatic
+
+* [purescript-monoid]()
+* [purescript-control]()
+* [purescript-free]()
+* [purescript-tailrec]()
 
 * [purescript-foldable-traversable]()
+
+## Effects
+
+* [purescript-eff]()
+* [purescript-console]()
+
+
+## JS-Bindings
+
+* [purescript-dom]()
+* [purescript-canvas]()
+* [purescript-jquery]()
+* [purescript-thermite]()
+* [purescript-halogen]()
+
+
