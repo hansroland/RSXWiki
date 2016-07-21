@@ -20,6 +20,9 @@ toc: no
 * [purescript-globals]()
 * [purescript-math]()
 * [purescript-parallel]()
+* [purescript-validation]()
+* [purescript-random]()
+* [purescript-exceptions]()
 
 ## Idiomatic
 
@@ -43,5 +46,6 @@ toc: no
 * [purescript-jquery]()
 * [purescript-thermite]()
 * [purescript-halogen]()
+* [purescript-react]()
 
 
