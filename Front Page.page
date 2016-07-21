@@ -18,6 +18,7 @@ in the [Gitit User’s Guide]().
 ## Contents
 
 * [Haskell](Haskell/Haskell)
+* [PureScript](PureScript/PureScript)
 * [Idris](Idris/Idris)
 * [x86 Assembler](x86Assembler/x86Assembler)
 * [Debian (Jessie)](Debian/Debian)
