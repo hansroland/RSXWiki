@@ -1,0 +1,48 @@
+---
+toc: no
+...
+# Emacs Commands
+
+## Terminology
+
+Frame 
+:   what is normally a window. Displays one file
+window
+:   a second part of the same file 
+
+## Emacs Special Keys
+
+* C -Key (Control key)  Ctrl  C-x is Control and x together
+* M - Key (Meta Key) Alt M-x is Alt and x together
+
+## Emacs Commands
+
+### Open and Close
+
+* Open File: C-x C-f
+* Beginning of File: C-Home
+* End of File: C-End
+
+
+* Close Emacs:  C-x C-c
+
+### Movement within a File
+
+* Page forwards: C-v
+* Page backwards: M-v
+* Put cursor location into middle of screen: C-l
+
+### Cursor movements (Can also be done with Arrow Keys)
+
+* Previous line: C-p
+* Next line: C-n
+* Forward one charcter: C-f
+* Backward one character: C-b
+
+* Beginning of line: C-a
+* End of line: C-e
+
+Cursor Movements by words:
+
+* Jump to end of current/next word: M-f
+* Jump to beginning of current/previous word: M-b
