@@ -23,9 +23,7 @@ Subcommands
 * print - print the current partitions
 * quit - exit parted utility
 
-
-* Check the partition number of the current boot partition.
-* Check the file system of the current linux main partition
+* Note the partition number and the file system of the current boot partition.
 
 
 ## Download the necessary files
@@ -41,6 +39,21 @@ Subcommands
 
 Edit the file /etc/grub.d/40_custom:
 
+    menuentry 'Debian Installer' {
+     insmod part_msdos
+     insmod ext2
+     set root='(hdX,gptY)'
+     linux /boot/newinstall/vmlinuz
+     initrd /boot/newinstall/initrd.gz
+    }
 
+* Replace *ext2* with the file system on the current /boot directory
+* Replace *hdX* with *hd0* if /boot/newinstall directory is on the first disk, hd1 if it is on the second disk, etc
+* Replace *gptY* with *gpt5*, if 5 is the partition number of the directory /boot/newinstall
 
+Run the following command:
+
+    sudo update-grub
+
+Restart the system and in the boot menu is now a new entry!
 
