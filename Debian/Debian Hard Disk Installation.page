@@ -1,0 +1,46 @@
+---
+toc: no
+...
+
+# Debian Hard Disk Installation
+
+## Introduction
+
+On new UEFI Systems, changing the HW to boot on an USB stick is not easy.
+
+If already a Linux System is installed then this Linux can be replaced by a Debian system with a so called hard disk installation.
+
+## Analyze current disk partitions
+
+Use the GNU parted utility. It will analyze the first disk. 
+
+    sudo parted
+
+If there is an other disk use the disk path as arguemnt to parted eg */dev/sdb*
+
+Subcommands
+
+* print - print the current partitions
+* quit - exit parted utility
+
+
+* Check the partition number of the current boot partition.
+* Check the file system of the current linux main partition
+
+
+## Download the necessary files
+
+* Create a directory */boot/newinstall*
+* Google for *hd-media/initrd.gz amd64* 
+* Look for something like debian/disks/jessie/installer-amd64/current-images
+* Download the files initrd.gz and vmlinuz and copy them into the new directory /boot/install
+* Google for a Debian netinstall iso disk image
+* Download it into /boot/newinstall
+
+## Create input for grub2 loader
+
+Edit the file /etc/grub.d/40_custom:
+
+
+
+
