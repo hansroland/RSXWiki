@@ -11,7 +11,7 @@ The most basic definitoon of a matrix is a list of rows:
 type Matrix a = [[a]]
 
 cols :: Matrix a  -> Matrix a
-cols [xs] = [[x]] | <- xs]                      -- convert [1,2,3] to [ [1], [2], [3] ]
+cols [xs] = [[x] | x <- xs]                      -- convert [1,2,3] to [ [1], [2], [3] ]
 cols (xs : xss) = zipWith (:) xs (cols xss)     -- prepend the rows from right
 
 ~~~
