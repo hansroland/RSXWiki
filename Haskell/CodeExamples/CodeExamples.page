@@ -5,6 +5,7 @@ toc: no
 # Haskell Code Examples
 
 * [Simple Loops]()
+* [Matrix Transposition]()
 * [Avoid Monadic Assignement Use Applicative]()
 * [ReaderMonad Example]()
 * Extend Monads for Logging [MonadDebug]()
