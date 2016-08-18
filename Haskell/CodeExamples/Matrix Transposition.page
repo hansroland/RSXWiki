@@ -24,5 +24,9 @@ cols (xs : xss) = zipWith (:) xs (cols xss)     -- prepend the rows from right
 cols [r1, r2, r3] = zipWith (:) r1 ( zipWith (:) r2 ( [[r] <- r3]) )
 ~~~
 
-Note: There are **no indices** involved
+### Notes: 
+ 
+* There are **no indices** involved
+* Data.List contains a *transpose* function
+
 
