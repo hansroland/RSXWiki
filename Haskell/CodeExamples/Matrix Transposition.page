@@ -1,0 +1,28 @@
+---
+toc: no
+...
+
+# Matrix Transposition
+
+The most basic definitoon of a matrix is a list of rows:
+
+~~~ { .haskell}
+
+type Matrix a = [[a]]
+
+cols :: Matrix a  -> Matrix a
+cols [xs] = [[x]] | <- xs]                      -- convert [1,2,3] to [ [1], [2], [3] ]
+cols (xs : xss) = zipWith (:) xs (cols xss)     -- prepend the rows from right
+
+~~~
+
+* The first line transposes the last row vector to a column vector
+* Then the second last row vector is transposed and prepended to the already transposed column vector
+* We work then up through all the rows to the first row
+
+~~~ { .haskell}
+cols [r1, r2, r3] = zipWith (:) r1 ( zipWith (:) r2 ( [[r] <- r3]) )
+~~~
+
+Note: There are **no indices** involved
+
