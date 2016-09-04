@@ -1,0 +1,10 @@
+---
+toc: no
+...
+
+# Create a self signed SSL Certificate
+
+See: [http://www.akadia.com/services/ssh_test_certificate.html](http://www.akadia.com/services/ssh_test_certificate.html)
+
+Generate a Private Key (need paraphrase)
+:   openssl genrsa -des3 -out server.key 1024
