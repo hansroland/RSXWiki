@@ -6,5 +6,25 @@ toc: no
 
 See: [http://www.akadia.com/services/ssh_test_certificate.html](http://www.akadia.com/services/ssh_test_certificate.html)
 
+Create a Directory
+:   cd ~
+:   mkdir .ssl
+:   cd .ssl
+
 Generate a Private Key (need paraphrase)
 :   openssl genrsa -des3 -out server.key 1024
+
+Generate a CSR (Certificate Signing Request) 
+:   openssl req -new -key server.key -out server.csr
+:    (Enter Host name goms.senn-irlet.ch as Common Name)
+
+Remove Passphrase from Key 
+:   cp server.key server.key.org
+:   openssl rsa -in server.key.org -out server.key
+
+Generating a Self-Signed Certificate
+:   openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+Installing the Private Key and Certificate
+:   cp server.crt     target directory
+:   cp server.key     target directory
