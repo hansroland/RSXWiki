@@ -20,3 +20,18 @@ toc: no
 
     sudo lvs
     sudo lvdisplay
+
+## Create a logical volume group 
+
+    ??
+
+## Create a logical volume in a volume group
+
+    Command:   lvcreate -n<name-of-volume> -LnnG  <volume-group>
+    Example:   lvcreate -nvisp-root -L30G xen-vg
+
+
+## Add a filesystem to a locical volume
+
+    Command:   mkfs.ext4 /dev/<volume-group>/<volume-name>
+    Example:   mkfs.ext4 /dev/xen-vg/visp-root
