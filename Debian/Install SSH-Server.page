@@ -1,12 +1,36 @@
 ---
 toc: no
 ...
-# Install SSH Server
+# SSH Server
 
+## Install SSH Server
 
     sudo apt-get install openssh-server
 
+## Install SSH-Client
+
+    sudo apt-get install openssh-client
+
+## Configurig SSH Server
+ 
+File **/etc/ssh/ssh_config**
+
+Enable options
+
+*  ForwardX11 yes
+
+Restart SSH Server after any changes in the config file
+
+## Starting - Stopping SSH Server
+
+    sudo service ssh start
+    sudo service ssh restart
+    sudo service ssh stop
 
 ### Connect to SSH
 
-    ssh userid@192.168.1.44
+    ssh host
+    ssh userid@host
+    ssh -X userid@host
+
+Note: The X-programs must be installed on the server
