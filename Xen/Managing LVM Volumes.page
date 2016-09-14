@@ -36,9 +36,7 @@ toc: no
     Command:   mkfs.ext4 /dev/<volume-group>/<volume-name>
     Example:   mkfs.ext4 /dev/xen-vg/visp-root
 
-## Shrinking a locial volume
-
-Notes:
+## Shrink a locial volume
 
  **Save data before shrinking !!!**
 
@@ -53,6 +51,25 @@ Notes:
     lvreduce -L 50G /dev/goms-vg/disk-name    -- Reduce LVM size, but is should be bigger than filesystem size
 
     resize2fs /dev/goms-vg/disk-name          -- Extend filessystem size to volume size                 
+
+
+## Shrink a logical volume group
+
+See: [unix.stackexchange.com/questions/67702/how-to-reduce-volume-group-size-in-lvm](http://unix.stackexchange.com/questions/67702/how-to-reduce-volume-group-size-in-lvm)
+
+Look at allocated segments
+
+    pvs -v --segments /dev/sda5
+
+Move data beginning of free space
+
+    sudo pvmove --alloc anywhere /dev/sda5:sssss-eeeee    <- takes a lot of time !!
+
+    sssss = Starting block from pvs command
+    eeeee = Ending block from pvs command
+
+After that use the gparted and resize the LVM to maximum used area and rest will be in unallocated space
+
 
 
 
