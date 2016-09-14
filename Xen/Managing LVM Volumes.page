@@ -35,3 +35,10 @@ toc: no
 
     Command:   mkfs.ext4 /dev/<volume-group>/<volume-name>
     Example:   mkfs.ext4 /dev/xen-vg/visp-root
+
+# Setup on Goms computer:
+
+    Partition     Volume group
+     --------     ------------
+    /dev/sda5     goms-vg
+    /dev/sda6     xen vg
