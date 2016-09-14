@@ -1,0 +1,22 @@
+---
+toc: no
+...
+
+# Managing LVM Volumes
+
+## Get information about physical volumes
+
+    sudo pvs
+    sudo pvdisplay
+    sudo pvs -v --segments
+    sudo pvs -v --segments /dev/sda5
+
+## Get information about volume groups
+
+    sudo vgs
+    sudo vgdisplay
+
+## Get information about logical volumes
+
+    sudo lvs
+    sudo lvdisplay
