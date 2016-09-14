@@ -3,5 +3,7 @@ toc: no
 ...
 # Xen
 
+See: [wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide](https://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide)
+
 * [Managing Xen Hosts]()
 * [Managing LVM Volumes]()
