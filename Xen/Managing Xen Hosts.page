@@ -22,7 +22,6 @@ toc: no
 
 ## Remove a guest
 
-    sudo rm /etc/xen/auto/<domU>.cfg
     sudo lv remove /dev/xen-vg/<disk-name>         -- do it for each LVM disk
 
     sudo rm /etc/xen/<domU>.cfg                    -- ATTENTION maybe youwant to keep teh config file...
