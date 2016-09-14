@@ -36,6 +36,26 @@ toc: no
     Command:   mkfs.ext4 /dev/<volume-group>/<volume-name>
     Example:   mkfs.ext4 /dev/xen-vg/visp-root
 
+## Shrinking a locial volume
+
+Notes:
+
+ **Save data before shrinking !!!**
+
+ **Volume must not be mounted. if you want to shrink the root volume, use live system / installation disk**
+  
+    umount /dev/goms-vg/root                  -- unmount if necessary
+
+    e2fsck -fy /dev/goms-vg/disk-name         -- check file system
+
+    resize2fs /dev/goms-vg/disk-name 40G      -- Resize filesystem: 40G is 10 to 20% lower than the new size
+
+    lvreduce -L 50G /dev/goms-vg/disk-name    -- Reduce LVM size, but is should be bigger than filesystem size
+
+    resize2fs /dev/goms-vg/disk-name          -- Extend filessystem size to volume size                 
+
+
+
 # Setup on Goms computer:
 
     Partition     Volume group
