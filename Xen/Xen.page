@@ -5,5 +5,7 @@ toc: no
 
 See: [wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide](https://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide)
 
+* [Create a Debian Xen Guest]()
+* [Managing Xen Guests]()
 * [Managing Xen Hosts]()
 * [Managing LVM Volumes]()
