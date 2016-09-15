@@ -14,12 +14,12 @@ sudo apt-gen install dmenu
 
 ### Installation of XMonad
 
-At the moment, we install the XMonad libraries to the user .cabal dirctory. This should be changed to a sandbox!
+At the moment, we install the XMonad libraries to the user .cabal directory. This should be changed to a sandbox!
 
 ~~~
 cabal install xmonad
 cabal install xmonad-contrib --flags="-use_xft"
-cabal isntall xmobar
+cabal install xmobar
 ~~~ 
 
 ### Configuration of the Login Manger
