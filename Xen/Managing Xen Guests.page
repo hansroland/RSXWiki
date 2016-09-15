@@ -1,0 +1,31 @@
+---
+toc: no
+...
+
+# Managing Xen Hosts
+
+## Get help about xl command
+
+    xl help
+
+## List all active systems
+
+    sudo xl list
+
+## Start guest system
+
+    sudo xl create /etc/xen/<domU>.cfg
+
+## Connect to running Guest
+
+    sudo xl console <domU>
+
+## Shutdown a guest
+
+    sudo xl shutdown <domU>
+
+## Remove a guest
+
+    sudo lv remove /dev/xen-vg/<disk-name>         -- do it for each LVM disk
+
+    sudo rm /etc/xen/<domU>
