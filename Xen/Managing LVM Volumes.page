@@ -36,7 +36,21 @@ toc: no
     Command:   mkfs.ext4 /dev/<volume-group>/<volume-name>
     Example:   mkfs.ext4 /dev/xen-vg/visp-root
 
-## Shrink a locial volume
+## Extend a logical volume
+
+ **Volume must not be mounted. Use dom0 system while domU is not active**
+
+    sudo lvextend -L10G /dev/<volume-group>/<volume-name>      -- The new size is now 10 GB 
+   
+    -- Check type of filesystem
+    sudo parted /dev/<volume-group>/<volume-name>
+
+    -- If filesystem is ext2 or ext3:
+    sudo e2fsck /dev/<volume-group>/<volume-name>
+    sudo resize2fs /dev/<volume-group>/<volume-name>
+   
+
+## Shrink a logical volume
 
  **Save data before shrinking !!!**
 
