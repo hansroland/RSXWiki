@@ -9,7 +9,8 @@ toc: no
 ~~~
 sudo apt-get install libx11-dev
 sudo apt-get install libXrandr-dev
-sudo apt-gen install dmenu
+sudo apt-gen install suckless-tools
+sudo apt-get install libxpm-dev
 ~~~
 
 ### Installation of XMonad
