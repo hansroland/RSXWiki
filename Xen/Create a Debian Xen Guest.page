@@ -17,10 +17,16 @@ toc:no
 This will create a system with 4 GB. If more is needed, the disk must be enlarged. the --size option doesn't work !!
 See [Managing LVM Volumes]()
 
+Copy the generated password to the clipboard
+
 ### Start Xen Guest
 
     sudo xl create /etc/xen/<my-hostname>.cfg
     sudo xl console <my-hostname>
+
+Change password
+
+    passwd
 
 ### Install additional software
 
