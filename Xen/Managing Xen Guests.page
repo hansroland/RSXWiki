@@ -18,7 +18,11 @@ toc: no
 
 ## Connect to running Guest
 
-    sudo xl console <domU>
+    sudo xl console <domU>      -- use Ctrl-] to release after use
+
+or
+
+    ssh -X 192.168.n.m
 
 ## Shutdown a guest
 
