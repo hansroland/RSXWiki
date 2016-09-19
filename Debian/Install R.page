@@ -1,0 +1,17 @@
+---
+toc: no
+...
+
+# Install the R Statistical System
+
+    sudo gedit /etc/apt/sources.list
+
+Add the following lines
+
+    # Cran (R Statisics) 
+    deb https://stat.ethz.ch/CRAN/bin/linux/debian jessie-cran3/
+
+Then
+
+    sudo apt-get update
+    sudo apt-get install r-base
