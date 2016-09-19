@@ -11,4 +11,10 @@ toc: no
 ## Usage
 
      library(ggplot2)
+
+## Tutorials
+
+* [http://boole.inf.usi.ch/sp-2014/slides/Lecture-20-ggplot2.pdf](http://boole.inf.usi.ch/sp-2014/slides/Lecture-20-ggplot2.pdf)
+* [http://www.ling.upenn.edu/~joseff/avml2012/](http://www.ling.upenn.edu/~joseff/avml2012/)
+
      
