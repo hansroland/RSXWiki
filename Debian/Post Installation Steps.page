@@ -63,3 +63,4 @@ sudo apt-get install <package>
 
 * git
 * gitit
+* apt-transport-https
