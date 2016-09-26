@@ -5,10 +5,24 @@ toc: no
 
 # Install Node JS
 
+This uses a similar scheme as the multiple GHC version
+
+* Download X64 version from [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+~~~
+    cd Download
+    NODE_VERSION="v4.5.0"
+    tar xf node-$NODE_VERSION-linux-x64.tar.xz
+    sudo cp -rp node-$NODE_VERSION-linux-x64 /usr/local/
+~~~
+
+* Add /usr/local/node/bin to the $PATH in .profile
+
 # Update / Upgrade NodeJS
 
 Use module n to install the newest stable version
 
+     
     sudo npm install n -g
     sudo n stable
 
