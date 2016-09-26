@@ -1,0 +1,25 @@
+---
+toc: no
+...
+
+# Searching Google
+
+
+Exact term
+:   Suchterm in "": Bsp
+
+
+site: 
+:    Search a website eg: sommaruga site:nzz.ch
+
+Exclude
+:   -- Exlude terms / websites with a hyphen. eg -computer  -site:wikipedia.org
+
+fieltype:
+:   Beschränkt suche nach Filetype eg: filetype:pdf
+
+link:
+:   Suche nach websites, die auf ein website verweisen eg link:youtube.com
+
+allintitle:
+:   Suche nur in Titeln
