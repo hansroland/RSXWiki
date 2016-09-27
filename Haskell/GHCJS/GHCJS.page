@@ -6,6 +6,10 @@ toc: no
 
 ### Installation
 
+Install Prerequisite
+
+    sudo apt-get install libtinfo-dev
+
 This installs directly into my local binary directory /home/roland/bin
 
 For GHCJS there is only one version active.
