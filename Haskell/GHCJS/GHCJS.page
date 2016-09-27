@@ -4,13 +4,22 @@ toc: no
 
 # GHCJS - The Haskell to JavaScript Compiler
 
-### Installation
+## Installation
 
-Install Prerequisite
+### Install Prerequisite
 
     sudo apt-get install libtinfo-dev
 
 This installs directly into my local binary directory /home/roland/bin
+
+### Prepare $PATH .profile
+
+    # set PATH so it includes user's private bin if it exists
+    if [ -d "$HOME/Software/ghcjs/bin" ] ; then
+        PATH="$HOME/Software/ghcjs/bin:$PATH"
+    fi
+
+### Install ghcjs
 
 For GHCJS there is only one version active.
 
