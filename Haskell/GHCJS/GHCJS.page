@@ -18,8 +18,9 @@ For GHCJS there is only one version active.
 cd ~/Software
 mkdir ghcjs
 cd ghcjs
+mkdir bin
 cabal sandbox init
-cabal install --bindir=/home/roland/bin http://ghcjs.luite.com/master.tar.gz
+cabal install --bindir=/home/roland/Software/ghcjs/bin http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 ~~~
 
