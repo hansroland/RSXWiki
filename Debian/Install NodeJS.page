@@ -17,6 +17,9 @@ sudo n stable
 sudo apt-get remove npm
 :   Remove old versions of nodejs and npm
 
+sudo apt-get autoremove
+:   Remove all unused packages
+
 sudo n stable
 :   Reinstall npm
 
