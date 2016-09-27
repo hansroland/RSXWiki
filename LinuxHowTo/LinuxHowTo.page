@@ -8,6 +8,9 @@ toc: no
 
 * [Search for a File]()
 
+Reload .profile
+:   source ~/.profile
+
 
 ## Different Topics
 
