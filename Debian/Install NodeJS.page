@@ -5,19 +5,21 @@ toc: no
 
 # Install Node JS
 
-This uses a similar scheme as the multiple GHC version
+sudo apt-get install npm
+:   Install npm from Debian packet repository. This is an old version and called nodejs
 
-* Download X64 version from [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+sudo npm install n -g
+:   Install newest version of n to allow for multiple node versions
 
-~~~
-    cd Download
-    NODE_VERSION="v4.5.0"
-    tar xf node-$NODE_VERSION-linux-x64.tar.xz
-    sudo cp -rp node-$NODE_VERSION-linux-x64 /usr/local/
-    sudo ln -s /usr/local/node-$NODE_VERSION-linux-x64 /usr/local/node
-~~~
+sudo n stable
+:   Install current stable node/npm version 
 
-* Add /usr/local/node/bin to the $PATH in .profile
+sudo apt-get remove npm
+:   Remove old versions of nodejs and npm
+
+sudo n stable
+:   Reinstall npm
+
 
 # Update / Upgrade NodeJS
 
