@@ -34,13 +34,14 @@ cabal install  opaleye
 sudo -u postgres psql
 ~~~
 
-### Create a User
+### Create a User and his default database
 
 Note the semicolon (;) at the end
 
 ~~~
 CREATE ROLE roland PASSWORD '******';
 ALTER ROLE roland LOGIN CREATEDB;
+CREATE DATABASE roland;
 ~~~
 
 ### Login as a user
