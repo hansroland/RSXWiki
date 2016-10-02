@@ -22,19 +22,19 @@ sudo apt-get install haskell-platform
 
 ### Compile additional Haskell Software
 
-In ~/Software/Hackage do the following
+In ~/Software/Hackage-X.Y.Z do the following
 
 ~~~
-mkdir base
-cd base
+mkdir addons
+cd addons
 cabal sandbox init
 cabal install cabal-install
 ~~~
 
-* copy the *cabal* binary in .cabal-sandbox/bin to a direcotry in your path: eg *~/bin* or  */usr/local/bin*
+* copy the *cabal* binary in .cabal-sandbox/bin to the ~/Software/ghc-X.Y.Z/bin directory
 * logout und do a new login, so you will now use the newly built cabal program
 
-In the *~/Software/Hackage/base* install with cabal the followin packages
+In the *~/Software/Hackage/addons* install with cabal the following packages
 
 * alex
 * cpphs
@@ -42,8 +42,10 @@ In the *~/Software/Hackage/base* install with cabal the followin packages
 * happy
 * hlint
 * pandoc
+* ghc-mod
+* stylish-haskell
 
-Move the resulting binaries again to the local binary directory **/usr/local/bin** (use *sudo*)
+Move the resulting binaries again to the ~/Software/ghc-X.Y.Z/bin directory
 
 ### Get rid of the Debian binaries
 
