@@ -54,7 +54,7 @@ sudo apt-get remove haskell-platform
 sudo apt-get autoremove
 ~~~
 
-### Install additional compilers and utilities
+### (Re-)Install additional compilers and utilities
 
 ~~~
 sudo apt-get git
