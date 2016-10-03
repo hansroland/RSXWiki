@@ -30,6 +30,7 @@ Note: the extensions are coma separated
 ### Language Extensions to Generate Code
 
 * [DataKinds]()
+* [PolyKinds]()
 * [FunctionalDependencies]()
 * [TypeFamilies]()
 * [TypeOperators]()
