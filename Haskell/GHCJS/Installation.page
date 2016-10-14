@@ -1,0 +1,60 @@
+---
+toc: no
+...
+
+# Installation of GHCJS - The Haskell to JavaScript Compiler
+
+### Install Prerequisite Software
+
+    sudo apt-get install libtinfo-dev
+
+
+### Prepare $PATH .profile
+
+    # set PATH so it includes user's private bin if it exists
+    if [ -d "$HOME/Software/ghcjs/bin" ] ; then
+        PATH="$HOME/Software/ghcjs/bin:$PATH"
+    fi
+
+### Install ghcjs
+
+At the moment I have only one version of GHCJS active!
+
+~~~
+cd ~/Software
+mkdir ghcjs
+cd ghcjs
+mkdir bin
+cabal sandbox init
+cabal install --bindir=/home/roland/Software/ghcjs/bin http://ghcjs.luite.com/master.tar.gz
+ghcjs-boot
+~~~
+
+### Documentation
+
+There is an index over all functions at file:///home/roland/.ghcjs/x86_64-linux-0.2.0-7.10.3/ghcjs/doc/html/doc-index.html
+
+### Running in node
+
+* Compile your program with: ghcjs Hello.hs
+* node Hello.jsexe/all
+
+### Running interactive in the Browser
+
+* Install socket.io
+
+~~~
+npm install -g socket.io
+~~~
+
+* Start interactive ghcjs session
+
+~~~
+ghcjs --interactive
+~~~    
+
+* Connect from the browser to ghcjs
+
+~~~
+http://localhost:6400
+~~~
