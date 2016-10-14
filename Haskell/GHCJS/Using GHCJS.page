@@ -1,0 +1,48 @@
+---
+toc: no
+...
+
+# Using GHCJS - The Haskell to JavaScript Compiler
+
+### Installing packages
+
+    cabal install --ghcjs <package-name>
+
+
+### Running in node
+
+Compile and run
+
+~~~
+ghcjs <myfile>.hs
+node <myfile>.jsexe/all
+~~~
+
+### Running in the browser
+
+Compile and run
+
+~~~
+ghcjs <myfile>.hs
+~~~
+
+Point browser to 
+
+~~~
+../<myfile>.jsexe/index.html
+~~~
+
+
+### Running interactive in the Browser
+
+* Start interactive ghcjs session
+
+~~~
+ghcjs --interactive
+~~~    
+
+* Connect from the browser to ghcjs
+
+~~~
+http://localhost:6400
+~~~
