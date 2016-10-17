@@ -21,3 +21,26 @@ ghc --make Setup.hs
 cd $HOME/Downloads
 rm -rfv Cabal-1.22.4.0*
 ~~~
+
+# Installation Script Cabal Install 1.22.4
+
+~~~
+# get distribution
+cd ~/Downloads
+wget "https://www.haskell.org/cabal/release/cabal-install-1.22.4.0/cabal-install-1.22.4.0.tar.gz" 
+tar xzvf cabal-install-1.22.4.0.tar.gz
+
+# install
+cd cabal-install-1.22.4.0
+./bootstrap.sh
+
+# copy to current ghc bin directory
+# ATTENTION: CHANGE THE GHC VERSION !!!
+
+cp /home/roland/.cabal/bin/cabal /home/roland/Software/ghc-7.10.2/bin
+
+
+# remove temporary files  
+cd ~/Downloads 
+rm -rfv cabal-install-1.22.4.0*  
+~~~
