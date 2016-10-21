@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Reflex Events
+
+## Data Type
+
+### Basics
+
+* Events are Functors
+* Events can be shown when the type *a* is an instance of *show*
