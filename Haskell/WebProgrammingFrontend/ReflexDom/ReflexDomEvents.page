@@ -1,0 +1,17 @@
+---
+toc: no
+...
+
+# Reflex Dom Events
+
+## Getting an event out of a Dom element
+
+~~~ {.haskell}
+domEvent :: EventName en -> El -> Event (EventResultType en)
+~~~
+
+### Example
+
+~~~ {.haskell}
+   keyup <- domEvent Keyup domEl
+~~~
