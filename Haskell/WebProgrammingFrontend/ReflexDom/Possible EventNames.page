@@ -1,0 +1,52 @@
+---
+toc: no
+...
+
+# Reflex Dom: Possible EventNames for the DOM Event function
+
+*  Abort
+*  Blur
+*  Change
+*  Click
+*  Contextmenu
+*  Dblclick
+*  Drag
+*  Dragend
+*  Dragenter
+*  Dragleave
+*  Dragover
+*  Dragstart
+*  Drop
+*  Error
+*  Focus
+*  Input
+*  Invalid
+*  Keydown
+*  Keypress
+*  Keyup
+*  Load
+*  Mousedown
+*  Mouseenter
+*  Mouseleave
+*  Mousemove
+*  Mouseout
+*  Mouseover
+*  Mouseup
+*  Mousewheel
+*  Scroll
+*  Select
+*  Submit
+*  Wheel
+*  Beforecut
+*  Cut
+*  Beforecopy
+*  Copy
+*  Beforepaste
+*  Paste
+*  Reset
+*  Search
+*  Selectstart
+*  Touchstart
+*  Touchmove
+*  Touchend
+*  Touchcancel 
