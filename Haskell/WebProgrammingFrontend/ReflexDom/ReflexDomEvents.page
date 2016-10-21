@@ -15,3 +15,5 @@ domEvent :: EventName en -> El -> Event (EventResultType en)
 ~~~ {.haskell}
    keyup <- domEvent Keyup domEl
 ~~~
+
+[Possible EventNames]()
