@@ -1,0 +1,31 @@
+---
+toc: no
+...
+
+# grep - Search for a string in a file
+
+## Basic command
+
+    grep -<options> <path> -e "search-pattern"
+
+### Options
+
+* **-r**  recursive
+* **-n**  line numbers
+* **-w**  match whole word
+* **-i**  ignore case
+
+### Examples
+
+    grep -rni . -e "domEvent*
+
+Searches for the string *domEvent* in all sudirectories of the current directory
+
+## Advanced Options
+
+### Include only files of a certain file type
+
+    grep --include=*.{hs,lhs}  -rni ....
+    grep --include=*.hs -rni . -e "domEvent"
+
+ 
