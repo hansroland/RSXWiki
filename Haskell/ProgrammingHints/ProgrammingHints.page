@@ -16,9 +16,9 @@ ByteString has no encoding, so first we have to apply an encoding and then we ca
 
 import qualified Data.Text as T
 import Data.Text.Encoding
+import Data.ByteString
 
 toString :: ByteString -> String
-toString = T.unpack $ decodeUtf8
-
+toString = T.unpack . decodeUtf8
 
 ~~~
