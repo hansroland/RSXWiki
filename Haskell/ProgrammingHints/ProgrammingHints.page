@@ -7,3 +7,18 @@ toc: no
 ##  Text processing
 
 For text processing use the *text* library. Import Data.Text. See: [The text package](http://hackage.haskell.org/package/text)
+
+## Convert ByteString to String
+
+ByteString has no encoding, so first we have to apply an encoding and then we can unpack
+
+~~~ {.haskell}
+
+import qualified Data.Text as T
+import Data.Text.Encoding
+
+toString :: ByteString -> String
+toString = T.unpack $ decodeUtf8
+
+
+~~~
