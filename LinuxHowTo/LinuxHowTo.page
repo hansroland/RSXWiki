@@ -8,9 +8,8 @@ toc: no
 
 * [Search for a File]()
 * [Search for a String in a File](grep)
-
-Reload .profile
-:   source ~/.profile
+* [Reload .profile]()
+* [Look at new incoming entris of syslog]()
 
 
 ## Different Topics
