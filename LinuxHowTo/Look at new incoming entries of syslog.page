@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Look at new, incoming entries of syslog
+
+    sudo tail -f /var/log/syslog
+
+May be used for:
+
+* Check system messages when plugging-in new devices (eg USB)
