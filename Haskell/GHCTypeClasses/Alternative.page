@@ -16,6 +16,17 @@ class Applicative f => Alternative f where
     (<|>) :: f a -> f a -> f a
 ~~~
 
+The Alternative type class defines 2 additional functions. They are mostly used in parsers:
+
+~~~ { .haskell }
+some :: f a -> f [a] 
+some f = (:) <$> f <*> many f
+
+many :: f a -> f [a] 
+many f = some f <|> pure []
+~~~
+
+
 ## Instances
 
 ### Maybe
@@ -30,3 +41,5 @@ instance Alternative Maybe where
     Nothing <|> r = r
     l       <|> _ = l
 ~~~ 
+
+For the Maybe instance *some* and *many* do not make sense. They evaluate the value until it becomes false and collect the result in a list. So for non-Nothing values they loop
