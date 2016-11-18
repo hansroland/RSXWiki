@@ -1,0 +1,32 @@
+--- 
+toc: no
+...
+
+# Typeclass Alternative
+
+## Definition
+
+Typical use: We choose one value out of two
+
+~~~ { .haskell }
+class Applicative f => Alternative f where
+    -- | The identity of '<|>'
+    empty :: f a
+    -- | An associative binary operation
+    (<|>) :: f a -> f a -> f a
+~~~
+
+## Instances
+
+### Maybe
+
+We choose the first Non-Nothing value. 
+
+Usage: We several computations and we return the first that succeeds!
+
+~~~ { .haskell }
+instance Alternative Maybe where
+    empty = Nothing
+    Nothing <|> r = r
+    l       <|> _ = l
+~~~ 
