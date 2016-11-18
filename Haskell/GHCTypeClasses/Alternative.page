@@ -43,3 +43,42 @@ instance Alternative Maybe where
 ~~~ 
 
 For the Maybe instance *some* and *many* do not make sense. They evaluate the value until it becomes false and collect the result in a list. So for non-Nothing values they loop
+
+## Using the Alternative Type Class with the MaybeT Transformer
+
+This can be used together with the MaybeT transformer for the following problem: (See [http://www.parsonsmatt.org/2016/11/18/clean_alternatives_with_maybet.html](http://www.parsonsmatt.org/2016/11/18/clean_alternatives_with_maybet.html) )
+
+
+Read form Cache; if not-found, read from Database; if not-found fetch from remote API 
+
+~~~ { .haskell }
+getFromCache     :: String -> IO (Maybe Record)
+getFromDatabase  :: String -> IO (Maybe Record)
+getFromRemoteAPI :: String -> IO (Maybe Record)
+~~~
+
+**Ugly Solution**
+
+~~~ { .haskell }
+retrieveRecord :: String -> IO (Maybe Record)
+retrieveRecord name = do
+    mrec <- getFromCache name
+    case mrec of
+        Just rec -> pure (Just rec)
+        Nothing -> do
+            mrec' <- getFromDatabase name
+            case mrec' of
+                Just rec -> pure (Just rec)
+                Nothing ->
+                    getFromRemoteAPI name
+~~~ 
+
+**Nice Solution**
+
+~~~ { .haskell }
+retrieveRecord :: String -> IO (Maybe Record)
+retrieveRecord name = runMaybeT 
+     $  MaybeT (getFromCache name)
+    <|> MaybeT (getFromDatabase name)
+    <|> MaybeT (getFromRemoteAPI name)
+~~~
