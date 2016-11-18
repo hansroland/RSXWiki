@@ -25,6 +25,7 @@ In ghci use the **:i[nfo]** Command eg: *:i Functor*
 * [Monad Instances]()
 * [Predefined Monads]()
 * [MonadPlus]()
+* [Alternative]()
 
 ## Special Classes
 * [Comonad]()
