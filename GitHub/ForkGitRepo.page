@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Forking a foreign Repository
+
+* Github: Go to the foreign repo and click the **Fork** button (up right)
+* Github will fork the repository and present the page of my repo
+* Github: Get https address from own repository: Click on **Clone or download** button, choose https and copy address to clipboard.
+* Terminal: cd ~/Projekte
+* Terminal: Clone repo  **git clone [addres-of-my-repo]**
+* Terminal: Go to the new directory: **cd [repo-directory]**
