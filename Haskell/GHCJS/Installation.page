@@ -18,16 +18,18 @@ toc: no
 
 ### Install ghcjs
 
-At the moment I have only one version of GHCJS active!
+Several GHCJS versions can be install in parallel. The method is similar to several parallel GHC versions
 
 ~~~
 cd ~/Software
-mkdir ghcjs
-cd ghcjs
+mkdir ghcjs-x.y.z
+cd ghcjs-x.y.z
 mkdir bin
 cabal sandbox init
-cabal install --bindir=/home/roland/Software/ghcjs/bin http://ghcjs.luite.com/master.tar.gz
-ghcjs-boot
+cabal install --bindir=/home/roland/Software/ghcjs-x.y.z/bin http://ghcjs.luite.com/master.tar.gz
+switchghcjs x.y.z
+cd bin
+./ghcjs-boot
 ~~~
 
 ### Install soket.io in the browser to allow interactive usage
