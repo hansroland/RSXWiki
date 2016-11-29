@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Add a new Branch to a Git Repository
+
+
+~~~
+git checkout -b <new-branch-name>
+git push origin <new-branch-name>
+~~~
