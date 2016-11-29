@@ -18,7 +18,7 @@ toc: no
 
 ### Install ghcjs
 
-Several GHCJS versions can be install in parallel. The method is similar to several parallel GHC versions
+Several GHCJS versions can be installed in parallel. The method is similar to several parallel GHC versions.
 
 ~~~
 cd ~/Software
