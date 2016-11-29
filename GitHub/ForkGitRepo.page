@@ -10,3 +10,5 @@ toc: no
 * Terminal: cd ~/Projekte
 * Terminal: Clone repo  **git clone [addres-of-my-repo]**
 * Terminal: Go to the new directory: **cd [repo-directory]**
+* Github: Take https address from foreign repository into the clipboard
+* Terminal: **git remote add upstream [adress-of foreign-repo]** 
