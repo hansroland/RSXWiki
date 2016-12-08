@@ -1,0 +1,14 @@
+---
+toc: no
+...
+
+# CSS Selector Types
+
+    h1            Select all <h1> elements
+    .class        Select all elements with class
+    #id           Select all elements with #id
+    *             Select all elements
+    div, p        Select all <div> and <p> elements
+    div > p       Select all <p> elements, that are a direct descendant of a <div>
+    div + p       Select all <p> elements, that are next sibling (placed directly after) a <div> element
+    
