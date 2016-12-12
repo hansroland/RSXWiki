@@ -1,5 +1,12 @@
 # Reflex / Reflex-Dom: Useful Functions
 
+## E
+
+~~~{ .haskell }
+-- Create a basic html element
+el :: forall t m a. MonadWidget t m => Text -> m a -> m a 
+~~~
+
 ## M
 
 ~~~{ .haskell }
