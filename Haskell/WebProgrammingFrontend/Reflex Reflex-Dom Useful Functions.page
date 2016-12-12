@@ -3,17 +3,17 @@
 ## M
 
 ~~~{ .haskell }
-
-mainWidget
+-- Create a main widget with a body element
+mainWidget :: Widget Spider (Gui Spider (WithWebView SpiderHost) (HostFrame Spider)) () -> IO () 
 ~~~
 
 
 ~~~{ .haskell }
-
-mainWidgetWithCss
+-- Create a main idget with an embeded css style file
+mainWidgetWithCss :: ByteString -> Widget Spider (Gui Spider (WithWebView SpiderHost) (HostFrame Spider)) () -> IO () 
 ~~~
 
 ~~~{ .haskell }
-mainWidgetWithHead
+mainWidgetWithHead :: Widget Spider (Gui Spider (WithWebView SpiderHost) (HostFrame Spider)) () -> Widget Spider (Gui Spider (WithWebView SpiderHost) (HostFrame Spider)) () -> IO () 
 
 ~~~
