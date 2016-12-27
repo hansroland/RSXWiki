@@ -7,8 +7,20 @@ toc: no
 ## Code for reflex-dom-0.3
 
 ~~~ { .haskell }
+main :: IO ()
+main = mainWidget $ el "div" $ do
+  el "h1" $ text "Checkbox"
+  
+  cb1 <- checkbox True $ def & checkboxConfig_attributes .~ constDyn ("class" =: "cssClass")
+  text "Click me"
+  
+  el "p" $ return ()
+  cbState <- mapDyn checkedState $ value cb1 
+  dynText cbState 
 
-
+checkedState :: Bool -> String
+checkedState True = "Checkbox is checked"
+checkedState _    = "Checkbox is not checked"
 ~~~
 
 ## Code for reflex-dom-0.4
