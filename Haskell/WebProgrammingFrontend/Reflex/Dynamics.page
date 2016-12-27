@@ -1,0 +1,28 @@
+---
+toc: no
+...
+
+# Dynamic
+
+A container for a value that can change over time and allows
+notifications on changes.  Basically a combination of a 'Behavior' and an
+'Event', with a rule that the 'Behavior' will change if and only if the
+'Event' fires.
+
+~~~ { .haskell }
+data Dynamic t :: * -> *
+~~~
+ 
+
+
+## Conversion functions
+
+### Extract the Behavior of a Dynamic
+~~~ { .haskell }
+  current :: Dynamic t a -> Behavior t a
+~~~
+
+### Extract the Event of the 'Dynamic'.
+~~~ { .haskell }
+  updated :: Dynamic t a -> Event t a
+~~~
