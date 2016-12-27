@@ -1,0 +1,30 @@
+---
+toc: no
+...
+
+# Checkbox
+
+## Code for reflex-dom-0.3
+
+~~~ { .haskell }
+
+
+~~~
+
+## Code for reflex-dom-0.4
+
+~~~ { .haskell }
+main = mainWidget $ el "div" $ do
+  el "h1" $ text "Checkbox"
+  
+  cb1 <- checkbox True $ def & checkboxConfig_attributes .~ constDyn ("class" =: "cssClass")
+  text "Click me"
+  
+  el "p" $ return ()
+  let cbState = checkedState <$> value cb1 
+  dynText cbState 
+
+checkedState :: Bool -> T.Text
+checkedState True = "Checkbox is checked"
+checkedState _    = "Checkbox is not checked"
+~~~
