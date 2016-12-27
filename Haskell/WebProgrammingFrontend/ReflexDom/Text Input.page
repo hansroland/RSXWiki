@@ -34,3 +34,8 @@ t <- textInput $
 
 ~~~
 
+### Example with multiple attributes
+
+~~~ { .haskell }
+
+~~~
