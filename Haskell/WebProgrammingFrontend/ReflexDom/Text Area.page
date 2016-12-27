@@ -1,0 +1,36 @@
+---
+toc: no
+...
+
+# Textarea
+ 
+## Samples
+
+~~~ { .haskell }
+
+~~~
+
+### Initial Text
+
+~~~ { .haskell }
+
+~~~
+
+### Input Hint (aka Placeholder)
+
+~~~ { .haskell }
+
+~~~
+
+### Maximal Length
+
+~~~ { .haskell }
+
+~~~
+
+### Password
+
+~~~ { .haskell }
+
+~~~
+
