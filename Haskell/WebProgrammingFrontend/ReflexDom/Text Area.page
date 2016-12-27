@@ -25,7 +25,8 @@ toc: no
 ### Maximal Length
 
 ~~~ { .haskell }
-
+textBox <- textArea $ 
+        def & attributes .~ constDyn("maxlength" =: "14")
 ~~~
 
 ### Password
