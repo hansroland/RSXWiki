@@ -8,10 +8,6 @@ A single line input element
  
 ## Samples
 
-~~~ { .haskell }
-
-~~~
-
 ### Initial Text
 
 ~~~ { .haskell }
@@ -21,7 +17,8 @@ t <- textInput $ def & textInputConfig_initialValue .~ "input"
 ### Input Hint (aka Placeholder)
 
 ~~~ { .haskell }
-
+t <- textInput $ 
+        def & attributes .~ constDyn("placeholder" =: "type something")
 ~~~
 
 ### Maximal Length
