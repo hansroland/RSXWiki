@@ -40,3 +40,21 @@ checkedState :: Bool -> T.Text
 checkedState True = "Checkbox is checked"
 checkedState _    = "Checkbox is not checked"
 ~~~
+
+## Code for reflex-dom-0.4 : Allow Click on Text
+
+~~~ { .haskell }
+main = mainWidget $ el "div" $ do
+  el "h1" $ text "Checkbox"
+  cb <- el "label" $ do
+    cb1 <- checkbox True $ def & checkboxConfig_attributes .~ constDyn ("class" =: "cssClass")
+    text "Click me"
+    return cb1
+  el "p" $ return ()
+  let cbState = checkedState <$> value cb  
+  dynText cbState 
+
+checkedState :: Bool -> T.Text
+checkedState True = "Checkbox is checked"
+checkedState _    = "Checkbox is not checked"
+~~~
