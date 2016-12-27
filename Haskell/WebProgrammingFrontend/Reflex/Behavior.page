@@ -1,0 +1,20 @@
+---
+toc: no
+...
+
+# Behavior
+
+A container for a value that can change over time.  'Behavior's can be
+sampled at will, but it is not possible to be notified when they change
+
+~~~ { .haskell }
+data Behavior t :: * -> *
+~~~
+
+## Conversion Functions 
+
+~~~ { .haskell }
+-- | Create an 'Event' that will occur whenever the currently-selected input 'Event' occurs
+
+switch :: Behavior t (Event t a) -> Event t a
+~~~
