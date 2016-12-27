@@ -25,7 +25,7 @@ t <- textInput $
 
 ~~~ { .haskell }
 t <- textInput $ 
-        def & attributes .~ constDyn("maxlength" =: "14")
+        def & attributes .~ constDyn ("maxlength" =: "14")
 ~~~
 
 ### Password
@@ -34,8 +34,8 @@ t <- textInput $
 
 ~~~
 
-### Example with multiple attributes
+### Example with multiple attributes (placeholder + maxlength)
 
 ~~~ { .haskell }
-
+t <- textInput $  def & attributes .~ constDyn ("placeholder" =: "Max 6 chars" <> "maxlength" =: "6")
 ~~~
