@@ -1,0 +1,39 @@
+---
+toc: no
+...
+
+# Text Input
+
+A single line input element
+ 
+## Samples
+
+~~~ { .haskell }
+
+~~~
+
+### Initial Text
+
+~~~ { .haskell }
+t <- textInput $ def & textInputConfig_initialValue .~ "input"
+~~~
+
+### Input Hint (aka Placeholder)
+
+~~~ { .haskell }
+
+~~~
+
+### Maximal Length
+
+~~~ { .haskell }
+t <- textInput $ 
+        def & attributes .~ constDyn("maxlength" =: "14")
+~~~
+
+### Password
+
+~~~ { .haskell }
+
+~~~
+
