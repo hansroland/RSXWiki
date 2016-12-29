@@ -13,8 +13,13 @@ toc: no
 
 ## Conversion Functions
 
+### Replace the value of an Event with the value of a Behavior
+
+Usage: Add data to a button click event
+
 ~~~ { .haskell }
 -- | Replace each occurrence value of the 'Event' with the value of the
 -- 'Behavior' at the time of that occurrence.
 tag :: Reflex t => Behavior t b -> Event t a -> Event t b
+
 ~~~
