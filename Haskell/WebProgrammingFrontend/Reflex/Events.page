@@ -10,3 +10,11 @@ toc: no
 
 * Events are Functors
 * Events can be shown when the type *a* is an instance of *show*
+
+## Conversion Functions
+
+~~~ { .haskell }
+-- | Replace each occurrence value of the 'Event' with the value of the
+-- 'Behavior' at the time of that occurrence.
+tag :: Reflex t => Behavior t b -> Event t a -> Event t b
+~~~
