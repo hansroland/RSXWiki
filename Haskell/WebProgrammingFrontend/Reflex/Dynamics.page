@@ -17,12 +17,22 @@ data Dynamic t :: * -> *
 
 ## Conversion functions
 
-### Extract the Behavior of a Dynamic
+### current - Extract the Behavior of a Dynamic
 ~~~ { .haskell }
   current :: Dynamic t a -> Behavior t a
 ~~~
 
-### Extract the Event of the 'Dynamic'.
+### updated - Extract the Event of the 'Dynamic'.
 ~~~ { .haskell }
   updated :: Dynamic t a -> Event t a
 ~~~
+ 
+
+### tagDyn: Replace the value of an Event with the value of a Behavior
+
+~~~ { .haskell }
+-- | Replace the value of the Event with the current value of the Dynamic each time the Event occurs.
+tagDyn :: Reflex t => Dynamic t a -> Event t b -> Event t a 
+~~~
+
+Note:  `tag (current d) e` is preferred.
