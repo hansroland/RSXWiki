@@ -25,6 +25,7 @@ toc: no
 
 ## Tools
 
+* [Stack](Stack/Stack)
 * [Cabal](Cabal/Cabal)
 * [Hlint](Hlint/Hlint)
 
