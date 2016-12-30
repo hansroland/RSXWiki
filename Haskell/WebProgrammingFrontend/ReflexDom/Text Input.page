@@ -5,7 +5,15 @@ toc: no
 # Text Input
 
 A single line input element
- 
+
+### Creation
+
+Create an input whose value is a string. By default, the "type" attribute is set to "text", but it can be changed using the _textInputConfig_inputType field. Note that only types for which the value is always a string will work - types whose value may be null will not work properly with this widget.
+
+~~~ { .haskell }
+textInput :: MonadWidget t m => TextInputConfig t -> m (TextInput t) 
+~~~
+
 ## Samples
 
 ### Initial Text
