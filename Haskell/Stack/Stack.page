@@ -1,0 +1,19 @@
+---
+toc: no
+...
+
+# Stack
+
+## Most important commands
+
+### Setting up the stack environnement
+
+    stack new    -- start from scratch
+
+    stack init   -- start, when a cabal file is already here
+
+### Building and compiling
+
+    stack setup
+
+    stack build
