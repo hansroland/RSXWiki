@@ -2,7 +2,16 @@
 toc: no
 ...
 
-# Installation Script to install GTK
+# Installation Script to install GTK-3 / Webkit GTK
+
+## Prerequistes from Debian Ubuntu
+
+~~~
+sudo apt-get install pkconf
+sudo apt-get install libwebgtk-3.0-dev
+~~~
+
+# Installation Script to install GTK-2
 
 ## Prerequistes from Debian
 
@@ -17,6 +26,4 @@ cabal install gtk2hs-buildtools -j4
 cabal install alex
 cabal install happy
 ~~~
-
-
 
