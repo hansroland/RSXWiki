@@ -1,0 +1,51 @@
+---
+toc: no
+...
+
+# Create a Ubuntu Xen Guest
+
+See: [http://weidner.in-bad-schmiedeberg.de/computer/linux/xen/ubuntu-trusty-tahr-xen-domu/](http://weidner.in-bad-schmiedeberg.de/computer/linux/xen/ubuntu-trusty-tahr-xen-domu/)
+
+## Download an ubuntu system
+
+    sudo mkdir -p /var/lib/xen/images/ubuntu-netboot/xenical16LTS
+    cd /var/lib/xen/images/ubuntu-netboot/xenical16LTS
+
+    ARCHIV="http://ftp.halifax.rwth-aachen.de/ubuntu/dists/xenial/main
+    sudo wget $ARCHIV/installer-amd64/current/images/netboot/xen/vmlinuz
+    sudo wget $ARCHIV/installer-amd64/current/images/netboot/xen/initrd.gz
+
+## Prepare the Virtual machine
+
+### Create a disk on the xen-vg group
+
+    sudo lvcreate -n ubuntu -L 40G xen-vg
+
+### Create the following file /etc/xen/ubuntu.cfg
+
+    name = "ubuntu"
+    memory = 2048
+    disk = ['/dev/xen-vg/ubuntu,raw,xvda,rw']
+    vif = [' ']
+    kernel = "/var/lib/xen/images/ubuntu-netboot/xenical16LTS/vmlinuz"
+    ramdisk = "/var/lib/xen/images/ubuntu-netboot/xenical16LTS/initrd.gz"
+    extra = "debian-installer/exit/always_halt=true -- console=hvc0"
+
+### Start of the new system
+
+    sudo xl create -c ubuntu.cfg
+
+Do the installation!
+
+### Modify file /etc/xen/ubuntu.cfg
+
+    name = "ubuntu"
+    memory = 2048
+    bootloader = "pygrub"
+    extra = "root=/dev/xvda1"
+    disk = ['/dev/xen-vg/ubuntu,raw,xvda,rw']
+    vif = [' ']
+
+### Restart new system
+
+    sudo xl create -c ubuntu.cfg
