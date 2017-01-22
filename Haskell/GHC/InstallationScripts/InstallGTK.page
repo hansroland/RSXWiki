@@ -11,6 +11,10 @@ sudo apt-get install pkconf
 sudo apt-get install libwebgtk-3.0-dev
 ~~~
 
+~~~
+cabal install webkitgtk3
+~~~
+
 # Installation Script to install GTK-2
 
 ## Prerequistes from Debian
