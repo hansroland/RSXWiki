@@ -1,0 +1,17 @@
+---
+toc: no
+...
+
+# Install Visual Studio Code
+
+## Delete the installed version
+
+    sudo apt-get remove code
+
+## Install the new version
+
+* Download from [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+~~~
+sudo dpkg -i <downloaded.deb-file>
+~~~
