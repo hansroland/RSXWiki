@@ -16,6 +16,10 @@ This is the main page about the GitHub service
 
     git push origin master
 
+#### For a forked rep fetch all changes from original repo 
+
+    git fetch upstream
+
 ## Addtional How To's
 
 * [Adding a new feature to a foreign project](AddFeature)
