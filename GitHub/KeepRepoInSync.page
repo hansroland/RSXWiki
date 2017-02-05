@@ -1,0 +1,12 @@
+---
+toc:no
+...
+
+# Github - Keep a Repository in Sync with the remote base
+
+~~~
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push origin master
+~~~
