@@ -1,0 +1,26 @@
+---
+toc: no
+...
+
+# Actions After a Merge of a Submitted Pull Request
+
+After a merge of a pull request do the following:
+
+### Clean up Pull Request Branch of Product Repo
+
+* Goto the repository that received the pull request
+* Click pull request / choose closed pull requests
+* Open your pull request
+* Scroll down, just above the new comment box, click button 'Delete Branch' 
+
+### Delete local branch
+
+~~~
+git branch --delete <branch>
+~~~
+
+### Delete remote branch
+
+~~~
+git push origin --delete <branch>
+~~~
