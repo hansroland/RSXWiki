@@ -16,9 +16,6 @@ This is the main page about the GitHub service
 
     git push origin master
 
-#### For a forked rep fetch all changes from original repo 
-
-    git fetch upstream
 
 ## Addtional How To's
 
@@ -29,3 +26,4 @@ This is the main page about the GitHub service
 * [Cloning a repository](CloneGitRepo)
 * [Forking a repository](ForkGitRepo)
 * [Add new branch to Repository](NewBranchGitRepo)
+* [Keep forked repository in sync with the remote base](KeepRepoInSync)
