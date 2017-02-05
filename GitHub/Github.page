@@ -27,3 +27,4 @@ This is the main page about the GitHub service
 * [Forking a repository](ForkGitRepo)
 * [Add new branch to Repository](NewBranchGitRepo)
 * [Keep forked repository in sync with the remote base](KeepRepoInSync)
+* [After a Merge of a Pull Request](AfterMergeOfPullRequest)
