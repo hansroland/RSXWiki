@@ -32,3 +32,8 @@ then go to the window to capture. Click with the cross-hair mouse pointer. The s
 With gdm root cannot login!
 
 If you need to login with root do **Alt-Ctrl-F1**. This gives the non-graphcal linux login pompt
+
+### Set the default application for a file type
+
+* Select a file in *Nautilus* with this file type, use context menu (right mouse) Properties / Eigenschaften
+* Click Tab "Open with" / "Öffnen mit" -> Select Application and click "Als Vorgabe festlegen"
