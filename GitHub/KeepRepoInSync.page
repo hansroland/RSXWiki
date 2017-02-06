@@ -4,9 +4,11 @@ toc:no
 
 # Github - Keep a Repository in Sync with the remote base
 
+Replace ```<master>``` with the name of the default branch
+
 ~~~
 git fetch upstream
-git checkout master
-git merge upstream/master
-git push origin master
+git checkout <master>
+git merge upstream/<master>
+git push origin <master>
 ~~~
