@@ -4,7 +4,8 @@ toc: no
 
 # GHCJS - The Haskell to JavaScript Compiler
 
-* [Installation]()
+* [Installation GHCJS]()
+* [Installation of Reflex/Reflex.Dom]()
 * [Documentation]()
 * [Using GHCJS]()
 
