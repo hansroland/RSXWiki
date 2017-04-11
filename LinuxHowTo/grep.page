@@ -17,7 +17,7 @@ toc: no
 
 ### Examples
 
-    grep -rni . -e "domEvent*
+    grep -rni . -e "domEvent"
 
 Searches for the string *domEvent* in all sudirectories of the current directory
 
