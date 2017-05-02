@@ -4,6 +4,16 @@ toc: no
 
 # Stack
 
+## Minimal stack.yaml file
+
+~~~
+resolver: lts-7.19
+flags: {}
+packages:
+- '.'
+extra-deps: []
+~~~
+
 ## Most important commands
 
 ### Setting up the stack environnement
