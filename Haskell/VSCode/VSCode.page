@@ -1,0 +1,14 @@
+---
+toc: no
+...
+
+# Visual Studio Code
+
+## Aktivate Haskero
+
+* stack setup
+* stack build
+* stack build intero
+* code .
+
+Now Haskero should be activated, and after som time, ready to use.
