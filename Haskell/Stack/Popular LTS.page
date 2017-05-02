@@ -1,0 +1,21 @@
+---
+toc: no
+...
+
+# Stack Popular Lts Versions
+
+## GHC 8.0.2
+
+* Lts-8.12
+
+
+## GHC 8.0.1
+
+* Lts-7.03
+* Lts-7.19
+
+
+## GHC 7.10.3
+
+* Lts-6.29
+* Lts 6.25
