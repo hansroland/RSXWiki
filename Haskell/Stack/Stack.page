@@ -28,6 +28,10 @@ extra-deps: []
 
     stack build
 
+### Enabling intero
+
+    stack build intero   -- must be done in every project !! 
+
 ## Other Stuff
 
 * [Popular LTS]()
