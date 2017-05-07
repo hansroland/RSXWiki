@@ -4,6 +4,23 @@ toc: no
 
 # Cabal Packet Manager
 
+## Cabal Subcommands
+
+cabal configure --enable-tests
+:    configure to build tests
+
+cabal configure -f <flag>
+:    set the compilation flag <flag> to True
+
+cabal configure -f <-flag>
+:    set the compilation flag <flag> to False
+
+cabal haddock
+:    Build the documentation
+
+cabal test
+:    Run the tests
+
 ## Nix Style Builds
 
 Nix-style cabal builds allow to have multiple versions of a package in the local Haskell package store.
