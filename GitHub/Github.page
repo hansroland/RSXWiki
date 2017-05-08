@@ -19,7 +19,8 @@ This is the main page about the GitHub service
 
 ## Addtional How To's
 
-* [Adding a new feature to a foreign project](AddFeature)
+* [Add a new feature to an own project](AddOwnFeature)
+* [Add a new feature to a foreign project](AddFeature)
 * [Connect to an existing own Github repository](ConnectToExisting)
 * [Look at an earlier version](EarlierVersion)
 * [Revert a single file to the last committed version](RevertFileToLastCommittedVersion)
