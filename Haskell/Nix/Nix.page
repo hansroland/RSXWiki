@@ -10,4 +10,4 @@ The project try-reflex installs a nix shell. Here are some commands:
 
     nix-env -f '<nixpkgs>' -qaPA haskellPackages|grep myPackage
 
-Use package name instead of xxxx
+Use package name instead of myPackage
