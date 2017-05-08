@@ -4,12 +4,18 @@ toc: no
 
 # Add new Feature to Own Project
 
-* git branch <branchname>
-* git checkout <branchname>
+Create a new branch
 
-Work and commit
+    git branch <branchname>
+    git checkout <branchname>
 
-* git checkout master
-* git merge <branchname>
+Work and commit!
 
-* git branch -d <branchname>
+Merge new feature to master branch
+
+    git checkout master
+    git merge <branchname>
+
+Delet branch when successfully pushed to Github
+
+    git branch -d <branchname>
