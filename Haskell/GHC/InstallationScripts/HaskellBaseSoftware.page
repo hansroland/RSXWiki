@@ -23,5 +23,5 @@ cabal install haddock -j4
 cabal install hlint -j4
 cabal install pandoc -j4
 
-cp .cabal-sandbox/bin/* ~/Software/bin
+cp .cabal-sandbox/bin/* ~/Software/ghc/bin
 ~~~
