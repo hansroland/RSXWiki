@@ -9,7 +9,7 @@ toc: no
 ### GHC 8.0.2
 
 ~~~
-resolver: lts-8.12
+resolver: lts-8.17
 flags: {}
 packages:
 - '.'
@@ -39,6 +39,12 @@ extra-deps: []
     stack setup
 
     stack build
+
+### Running a program with stack
+
+    stack exec my-prog          -- where myprog is the cabal name of the executable
+
+    stack runghc src/Main.hs    -- to run the main() function in thi file
 
 ### Enabling intero
 
