@@ -1,0 +1,15 @@
+---
+toc: no
+...
+
+# Git - Working with Remote Branches
+
+## List the remote branches
+
+    git branch -r
+
+## Checkout a remote branch
+
+    git checkout origin/remote-branch-name
+
+Note: You cannot commit to such a remote branch
