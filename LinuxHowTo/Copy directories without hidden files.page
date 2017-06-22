@@ -1,0 +1,7 @@
+---
+toc: no
+...
+
+## Copy directories without hidden files
+
+    rsync -av --exclude=".*" src dest
