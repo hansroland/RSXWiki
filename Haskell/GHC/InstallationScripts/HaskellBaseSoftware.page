@@ -9,7 +9,7 @@ toc: no
 
 cabal update
 
-cd ~/Software/Hackage
+cd ~/Software/ghc-x.y.z/Hackage
 
 mkdir base
 cd base
