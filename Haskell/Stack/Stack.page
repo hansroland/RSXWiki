@@ -30,9 +30,9 @@ extra-deps: []
 
 ### Setting up the stack environnement
 
-    stack new    -- start from scratch
+    stack new --resolver lts-x.yy      -- start from scratch
 
-    stack init   -- start, when a cabal file is already here
+    stack init --resolver lts-x.yy     -- start, when a cabal file is already here
 
 ### Building and compiling
 
