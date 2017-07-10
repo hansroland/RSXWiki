@@ -19,7 +19,7 @@ extra-deps: []
 ### GHC 8.0.1
 
 ~~~
-resolver: lts-7.19
+resolver: lts-7.24
 flags: {}
 packages:
 - '.'
