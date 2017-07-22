@@ -16,8 +16,11 @@ wget http://downloads.haskell.org/~ghc/8.2.1-rc3/ghc-8.2.0.20170704-x86_64-deb8-
 mv ghc-8.2.0.20170704-x86_64-deb8-linux.tar.xz ghc-8.2.1-x86_64-deb8-linux.tar.xz
 
 
- 
 tar xvfJ ghc-8.2.1-x86_64-deb8-linux.tar.xz
+
+# This is a RELEASE candidate
+mv ghc-8.2.0.20170704 ghc-8.2.1
+
 cd ghc-8.2.1 
 
 # install  
