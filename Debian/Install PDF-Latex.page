@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Install PDF-Latex 
+
+PDF-Latex is used to create slides from markdown files
+
+    sudo apt-get install texlive-latex-base
+    sudo apt-get install texlive-latext-extra
+
+Note: It's **tex** and not tex**t** 
