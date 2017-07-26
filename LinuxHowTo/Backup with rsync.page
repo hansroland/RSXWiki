@@ -1,0 +1,13 @@
+---
+toc: no
+...
+
+#Backup
+
+
+## backup User Data
+
+
+Go to the TARBET directory to write the data
+
+     rsync -av --exclude=".local/share/Trash/*"  ~ .
