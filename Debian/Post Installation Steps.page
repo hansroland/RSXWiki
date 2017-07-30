@@ -55,6 +55,16 @@ Add the line and save
     deb http://security.debian.org/ jessie/updates main contrib non-free
 
 
+### Check Swap files
+
+If installed on a machine with LVM volumes, Debian takes all swap partitions and attaches them to the DOM-0 domain.
+
+To give back swap partitions to DOM-U machines do:
+
+    sudo gedit /etc/fstab
+    Check all swap entries and delete those belonging to a DOM-U client
+
+
 ### Install Additional Packages
 
 ~~~
