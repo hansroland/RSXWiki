@@ -1,0 +1,13 @@
+---
+toc: no
+...
+
+# Change Boot Order
+
+After installation of Xen, Grub boots still Debian without Xen Hypervisor. To change do the following
+
+
+    sudo mv /etc/grub.d/10_linux /etc/grub.d/21_linux
+    sudo update-grub
+
+The procedure with setting the default entry in */etc/default/grub* did not work!
