@@ -9,3 +9,4 @@ See: [wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide](https://wiki.xenproj
 * [Create a Ubuntu Xen Guest]()
 * [Managing Xen Guests]()
 * [Managing LVM Volumes]()
+* [Change Boot Order]()
