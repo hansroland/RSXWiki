@@ -2,6 +2,10 @@
 toc: no
 ...
 
+# Find out Installed Versions
+
+    ls ~/.stack/snapshots/<TAB>
+
 # Stack Popular Lts Versions
 
 ## GHC 8.0.2
