@@ -7,3 +7,9 @@ toc:no
 ### View Result for Markdown files
 
 **Ctrl-Shift-V**
+
+### View HTML file in browser
+
+**Ctrl-Shift-B**
+
+But first do [this configuration step](https://stackoverflow.com/questions/30039512/how-to-view-my-html-code-in-browser-with-visual-studio-code)
