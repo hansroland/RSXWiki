@@ -55,6 +55,15 @@ Interpretation:
 means: Lift the function f into the context A and apply it the arguments separated by the <*>
 ~~~
 
+Compare the operators:
+
+
+~~~ {.haskell}
+  ($)   ::   (a -> b) ->   a ->   b             -- function application
+ (<$>)  ::   (a -> b) -> f a -> f b             -- fmap
+ (<*>)  :: f (a -> b) -> f a -> f b             -- ap = apply in Applicative
+~~~
+
 ## Laws
 
 ~~~ {.haskell}
