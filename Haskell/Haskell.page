@@ -18,11 +18,11 @@ toc: no
 * [GHC Libraries](GHCLibraries/GHCLibraries)
 * [GHC Type Classes](GHCTypeClasses/GHCTypeClasses)
 
-## IDEs and Editors
+## REPLs, IDEs and Editors
 
+* [GHCi](GHCi/GHCi)
 * [Visual Studio Code](VSCode/VSCode)
 * [Atom](Atom/Atom)
-* [Leksah](Leksah/Leksah)
 
 ## Tools
 
