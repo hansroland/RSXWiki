@@ -12,3 +12,8 @@ toc: no
 Result:
 
     fmap @Maybe :: (a -> b) -> Maybe a -> Maybe b
+
+Use underscore for data types with more than one polymorphic type variables
+
+    :type fmap @(Either _)
+    :type fmap @((->) _)
