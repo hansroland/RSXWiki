@@ -1,0 +1,14 @@
+---
+toc: no
+...
+
+# GHCi Tricks and Tipps
+
+### Show type class functions specialized for one type class
+
+    :set -XTypeApplications
+    :type fmap @Maybe
+
+Result:
+
+    fmap @Maybe :: (a -> b) -> Maybe a -> Maybe b
