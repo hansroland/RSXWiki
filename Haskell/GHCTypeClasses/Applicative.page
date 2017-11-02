@@ -103,6 +103,12 @@ Just(+) <*>  Just 6 <*> Just 9
 
 In <*> apply each function from the left list to each element from the right list. (Kind of a multiplication)
 
+The specialization of the applicative type class for lists:
+
+    (<*>) :: [] (a -> b)  -> [] a -> [] b
+          or
+    (<*>) :: [(a -> b)]   -> [a]  -> [b]
+
 Examples:
 
 ~~~ {.haskell}
