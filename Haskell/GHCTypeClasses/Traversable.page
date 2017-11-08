@@ -27,6 +27,13 @@ class (Functor t, Foldable t) => Traversable t where
 
 Note: *sequenceA* flips the Applicative and the Traversable context
 
+### Compare sequenceA with sequence:
+
+~~~ { .haskell }
+sequence  :: (Monad m,       Traversable t) => t (m a) -> m (t a)
+sequenceA :: (Applicative f, Traversable t) => t (f a) -> f (t a)
+~~~
+
 ## Other Functions
 
 ## Instances
