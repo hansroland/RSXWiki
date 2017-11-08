@@ -17,3 +17,12 @@ Use underscore for data types with more than one polymorphic type variables
 
     :type fmap @(Either _)
     :type fmap @((->) _)
+
+### Display the Data Types and Functions of a Library
+
+    :browse Data.Foldable
+
+Note: The library must be imported into the current GHCi scope with an import statement in the code 
+or with a GHCi import command.
+
+:b is **not** an abbreviation for :browse
