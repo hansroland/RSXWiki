@@ -18,13 +18,15 @@ In ghci use the **:i[nfo]** Command eg: *:i Functor*
 
 ## Standard Classes
 
+* [Monoid]()
 * [Functor]()
 * [Applicative]()
-* [Monoid]()
 * [Monad]()
 * [Monad Instances]()
 * [Predefined Monads]()
 * [MonadPlus]()
+* [Foldable]()
+* [Traversable]()
 * [Alternative]()
 
 ## Special Classes
