@@ -1,0 +1,17 @@
+---
+toc: no
+...
+
+# Typeclass Foldable
+
+## Overview
+
+## Definition
+
+## Other Functions
+
+~~~ { .haskell }
+sum :: Num a => t a -> a
+~~~ 
+
+Note: sum takes the value(s) out of the container / context. For **Maybe**s a default for *Nothing* is assumed!
