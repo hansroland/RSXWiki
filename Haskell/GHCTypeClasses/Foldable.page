@@ -34,6 +34,11 @@ class Foldable t where
 ## Other Functions
 
 ~~~ { .haskell }
+-- | List of elements of a structure, from left to right.
+toList :: t a -> [a]
+~~~ 
+
+~~~ { .haskell }
 sum     :: Num a => t a -> a
 product :: Num a => t a -> a
 ~~~ 
