@@ -11,7 +11,8 @@ toc: no
 ## Other Functions
 
 ~~~ { .haskell }
-sum :: Num a => t a -> a
+sum     :: Num a => t a -> a
+product :: Num a => t a -> a
 ~~~ 
 
-Note: sum takes the value(s) out of the container / context. For **Maybe**s a default for *Nothing* is assumed!
+Note: *sum* an *product* take the value(s) out of the container / context. For **Maybe**s a default for *Nothing* is assumed!
