@@ -15,4 +15,11 @@ sum     :: Num a => t a -> a
 product :: Num a => t a -> a
 ~~~ 
 
-Note: *sum* an *product* take the value(s) out of the container / context. For **Maybe**s a default for *Nothing* is assumed!
+Note: *sum* an *product* take the value(s) out of the container / context. For empty structures eg **Maybe**s a default for *Nothing* is assumed!
+
+~~~ { .haskell }
+minimum :: (Ord a, Foldable t) => t a -> a
+maximum :: (Ord a, Foldable t) => t a -> a
+~~~ 
+
+Note: *minimum* and *maximum* do not operate on empty structures (eg [] or Nothing
