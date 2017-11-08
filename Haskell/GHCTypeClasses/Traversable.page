@@ -38,3 +38,11 @@ Note: *sequenceA* flips the Applicative and the Traversable context
 ### instance Traversable (Either a) 
 
 ### instance Traversable ((,) a) 
+
+## Examples
+
+~~~ { .haskell }
+sequenceA [Just 1, Just 2, Just 3, Just 4]    -- -> Just [1,2,3,4]
+~~~
+
+Note: In this example List is Traversable, and Maybe is the Applicative!!
