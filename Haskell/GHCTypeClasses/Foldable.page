@@ -8,6 +8,29 @@ toc: no
 
 ## Definition
 
+
+~~~ { .haskell }
+class Foldable t where
+    {-# MINIMAL foldMap | foldr #-}
+
+    -- | Combine the elements of a structure using a monoid.
+    fold :: Monoid m => t m -> m
+
+    -- | Map each element of the structure to a monoid,
+    -- and combine the results.
+    foldMap :: Monoid m => (a -> m) -> t a -> m
+
+    -- | Right-associative fold of a structure.
+    foldr :: (a -> b -> b) -> b -> t a -> b
+
+    -- | Left-associative fold of a structure but with strict application of
+    -- the operator.
+    foldl' :: (b -> a -> b) -> b -> t a -> b
+
+
+~~~
+
+
 ## Other Functions
 
 ~~~ { .haskell }
