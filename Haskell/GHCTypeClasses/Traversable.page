@@ -27,4 +27,14 @@ class (Functor t, Foldable t) => Traversable t where
     sequenceA = traverse id
 ~~~
 
-## Other Function
+## Other Functions
+
+## Instances
+
+### instance Traversable [] 
+
+### instance Traversable Maybe
+
+### instance Traversable (Either a) 
+
+### instance Traversable ((,) a) 
