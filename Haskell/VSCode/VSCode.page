@@ -4,11 +4,17 @@ toc: no
 
 # Visual Studio Code
 
-## Aktivate Haskero
+## Aktivate Intero
 
 * stack setup
 * stack build
 * stack build intero
 * code .
 
-Now Haskero should be activated, and after som time, ready to use.
+Now Haskero should be activated, and after some time, ready to use.
+
+
+## Preview Markdown Files
+
+* Use **Ctrl+Shift+V** to preview the .md file
+* Use **Ctrl+K V**     to have the preview side by side
