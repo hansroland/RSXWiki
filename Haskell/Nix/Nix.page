@@ -2,7 +2,15 @@
 toc: no
 ...
 
-# Haskell and Nix
+# Using Nix and Haskell
+
+* [Set up a Nix-Haskell Project]()
+* [Nix Commands]()
+* [reflex-plattform]() a special Haskell-Nix project
+* [Tutorials]()
+
+
+# Reflex-plattform a special Haskell-Nix project
 
 The project try-reflex installs a nix shell. Here are some commands:
 
