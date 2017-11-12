@@ -5,6 +5,6 @@ toc: no
 # Using Nix and Haskell
 
 * [Set up a Nix-Haskell Project]()
-* [Nix Commands]()
+* [Nix HowTo]()
 * [reflex-plattform]() a special Haskell-Nix project
 * [Tutorials]()
