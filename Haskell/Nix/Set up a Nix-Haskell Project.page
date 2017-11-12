@@ -1,0 +1,69 @@
+---
+toc: no
+...
+
+# How to Setup a Haskell-Nix project
+
+
+## Create a cabal file
+
+    cabal.init
+
+## Create a default.nix file 
+
+    cabal2nix . > default.nix        -- MIND THE DOT for the current directory !!
+
+Each time the cabal file is updated, the default.nix file must be regenerated!!
+
+
+## Create a packages.nix file 
+
+This is a standard example. Change the name *project0* to your project name.
+Name it <project>.nix .
+
+The name *packages.nix* is my local convention. It's referenced in the *shell.nix* file.
+
+    let
+      pkgs = import <nixpkgs> { };
+    in
+      { project0 = pkgs.haskellPackages.callPackage ./default.nix { };
+      }
+
+
+If you want to override some Haskell packages use the following template for packages.nix
+
+    let
+      config = {
+        packageOverrides = pkgs: rec {
+          haskellPackages = pkgs.haskellPackages.override {
+            overrides = haskellPackagesNew: haskellPackagesOld: rec {
+              project1 =
+                haskellPackagesNew.callPackage ./default.nix { };
+
+              turtle =
+                haskellPackagesNew.callPackage ./turtle.nix { };
+            };
+          };
+        };
+      };
+
+      pkgs = import <nixpkgs> { inherit config; };
+
+    in
+      { project1 = pkgs.haskellPackages.project1;
+      }
+
+Create for every overwritten package (here *Turtle*) a nix file with cabal2nix. 
+Add a new entry like the  *Turtle* entry. 
+
+## Create a file shell.nix
+
+    (import ./packages.nix).project0.env
+
+## Run the nix shell
+
+The nix shell will use the options from the file shell.nix
+
+    nix-shell
+
+Run cabal commands in this shell like cabal configure, cabal build but not cabal install
