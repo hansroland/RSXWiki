@@ -18,15 +18,15 @@ Each time the cabal file is updated, the default.nix file must be regenerated!!
 
 ## Create a packages.nix file 
 
-This is a standard example. Change the name *project0* to your project name.
-Name it <project>.nix .
+This is a standard example. Change the name *project* to your project name.
+Name it project>.nix , where *project* is the same name as your cabal file.
 
 The name *packages.nix* is my local convention. It's referenced in the *shell.nix* file.
 
     let
       pkgs = import <nixpkgs> { };
     in
-      { project0 = pkgs.haskellPackages.callPackage ./default.nix { };
+      { project = pkgs.haskellPackages.callPackage ./default.nix { };
       }
 
 
@@ -50,15 +50,27 @@ If you want to override some Haskell packages use the following template for pac
       pkgs = import <nixpkgs> { inherit config; };
 
     in
-      { project1 = pkgs.haskellPackages.project1;
+      { project = pkgs.haskellPackages.project;
       }
+
+Note: The name *project* in the last line must be replaced twice
 
 Create for every overwritten package (here *Turtle*) a nix file with cabal2nix. 
 Add a new entry like the  *Turtle* entry. 
 
+Use the following syntax:
+
+    cabal2nix /path/to/myproj.cabal
+    cabal2nix cabal://turtle-1.3.2 > turtle.nix
+    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git --revision ba9c992933ae625cef40a88ea16ee857d1b93e13 > turtle-2.nix
+    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git  > turtle-2.nix       -- -> for newest version
+
+
 ## Create a file shell.nix
 
-    (import ./packages.nix).project0.env
+    (import ./packages.nix).project.env
+
+Again, replace the name *project*!
 
 ## Run the nix shell
 
