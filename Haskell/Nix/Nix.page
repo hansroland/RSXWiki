@@ -8,14 +8,3 @@ toc: no
 * [Nix Commands]()
 * [reflex-plattform]() a special Haskell-Nix project
 * [Tutorials]()
-
-
-# Reflex-plattform a special Haskell-Nix project
-
-The project try-reflex installs a nix shell. Here are some commands:
-
-### List version of a Haskell package:
-
-    nix-env -f '<nixpkgs>' -qaPA haskellPackages|grep myPackage
-
-Use package name instead of myPackage
