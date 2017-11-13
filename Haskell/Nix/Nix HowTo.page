@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Nix HowTo
+
+## commands
+
+* [nix-channel]()
+* [nix-env]()
+* [nix shell]()
+
