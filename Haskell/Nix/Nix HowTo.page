@@ -10,3 +10,8 @@ toc: no
 * [nix-env]()
 * [nix shell]()
 
+## Clean up the Nix Store
+
+    nix-collect-garbage -d
+
+
