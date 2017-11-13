@@ -1,0 +1,49 @@
+---
+toc: no
+...
+
+# Nix Channels
+
+Nix channels are predefined sets of software packages.
+
+
+## Availabe channels
+
+See: [https://nixos.org/channels/](https://nixos.org/channels/)
+
+Do not use *small* channels! 
+
+## Listing the used Nix channel
+
+    nix-channel --list
+
+## Choosing a channel
+
+    newest   -> base-4.10.0.0    -> GHC 8.2.1   (Nov 2017)
+    17.09    -> base-4.10.0.0    -> GHC 8.2.1
+    17.03    -> base-4.9.1.0     -> GHC 8.0.2
+    16.09    -> base-4-9.0.0     -> GHC 8.0.1
+    16.03    -> base-4.8.2.0     -> GHC 7.10.3
+    15.09    -> base-4.8.2.0     -> GHC 7.10.3
+
+### Looking at the Haskell Packages available in a Channel
+
+* [Newest]()
+
+* Stable: Use the link * https://raw.githubusercontent.com/NixOS/nixpkgs/release-16.09/pkgs/development/haskell-modules/hackage-packages.nix * and replace *16.09* with the channel version. 
+
+### Finding the GHC version of a Channel
+
+Look at the packages (see above), and do a find ```= "base"```
+
+## Setting the nix channel
+
+    nix-channel --add https://nixos.org/channels/nixos-16.09 nixpkgs
+
+Change *16.09* to your channel version.
+
+## Getting Updates for a channel
+
+    nix-channel --update nixpkgs
+
+
