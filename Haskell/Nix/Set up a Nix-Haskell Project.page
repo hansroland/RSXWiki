@@ -9,6 +9,8 @@ toc: no
 
     cabal.init
 
+Add the dependencies to the cabal file.
+
 ## Create a default.nix file 
 
     cabal2nix . > default.nix        -- MIND THE DOT for the current directory !!
@@ -21,7 +23,7 @@ Each time the cabal file is updated, the default.nix file must be regenerated!!
 This is a standard example. Change the name *project* to your project name.
 Name it project>.nix , where *project* is the same name as your cabal file.
 
-The name *packages.nix* is my local convention. It's referenced in the *shell.nix* file.
+The name *packages.nix* is my local convention. It can have any name. It's referenced in the *shell.nix* file.
 
     let
       pkgs = import <nixpkgs> { };
@@ -62,8 +64,8 @@ Use the following syntax:
 
     cabal2nix /path/to/myproj.cabal
     cabal2nix cabal://turtle-1.3.2 > turtle.nix
-    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git --revision ba9c992933ae625cef40a88ea16ee857d1b93e13 > turtle-2.nix
-    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git  > turtle-2.nix       -- -> for newest version
+    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git --revision ba9c992933ae625cef40a88ea16ee857d1b93e13 > turtle.nix
+    cabal2nix https://github.com/Gabriel439/Haskell-Turtle-Library.git  > turtle.nix       -- -> for newest version
 
 
 ## Create a file shell.nix
