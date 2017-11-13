@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# The nix-env Command
+
+
+## Installing Packages
+
+    nix-env -i hello
+
+Installs the hello world package. Note the package is *globally* available, even if installed in a nix-shell.
+
+## Deinstalling a Package
+
+   nix-env -e hello
