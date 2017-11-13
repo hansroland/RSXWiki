@@ -30,7 +30,7 @@ Do not use *small* channels!
 
 ### Looking at the Haskell Packages available in a Channel
 
-* [Newest]()
+* [Newest](https://raw.githubusercontent.com/NixOS/nixpkgs/master/pkgs/development/haskell-modules/hackage-packages.nix)
 
 * Stable: Use this [link](https://raw.githubusercontent.com/NixOS/nixpkgs/release-16.09/pkgs/development/haskell-modules/hackage-packages.nix) and replace *16.09* with the channel version. 
 
