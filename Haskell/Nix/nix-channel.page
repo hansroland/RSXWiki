@@ -44,6 +44,8 @@ Look at the packages (see above), and do a find ```= "base"```
 
 Change *16.09* to your channel version.
 
+Note: Nix channels are **global! Be careful!!**
+
 ## Getting Updates for a channel
 
     nix-channel --update nixpkgs
