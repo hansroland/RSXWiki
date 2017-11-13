@@ -25,12 +25,14 @@ Do not use *small* channels!
     16.09    -> base-4-9.0.0     -> GHC 8.0.1
     16.03    -> base-4.8.2.0     -> GHC 7.10.3
     15.09    -> base-4.8.2.0     -> GHC 7.10.3
+    14.12    -> base-4.7.0.2     -> GHC 7.8.4
+
 
 ### Looking at the Haskell Packages available in a Channel
 
 * [Newest]()
 
-* Stable: Use the link * https://raw.githubusercontent.com/NixOS/nixpkgs/release-16.09/pkgs/development/haskell-modules/hackage-packages.nix * and replace *16.09* with the channel version. 
+* Stable: Use this [link](https://raw.githubusercontent.com/NixOS/nixpkgs/release-16.09/pkgs/development/haskell-modules/hackage-packages.nix) and replace *16.09* with the channel version. 
 
 ### Finding the GHC version of a Channel
 
