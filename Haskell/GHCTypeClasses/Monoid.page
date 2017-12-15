@@ -111,3 +111,17 @@ instance Monoid Ordering where
     EQ `mappend` y = x == x
     GT `mappend` _ = GT
 ~~~
+
+## Duals
+
+Given a monoid on _a_, _Dual a_ is the monoid which uses
+the same binary operation as _a_, but with the order of arguments
+switched.
+
+~~~ {.haskell}
+newtype Dual a = Dual a
+
+instance Monoid a => Monoid (Dual a) where 
+    mempty = Dual mempty
+    (Dual a) <> (Dual b) = Dual (b <> a)
+~~~ 
