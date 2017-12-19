@@ -4,6 +4,24 @@ toc: no
 
 # Haskell Profiling and Performance
 
+## General
+
+You must compile the program and all dependencies with the profiling option
+
+## Performance Profiling
+
+Run the program with the options
+
+    +RTS -s -p -RTS
+
+This creates a 
+
+## Memory Profiling
+
+Run the program with the options
+    
+    +RTS -s -hd -RTS
+
 ## Links
 
 [The Haskell Performance Checklist]()
