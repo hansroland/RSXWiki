@@ -14,7 +14,8 @@ Run the program with the options
 
     +RTS -s -p -RTS
 
-This creates a 
+* **-s** creates a summary on standart output, with short information on memory, garbage collection and execution time usage.
+* **-p** create a file _programName.prof_ file with cost center based information. Use normal editor to read.
 
 ## Memory Profiling
 
