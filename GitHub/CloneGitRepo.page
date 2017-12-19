@@ -36,3 +36,8 @@ The clone command creates a new subdirectory and copies the project into this su
 ### Getting Updates from the remote repository
 
     git fetch origin
+
+### Working with Different Branches
+
+    git branch -a                    -- lists all branches
+    git checkout <branch-name>       -- makes this branch the working branch
