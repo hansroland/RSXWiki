@@ -6,18 +6,15 @@ toc: no
 
 ## Minimal stack.yaml files
 
-### GHC 8.2.1
-
-**Note: There is not yet a *lts* version**
+### GHC 8.2.2
 
 ~~~
-resolver: nightly-2017-08-25
+resolver: lts-10.0
 flags: {}
 packages:
 - '.'
 extra-deps: []
 ~~~
-
 
 
 ### GHC 8.0.2
@@ -30,15 +27,6 @@ packages:
 extra-deps: []
 ~~~
 
-### GHC 8.0.1
-
-~~~
-resolver: lts-7.24
-flags: {}
-packages:
-- '.'
-extra-deps: []
-~~~
 
 ## Most important commands
 
