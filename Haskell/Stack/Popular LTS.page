@@ -8,6 +8,10 @@ toc: no
 
 # Stack Popular Lts Versions
 
+## GHC 8.2.2
+
+* Lts-10.0
+
 ## GHC 8.0.2
 
 * Lts-8.17
