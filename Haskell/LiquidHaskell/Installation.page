@@ -1,0 +1,18 @@
+---
+toc: no
+...
+
+# Install Z3 Server from Debian packet manager
+
+    apt-get install z3
+
+# Installation of Liquid Haskell
+
+    cd ~/Software/ghc-x.y.z 
+    git clone --recursive https://github.com/ucsd-progsys/liquidhaskell 
+    cd liquidhaskell
+    stack install
+
+
+    mv /home/roland/.local/bin/fixpoint ~/Software/ghc-x.y.z/bin/fixpoint
+    mv /home/roland/.local/bin/liquid ~/Software/ghc-x.y.z/bin/liquid
