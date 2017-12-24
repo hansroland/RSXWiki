@@ -6,6 +6,9 @@ toc: no
 
 See also: [https://wiki.haskell.org/Base_package](https://wiki.haskell.org/Base_package)
 
+GHC 8.2.2
+:   base: 4.10.1
+
 GHC 8.2.1
 :   base: 4.10.0
 
