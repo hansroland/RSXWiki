@@ -28,7 +28,7 @@ extra-deps: []
 ~~~
 
 
-## Most important commands
+## Most important workflows
 
 ### Setting up the stack environnement
 
@@ -51,6 +51,11 @@ extra-deps: []
 ### Enabling intero
 
     stack build intero   -- must be done in every project !! 
+
+### Changing the LTS Version
+
+    Change resolver in stack.yaml file
+    stack setup
 
 ## Other Stuff
 
