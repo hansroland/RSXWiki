@@ -4,6 +4,15 @@ toc: no
 
 # GHCi Tricks and Tipps
 
+### Show time and memory statistics
+
+    :set +s
+
+    Prelude> 3 + 4
+    7
+    (0.05 secs, 64,888 bytes)
+
+
 ### Show type class functions specialized for one type class
 
     :set -XTypeApplications
