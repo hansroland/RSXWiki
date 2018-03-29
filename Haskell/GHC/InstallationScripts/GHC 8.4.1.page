@@ -9,9 +9,9 @@ toc: no
 ~~~
 # get distribution   
 cd $HOME/Downloads  
-wget https://downloads.haskell.org/~ghc/8.4.1/ghc-8.4.1-x86_64-deb8-linux-dwarf.tar.xz
+wget https://downloads.haskell.org/~ghc/8.4.1/ghc-8.4.1-x86_64-deb8-linux.tar.xz
 
-tar xvfJ ghc-8.4.1-x86_64-deb8-linux-dwarf.tar.xz
+tar xvfJ ghc-8.4.1-x86_64-deb8-linux.tar.xz
 
 cd ghc-8.4.1 
 
