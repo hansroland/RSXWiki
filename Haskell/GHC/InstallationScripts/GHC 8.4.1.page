@@ -1,0 +1,33 @@
+---
+toc: no
+...
+
+# Installation of GHC 8.4.1
+
+## Installation Script
+
+~~~
+# get distribution   
+cd $HOME/Downloads  
+wget https://downloads.haskell.org/~ghc/8.4.1/ghc-8.4.1-x86_64-deb8-linux-dwarf.tar.xz
+
+tar xvfJ ghc-8.4.1-x86_64-deb8-linux-dwarf.tar.xz
+
+cd ghc-8.4.1 
+
+# install  
+mkdir $HOME/Software/ghc-8.4.1  
+
+./configure --prefix=$HOME/Software/ghc-8.4.1  
+make install
+
+# cleanup: remove temporary files  
+cd ..  
+rm -rfv ghc-8.4.1*
+~~~
+
+## Activation Script
+
+~~~
+switchghc 8.4.1 
+~~~
