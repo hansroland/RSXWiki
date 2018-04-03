@@ -22,7 +22,7 @@ sudo apt-get install haskell-platform
 
 ### Compile additional Haskell Software
 
-In ~/Software/Hackage-X.Y.Z do the following
+In ~/Software/ghc-X.Y.Z/Hackage do the following
 
 ~~~
 mkdir addons
@@ -34,7 +34,7 @@ cabal install cabal-install
 * copy the *cabal* binary in .cabal-sandbox/bin to the ~/Software/ghc-X.Y.Z/bin directory
 * logout und do a new login, so you will now use the newly built cabal program
 
-In the *~/Software/Hackage/addons* install with cabal the following packages
+In the *~/Software/ghc-X.Y.Z/Hackage/addons* install with cabal the following packages
 
 * alex
 * cpphs
@@ -45,7 +45,7 @@ In the *~/Software/Hackage/addons* install with cabal the following packages
 * ghc-mod
 * stylish-haskell
 
-Move the resulting binaries again to the ~/Software/ghc-X.Y.Z/bin directory
+Copy the resulting binaries again to the ~/Software/ghc-X.Y.Z/bin directory
 
 ### Get rid of the Debian binaries
 
