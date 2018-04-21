@@ -38,7 +38,6 @@ In the *~/Software/ghc-X.Y.Z/Hackage/addons* install with cabal the following pa
 
 * alex
 * cpphs
-* haddock
 * happy
 * hlint
 * pandoc
