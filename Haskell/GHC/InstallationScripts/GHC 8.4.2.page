@@ -6,8 +6,6 @@ toc: no
 
 ## Installation Script
 
-**ATTENTION - Currently this is the script to build GHC 8.4.2 DWARF **
-
 ~~~
 # get distribution   
 cd $HOME/Downloads  
