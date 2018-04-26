@@ -6,10 +6,10 @@ toc: no
 
 ## Minimal stack.yaml files
 
-### GHC 8.4.1
+### GHC 8.4.2
 
 ~~~
-resolver: nightly-2018-04-05
+resolver: nightly-2018-04-25
 flags: {}
 packages:
 - '.'
@@ -19,7 +19,7 @@ extra-deps: []
 ### GHC 8.2.2
 
 ~~~
-resolver: lts-10.0
+resolver: lts-11.2
 flags: {}
 packages:
 - '.'
