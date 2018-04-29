@@ -13,6 +13,7 @@ toc: no
 * [GHC The Glasgow Haskell Compiler](GHC/GHC)
 * [GHCJS The Haskell to JavaScript Compiler](GHCJS/GHCJS)
 * [Liquid Haskell form UCSD](LiquidHaskell/LiquidHaskell)
+* [LLVM Backend](LLVMBackend/LLVMBackend)
 
 ## Libraries and Typeclasses
 
