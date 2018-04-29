@@ -1,0 +1,8 @@
+---
+toc:no
+...
+
+# GHC Versions vs LLVM Version 
+
+* GHC 8.4 -> LLVM 5.0 
+* GHC 8.2 -> LLVM 3.9
