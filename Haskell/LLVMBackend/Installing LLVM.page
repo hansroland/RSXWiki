@@ -2,8 +2,15 @@
 toc: no
 ...
 
+# Installing a LLVM Backend for GHC
+
 * Installing LLVM Backend 
 
-* [Link to LLVM source](http://releases.llvm.org/download.html)
-* Download the correct versions of LLVM and Clang source to a directory ~/Software/llvm-x.y.z 
+* Install LLVM from the Debian packages 
+
+~~~
+     sudo apt-get install llvm-X.Y
+~~~
+
+where X.Y is the needed version for your GHC release
 
