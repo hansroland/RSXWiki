@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# Using the LLVM Backend with GHC 
+
+In the .cabal file use the line:
+
+    ghc-options:       -fllvm -pgmlc /usr/lib/llvm-3.9/bin/llc -pgmlo /usr/lib/llvm-3.9/bin/opt
+
+Change 3.9 according the GHC version!
