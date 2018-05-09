@@ -56,6 +56,10 @@ extra-deps: []
     Change resolver in stack.yaml file
     stack setup
 
+## Using stack to play with some libraries
+
+    stack repl --resolver lts-x.yy --package <package1> --package <package2>
+
 ## Other Stuff
 
 * [Popular LTS]()
