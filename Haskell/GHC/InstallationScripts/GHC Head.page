@@ -40,8 +40,8 @@ Note: The *ghchead* at the end of the clone command, is the name of the target d
 
 ~~~
 cd ~/Projekte
-git clone --recursive git://git.haskell.org/ghc.git ghchead
-cd ghchead
+git clone --recursive git://git.haskell.org/ghc.git ghc-head
+cd ghc-head
 cd mk
 cp build.mk.sample build.mk
 atom build.mk
@@ -61,3 +61,9 @@ make -j4
 ~~~
 ./inplace/bin/ghc-stage2 --version
 ~~~
+
+## Make the GHC Head compiler usable 
+
+* Create a directory _Software/ghc-head/bin_ 
+* Create a link to the new compiler: _ln -s  /home/roland/Projekte/ghchead/inplace/bin/ghc-stage2 /home/roland/Software/ghc-head/bin/ghc_
+* Use _swithcghc head_ to mkae the new compiler the default compiler
