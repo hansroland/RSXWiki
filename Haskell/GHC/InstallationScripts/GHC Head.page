@@ -2,14 +2,21 @@
 toc: no
 ...
 
-# Install GHC Head
+# Install GHC Head from a Github fork
 
 ## References
 
 * [A blog post:](http://rawgit.com/gibiansky/4c54f767bf21a6954b23/raw/67c62c5555f40c6fb67b124307725df168201361/exp.html)
 * [Official Newcomer page](https://ghc.haskell.org/trac/ghc/wiki/Newcomers)
 
-## Installation Script
+## Remark
+
+GHC uses Git subprojects for hadrian, libffi-tarballs and nofib directories. There are two possible options:
+
+* fork GHC and all the subprojects -> you can send PRs to the subprojects
+* fork only GHC, but not the subprojects -> you cannot send PRs o the subprojects
+
+## Installation Script (Fork only GHC without subprojects)
 
 ### Preparation Steps
 
@@ -22,7 +29,11 @@ sudo apt-get install dblatex docbook-xsl docbook-utils libxml2-utils texlive-fon
 Set (only once) the following rewrite rule
 
 ~~~
-git config --global url."git://github.com/ghc/packages-".insteadOf git://github.com/ghc/packages/ 
+git config --global url."git://github.com/ghc/packages-".insteadOf     git://github.com/ghc/packages/ 
+git config --global url."http://github.com/ghc/packages-".insteadOf    http://github.com/ghc/packages/ 
+git config --global url."https://github.com/ghc/packages-".insteadOf   https://github.com/ghc/packages/ 
+git config --global url."ssh://git@github.com/ghc/packages-".insteadOf ssh://git@github.com/ghc/packages/ 
+git config --global url."git@github.com:ghc/packages-".insteadOf       git@github.com:ghc/packages/  
 ~~~
 
 
@@ -36,34 +47,42 @@ happy --version
 
 ### Installation
 
-Note: The *ghchead* at the end of the clone command, is the name of the target directory.
+* Fork GHC on Github from the ghc user
+
+* Clone GHC to the projects directory again from the **ghc** user!!
 
 ~~~
 cd ~/Projekte
-git clone --recursive git://git.haskell.org/ghc.git ghc-head
-cd ghc-head
+git clone --recursive git://github.com/ghc/ghc
+cd ghc
 cd mk
 cp build.mk.sample build.mk
-atom build.mk
+gedit build.mk
 ~~~
 
 Remove the comment marker (#) on the line "BuildFlavor = devel2"
 
+
+We have cloned from the Githubs **ghc** user, and not from your private fork. 
+Therefore we have to adjust the *origin* of our local repo, and to set *upstream*. 
+
+~~~
+git remote -v 
+git remote set-url --add origin https://github.com/hansroland/ghc 
+git remote set-url --remove origin git://github.com/ghc/ghc 
+git remote add upstream https://github.com/ghc/ghc
+git fetch upstream
+~~~
+
 ~~~
 cd ..
 ./boot
-./configure
-make -j4
+./configure --prefix=/home/roland/Software/ghc-head
+make -j4 install
 ~~~
 
-## Do a first little test
+## Using the generated GHC compiler 
 
 ~~~
-./inplace/bin/ghc-stage2 --version
+switchghc head
 ~~~
-
-## Make the GHC Head compiler usable 
-
-* Create a directory _Software/ghc-head/bin_ 
-* Create a link to the new compiler: _ln -s  /home/roland/Projekte/ghchead/inplace/bin/ghc-stage2 /home/roland/Software/ghc-head/bin/ghc_
-* Use _swithcghc head_ to mkae the new compiler the default compiler
