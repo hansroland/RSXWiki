@@ -69,9 +69,10 @@ Therefore we have to adjust the *origin* of our local repo, and to set *upstream
 ~~~
 git remote -v 
 git remote set-url --add origin https://github.com/hansroland/ghc 
-git remote set-url --remove origin git://github.com/ghc/ghc 
+git remote set-url --delete origin git://github.com/ghc/ghc 
 git remote add upstream https://github.com/ghc/ghc
 git fetch upstream
+git push origin master
 ~~~
 
 ~~~
