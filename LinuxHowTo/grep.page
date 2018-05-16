@@ -14,12 +14,13 @@ toc: no
 * **-n**  line numbers
 * **-w**  match whole word
 * **-i**  ignore case
+* **-I**  process only text files
 
 ### Examples
 
-    grep -rni . -e "domEvent"
+    grep -rniI . -e "domEvent"
 
-Searches for the string *domEvent* in all sudirectories of the current directory
+Searches for the string *domEvent* in all textfiles in all sudirectories of the current directory
 
 ## Advanced Options
 
