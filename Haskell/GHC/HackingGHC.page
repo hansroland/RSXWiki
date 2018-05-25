@@ -8,9 +8,18 @@ toc: no
 
 See section [Installation Scripts](InstallationScripts/GHC Head)
 
-### Getting the newest Updates
+### Building 
 
-    git fetch origin
+TBD
+
+### Building Documentation 
+
+Use Hadrian: 
+
+    hadrian/build.sh docs
+
+The generated users_guide is in the directory ~/Projekte/ghc/_build/docs 
+
 
 ### Running Tests
 
