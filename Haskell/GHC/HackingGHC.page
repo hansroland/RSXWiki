@@ -4,13 +4,8 @@ toc: no
 
 # Hacking GHC
 
-### Installation
-
-See section [Installation Scripts](InstallationScripts/GHC Head)
-
-### Building 
-
-TBD
+* [Installation](InstallationScripts/GHC Head)
+* [Workflow]()
 
 ### Building Documentation 
 
