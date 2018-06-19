@@ -1,0 +1,70 @@
+---
+toc: no
+...
+
+# GHC Hacking Workflow
+
+### Get Fresh Sources
+
+~~~
+Remove old GHC directory
+cd ~/Projekte
+git clone --recursive git://github.com/ghc/ghc
+cd ghc
+
+cp mk/build.mk.sample mk/build.mk
+gedit mk/build.mk    -- Activate  BuildFlavour = devel2
+
+git pull --recurse-submodules=yes
+git submodules update init
+~~~
+
+### Prepare the Build
+
+~~~
+cd ..
+./boot
+./configure --prefix=/home/roland/Software/ghc-head
+~~~
+
+### Build 
+
+~~~
+make -j4 
+~~~
+
+### Install the generated compiler
+
+~~~
+make install 
+~~~
+
+### Working 
+
+Create a git branch!
+
+### Testing 
+
+### Updateing the source tree
+
+~~~
+git checkout master
+git pull --recurse-submodules=yes
+git submodules update init
+git checkout <my-branch>
+~~~
+
+### Sending PR to Phabricator
+
+* git checkout <my-branch>
+* arc diff 
+* Add link from Phabricator to a comment 
+* Fill out the following fields in the ticket: 
+  - Status: patch
+  - Testcase: <???????>
+  - Differential Revs: Phab: D9999
+
+### Fixing the Patch
+
+* Work on the same branch
+* Again use: arc diff
