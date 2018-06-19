@@ -45,6 +45,14 @@ Create a git branch!
 
 ### Testing 
 
+Test your testcase:
+
+~~~
+cd ~/Projekte/ghc/testsuite
+
+make TEST=T99999
+~~~
+
 ### Updateing the source tree
 
 ~~~
@@ -58,6 +66,7 @@ git checkout <my-branch>
 
 * git checkout <my-branch>
 * arc diff 
+* Possible reviewers: mpickering  bgamari  thomie  ezyang, RyanGlScott
 * Add link from Phabricator to a comment 
 * Fill out the following fields in the ticket: 
   - Status: patch
