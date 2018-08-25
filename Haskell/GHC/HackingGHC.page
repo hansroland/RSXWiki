@@ -18,11 +18,10 @@ The generated users_guide is in the directory ~/Projekte/ghc/_build/docs
 
 ### Running Tests
 
-    cd testuite/tests
+    make test TEST=T99999
 
-    cd <directory to test>
+    make test TESTS="T11111 T22222"
 
-    make THREADS=4
 
 ## Reading List and Pointers
 
