@@ -22,6 +22,11 @@ The generated users_guide is in the directory ~/Projekte/ghc/_build/docs
 
     make test TESTS="T11111 T22222"
 
+### Running GHCi in GHCi
+
+    ./utils/ghc-in-ghci/run.sh -fobject-code -j4
+    main
+
 
 ## Reading List and Pointers
 
