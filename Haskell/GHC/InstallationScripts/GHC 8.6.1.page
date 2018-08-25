@@ -1,3 +1,12 @@
+---
+toc: no
+...
+
+# Installation of GHC 8.6.1
+
+## Installation Script
+
+~~~
 # get distribution   
 cd $HOME/Downloads  
 wget https://downloads.haskell.org/~ghc/8.6.1-beta1/ghc-8.6.0.20180810-x86_64-deb8-linux.tar.xz
@@ -15,3 +24,10 @@ make install
 # cleanup: remove temporary files  
 cd ..  
 rm -rfv ghc-8.6.0*
+~~~
+
+## Activation Script
+
+~~~
+switchghc 8.6.1 
+~~~
