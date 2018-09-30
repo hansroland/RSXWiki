@@ -7,13 +7,18 @@ toc: no
 ~~~
 # Script to install different Haskell packages from Hackage 
 
+switchghc x.y.z
+
 cabal update
 
-cabal new-install --symlink-bindir=~/Software/ghc/bin cabal-install 
-cabal new-install --symlink-bindir=~/Software/ghc/bin alex 
-cabal new-install --symlink-bindir=~/Software/ghc/bin happy 
-cabal new-install --symlink-bindir=~/Software/ghc/bin haddock 
-cabal new-install --symlink-bindir=~/Software/ghc/bin hlint 
-cabal new-install --symlink-bindir=~/Software/ghc/bin pandoc 
+cp $HOME/Software/ghc-a.b.c/bin/cabal  $HOME/Software/ghc/bin/cabal_old    # a.b.c = previou ghc version
+cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin cabal-install
+rm $HOME/Software/ghc/bin/cabal_old
+
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin alex 
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin happy 
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin haddock 
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin hlint 
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin pandoc 
 
 ~~~
