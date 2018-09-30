@@ -20,5 +20,8 @@ cabal new-install --symlink-bindir=$HOME/Software/ghc/bin happy
 cabal new-install --symlink-bindir=$HOME/Software/ghc/bin haddock 
 cabal new-install --symlink-bindir=$HOME/Software/ghc/bin hlint 
 cabal new-install --symlink-bindir=$HOME/Software/ghc/bin pandoc 
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin cabal2nix
+cabal new-install --symlink-bindir=$HOME/Software/ghc/bin hackage2nix 
+ 
 
 ~~~
