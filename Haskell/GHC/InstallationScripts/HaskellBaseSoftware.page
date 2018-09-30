@@ -9,19 +9,11 @@ toc: no
 
 cabal update
 
-cd ~/Software/ghc-x.y.z/Hackage
+cabal new-install --symlink-bindir=~/Software/ghc/bin cabal-install 
+cabal new-install --symlink-bindir=~/Software/ghc/bin alex 
+cabal new-install --symlink-bindir=~/Software/ghc/bin happy 
+cabal new-install --symlink-bindir=~/Software/ghc/bin haddock 
+cabal new-install --symlink-bindir=~/Software/ghc/bin hlint 
+cabal new-install --symlink-bindir=~/Software/ghc/bin pandoc 
 
-mkdir base
-cd base
-
-cabal sandbox init
-
-cabal install cabal-install -j4
-cabal install alex -j4
-cabal install happy -j4
-cabal install haddock -j4
-cabal install hlint -j4
-cabal install pandoc -j4
-
-cp .cabal-sandbox/bin/* ~/Software/ghc/bin
 ~~~
