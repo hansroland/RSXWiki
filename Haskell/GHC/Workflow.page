@@ -16,7 +16,7 @@ cp mk/build.mk.sample mk/build.mk
 gedit mk/build.mk    -- Activate  BuildFlavour = devel2
 
 git pull --recurse-submodules=yes
-git submodules update init
+git submodule update --init
 ~~~
 
 ### Prepare the Build
