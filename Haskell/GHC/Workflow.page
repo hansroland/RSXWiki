@@ -58,7 +58,7 @@ make TEST=T99999
 ~~~
 git checkout master
 git pull --recurse-submodules=yes
-git submodules update init
+git submodule update --init
 git checkout <my-branch>
 ~~~
 
