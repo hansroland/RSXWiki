@@ -18,26 +18,27 @@ sudo apt-get install haskell-platform
 
 * Install the newest GHC version from the [Installation Scripts](InstallationScripts/InstallationScripts) page.
 
-* Install a cabal library (again use [Installation Scripts](InstallationScripts/InstallationScripts) page).
-
 ### Compile additional Haskell Software
 
 In ~/Software/ghc-X.Y.Z/bin do the following:
 
-* copy the *cabal* binary from the previous release
+* copy the *cabal* binary from the previous release and name it *rsxcabal*
 * Run the follwoing commands: 
 
 ~~~
-./cabal new-update
-./cabal new_install --symlink-bindir=.  cabal-install
+rsxcabal new-update
+rsxcabal new_install --symlink-bindir=.  cabal-install
+rm rsxcabal
 
-./cabal new-install --symlink-bindir=.  alex
-./cabal new-install --symlink-bindir=.  cpphs
-./cabal new-install --symlink-bindir=.  happy
-./cabal new-install --symlink-bindir=.  hlint
-./cabal new-install --symlink-bindir=.  pandoc
-./cabal new-install --symlink-bindir=.  ghc-mod
-./cabal new-install --symlink-bindir=.  stylish-haskell
+cabal new-update
+
+cabal new-install --symlink-bindir=.  alex
+cabal new-install --symlink-bindir=.  cpphs
+cabal new-install --symlink-bindir=.  happy
+cabal new-install --symlink-bindir=.  hlint
+cabal new-install --symlink-bindir=.  pandoc
+cabal new-install --symlink-bindir=.  ghc-mod
+cabal new-install --symlink-bindir=.  stylish-haskell
 ~~~
 
 If there is an error like *cabal: ghc-pkg dump failed:* and *package.db: getDirectoryContents:openDirStream: does not exist *
