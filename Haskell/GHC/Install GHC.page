@@ -31,13 +31,13 @@ In ~/Software/ghc-X.Y.Z/bin do the following:
 ./cabal new-update
 ./cabal new_install --symlink-bindir=.  cabal-install
 
-./cabal new_install --symlink-bindir=.  alex
-./cabal new_install --symlink-bindir=.  cpphs
-./cabal new_install --symlink-bindir=.  happy
-./cabal new_install --symlink-bindir=.  hlint
-./cabal new_install --symlink-bindir=.  pandoc
-./cabal new_install --symlink-bindir=.  ghc-mod
-./cabal new_install --symlink-bindir=.  stylish-haskell
+./cabal new-install --symlink-bindir=.  alex
+./cabal new-install --symlink-bindir=.  cpphs
+./cabal new-install --symlink-bindir=.  happy
+./cabal new-install --symlink-bindir=.  hlint
+./cabal new-install --symlink-bindir=.  pandoc
+./cabal new-install --symlink-bindir=.  ghc-mod
+./cabal new-install --symlink-bindir=.  stylish-haskell
 ~~~
 
 If there is an error like *cabal: ghc-pkg dump failed:* and *package.db: getDirectoryContents:openDirStream: does not exist *
