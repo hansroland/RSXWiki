@@ -22,29 +22,28 @@ sudo apt-get install haskell-platform
 
 ### Compile additional Haskell Software
 
-In ~/Software/ghc-X.Y.Z/Hackage do the following
+In ~/Software/ghc-X.Y.Z/bin do the following:
+
+* copy the *cabal* binary from the previous release
+* Run the follwoing commands: 
 
 ~~~
-mkdir addons
-cd addons
-cabal sandbox init
-cabal install cabal-install
+./cabal new-update
+./cabal new_install --symlink-bindir=.  cabal-install
+
+./cabal new_install --symlink-bindir=.  alex
+./cabal new_install --symlink-bindir=.  cpphs
+./cabal new_install --symlink-bindir=.  happy
+./cabal new_install --symlink-bindir=.  hlint
+./cabal new_install --symlink-bindir=.  pandoc
+./cabal new_install --symlink-bindir=.  ghc-mod
+./cabal new_install --symlink-bindir=.  stylish-haskell
 ~~~
 
-* copy the *cabal* binary in .cabal-sandbox/bin to the ~/Software/ghc-X.Y.Z/bin directory
-* logout und do a new login, so you will now use the newly built cabal program
+If there is an error like *cabal: ghc-pkg dump failed:* and *package.db: getDirectoryContents:openDirStream: does not exist *
+then create one with:
 
-In the *~/Software/ghc-X.Y.Z/Hackage/addons* install with cabal the following packages
-
-* alex
-* cpphs
-* happy
-* hlint
-* pandoc
-* ghc-mod
-* stylish-haskell
-
-Copy the resulting binaries again to the ~/Software/ghc-X.Y.Z/bin directory
+    echo "" | cabal new-repl -w ghc-X.Y.Z --build-dep fail
 
 ### Get rid of the Debian binaries
 
