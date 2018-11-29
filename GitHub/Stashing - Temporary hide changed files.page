@@ -33,3 +33,6 @@ Note: The *n* is the sequence number of the *stash list* output list.
 
     git stash show stash@{n} -p
    
+## Delete stashed files
+
+    git stash drop stash@{n}
