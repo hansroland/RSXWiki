@@ -30,6 +30,7 @@ This is the main page about the GitHub service
 * [Keep forked repository in sync with the remote base](KeepRepoInSync)
 * [After a Merge of a Pull Request](AfterMergeOfPullRequest)
 * [Working with remote branches](RemoteBranches) 
+* [Stashing - Temporary hide changed files]()
 
 ## Additional commands
 
