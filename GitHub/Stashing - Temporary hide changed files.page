@@ -1,0 +1,35 @@
+---
+toc: no
+...
+
+# Stashing - Temporary hide changed files
+
+Working on different branches (eg change the current working branch) sometimes requires, that changed files must be commited. It these files contain debug code, or bad code that should not be seen by others, we can use git stash.
+
+## Stashing (Hiding) changed files
+
+    git stash save "message"
+
+The message should describe the changes of the files, the branch name is not necessary.
+
+## List the available stashes
+
+    git stash list 
+
+## Re-apply the hidden files
+
+    git stash apply stash@{n}
+
+Note: The *n* is the sequence number of the *stash list* output list.
+
+* apply - the changed files remain in the stash store.
+* pop   - the changed files are deleted from the stash store.
+   
+## List the names of the stashed files
+
+    git stash show stash@{n}
+
+## List the changes in the stashed files
+
+    git stash show stash@{n} -p
+   
