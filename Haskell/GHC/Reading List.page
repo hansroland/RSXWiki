@@ -1,0 +1,13 @@
+---
+toc:no
+...
+
+# Reading List and Pointers
+
+* [GHC Newcomers Page](https://ghc.haskell.org/trac/ghc/wiki/Newcomers)
+
+* [Stephen Diehl - Dive into GHC: Pipeline](http://www.stephendiehl.com/posts/ghc_01.html)
+* [Stephen Diehl - Dive into GHC: Intermediate Forms](http://www.stephendiehl.com/posts/ghc_02.html)
+* [Stephen Diehl - Dive into GHC: Targeting Core](http://www.stephendiehl.com/posts/ghc_03.html)
+
+* [Tavid Derei - A Haskell compiler](http://www.scs.stanford.edu/11au-cs240h/notes/ghc-slides.html)
