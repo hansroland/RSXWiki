@@ -4,27 +4,35 @@ toc: no
 
 # GHC Hacking Workflow
 
-### Get Fresh Sources
+### Update the source tree
 
 ~~~
-Remove old GHC directory
-cd ~/Projekte
-git clone --recursive git://github.com/ghc/ghc
-cd ghc
-
-cp mk/build.mk.sample mk/build.mk
-gedit mk/build.mk    -- Activate  BuildFlavour = devel2
-
-git pull --recurse-submodules=yes
+cd ~/Projekte/ghc
+git checkout master
+git pull upstream master --recurse-submodules=yes
 git submodule update --init
+
+# For every working branch to 
+git checkout <branch>
+git rebase master
+
+# Push back changes to personal Gitlab account
+git push origin master
 ~~~
 
-### Prepare the Build
+### Prepare build after updating master
 
 ~~~
-cd ..
+# Check mk/build.mk
+ - BuildFlavour = devel2  must be activated
+ - stage=2                must be deactivated 
+
 ./boot
-./configure --prefix=/home/roland/Software/ghc-head
+./configure
+make -j4 
+
+# After successful build
+ - Activate again stage=2 in mk/build.mk
 ~~~
 
 ### Build 
@@ -33,11 +41,7 @@ cd ..
 make -j4 
 ~~~
 
-### Install the generated compiler
 
-~~~
-make install 
-~~~
 
 ### Working 
 
@@ -51,15 +55,6 @@ Test your testcase:
 cd ~/Projekte/ghc/testsuite
 
 make TEST=T99999
-~~~
-
-### Updateing the source tree
-
-~~~
-git checkout master
-git pull --recurse-submodules=yes
-git submodule update --init
-git checkout <my-branch>
 ~~~
 
 ### Sending PR to Phabricator
