@@ -9,7 +9,7 @@ toc: no
 
 switchghc x.y.z
 
-cabal update
+cabal new-update
 
 cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a.b.c = previous GHC version
 cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin --overwrite-policy=always cabal-install
