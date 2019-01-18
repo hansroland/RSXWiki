@@ -47,13 +47,13 @@ happy --version
 
 ### Installation
 
-* Fork GHC on Github from the ghc user
+* Fork GHC on gitlab.haskell.org from the ghc user
 
 * Clone GHC to the projects directory again from the **ghc** user!!
 
 ~~~
 cd ~/Projekte
-git clone --recursive git://github.com/ghc/ghc
+git clone --recursive git://gitlab.haskell.org/ghc/ghc
 cd ghc
 cd mk
 cp build.mk.sample build.mk
@@ -68,9 +68,9 @@ Therefore we have to adjust the *origin* of our local repo, and to set *upstream
 
 ~~~
 git remote -v 
-git remote set-url --add origin https://github.com/hansroland/ghc 
+git remote set-url --add origin https://gitlab.haskell.org/RolandSenn/ghc 
 git remote set-url --delete origin git://github.com/ghc/ghc 
-git remote add upstream https://github.com/ghc/ghc
+git remote add upstream https://gitlab.haskell.org/ghc/ghc
 git fetch upstream
 git push origin master
 ~~~
