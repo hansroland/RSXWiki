@@ -15,12 +15,12 @@ cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a
 cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin --overwrite-policy=always cabal-install
 rm $HOME/Software/ghc/bin/cabal_old
 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin alex 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin happy 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin haddock 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin hlint 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin pandoc 
-cabal new-install --symlink-bindir=$HOME/Software/ghc/bin cabal2nix
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin alex 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin happy 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin haddock 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin hlint 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin pandoc 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin cabal2nix
 
  
 ~~~
