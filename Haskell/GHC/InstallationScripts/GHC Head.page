@@ -53,30 +53,28 @@ happy --version
 
 ~~~
 cd ~/Projekte
-git clone --recursive git://gitlab.haskell.org/ghc/ghc
+git clone --recursive https://gitlab.haskell.org/ghc/ghc
 cd ghc
-cd mk
-cp build.mk.sample build.mk
-gedit build.mk
+cp mk/build.mk.sample mk/build.mk
+gedit mk/build.mk
 ~~~
 
 Remove the comment marker (#) on the line "BuildFlavor = devel2"
 
 
-We have cloned from the Githubs **ghc** user, and not from your private fork. 
+We have cloned from the gitlab.haskell.org **ghc** user, and not from your private fork. 
 Therefore we have to adjust the *origin* of our local repo, and to set *upstream*. 
 
 ~~~
 git remote -v 
 git remote set-url --add origin https://gitlab.haskell.org/RolandSenn/ghc 
-git remote set-url --delete origin git://github.com/ghc/ghc 
+git remote set-url --delete origin https://gitlab.haskell.org/ghc/ghc 
 git remote add upstream https://gitlab.haskell.org/ghc/ghc
 git fetch upstream
 git push origin master
 ~~~
 
 ~~~
-cd ..
 ./boot
 ./configure --prefix=/home/roland/Software/ghc-head
 make -j4 install
