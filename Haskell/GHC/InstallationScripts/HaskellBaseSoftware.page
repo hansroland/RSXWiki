@@ -7,7 +7,7 @@ toc: no
 ~~~
 # Script to install different Haskell packages from Hackage 
 
-switchghc x.y.z
+switchghc x.y.z     # x.y.z new version
 
 cabal new-update
 
@@ -16,11 +16,8 @@ cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin --overwrite-polic
 rm $HOME/Software/ghc/bin/cabal_old
 
 cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin alex 
-cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin happy 
-cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin haddock 
+cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin happy  
 cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin hlint 
 cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin pandoc 
 cabal new-install --overwrite-policy=always --symlink-bindir=$HOME/Software/ghc/bin cabal2nix
-
- 
 ~~~
