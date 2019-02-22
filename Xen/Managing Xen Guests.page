@@ -30,6 +30,9 @@ or
 
 ## Remove a guest
 
+    # List the LVMs
+    sudo lvs
+
     sudo lvremove /dev/xen-vg/<disk-name>         -- do it for each LVM disk
 
     sudo rm /etc/xen/<domU>.cfg
