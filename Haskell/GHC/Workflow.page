@@ -10,14 +10,14 @@ toc: no
 cd ~/Projekte/ghc
 git checkout master
 git pull upstream master --recurse-submodules=yes
-git submodule update
+git submodule update --init
 
 # Push back changes to personal Gitlab account
 git push origin master
 
 # For every working branch do 
 git checkout <branch>
-git submodule update
+git submodule update --init
 git rebase master
 ~~~
 
