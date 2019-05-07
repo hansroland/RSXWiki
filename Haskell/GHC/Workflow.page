@@ -21,41 +21,25 @@ git submodule update --init
 git rebase master
 ~~~
 
-### Prepare build after updating master
+### Full build after updating master
 
 ~~~
-# Check mk/build.mk
- - BuildFlavour = devel2  must be activated
- - stage=2                must be deactivated 
-
-./boot
-./configure
-make -j4 
-
-# After successful build
- - Activate again stage=2 in mk/build.mk
+hadrian full
 ~~~
 
-### Build 
+### Difference build after code changes
 
 ~~~
-make -j4 
+hadrian
 ~~~
 
-
-
-### Working 
-
-Create a git branch!
 
 ### Testing 
 
 Test your testcase:
 
 ~~~
-cd ~/Projekte/ghc/testsuite
-
-make TEST=T99999
+hadrian test <T12345>
 ~~~
 
 ### Sending a PR to gitlab.haskell.org
@@ -66,19 +50,29 @@ git pull origin <branch>
 git push origin <branch>
 ~~~
 
-
-### Sending PR to Phabricator
-
-* git checkout <my-branch>
-* arc diff 
-* Possible reviewers: mpickering  bgamari  thomie  ezyang, RyanGlScott
-* Add link from Phabricator to a comment 
-* Fill out the following fields in the ticket: 
-  - Status: patch
-  - Testcase: <???????>
-  - Differential Revs: Phab: D9999
-
 ### Fixing the Patch
 
 * Work on the same branch
-* Again use: arc diff
+* Squash all commits to one single commit
+
+### Squashing multiple commits
+
+* close `code` editor and `gitg` (They block a file used by git-squash)
+* count the numbers of commits to squash
+
+```
+git rebase -i HEAD~n       (n is the number of commits to squash)
+```
+
+* In the editor:
+* use `pick` on the first/top commit.
+* Adapt commit message on the first/top commit
+* change `pick`s on following lines to `fixup`
+* close editor
+* use --force to push to origin
+
+```
+git push --force origin <remote-branch>
+```
+
+
