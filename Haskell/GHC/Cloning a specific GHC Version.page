@@ -1,0 +1,3 @@
+# Cloning a specific GHC Version
+
+    git clone --recursive --branch ghc-8.6.3-release https://gitlab.haskell.org/ghc/ghc ghc-8.6.3
