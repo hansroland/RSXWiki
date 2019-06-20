@@ -7,6 +7,8 @@ toc: no
 ### Update the source tree
 
 ~~~
+cabal v2-update
+
 cd ~/Projekte/ghc
 git checkout master
 git pull upstream master --recurse-submodules=yes
