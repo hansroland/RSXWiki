@@ -9,6 +9,8 @@ toc: no
 * [Reading List]()
 * [Cloning a specific GHC Version]()
 
+* [Users Guide (HEAD version)](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/index.html)
+
 ### Building Documentation 
 
 Use Hadrian: 
