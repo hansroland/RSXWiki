@@ -8,7 +8,7 @@ toc: no
 
 ~~~
 sudo apt-get install pkconf
-sudo apt-get install libwebgtk-3.0-dev
+sudo apt-get install libwebkitgtk-3.0-dev
 ~~~
 
 ~~~
