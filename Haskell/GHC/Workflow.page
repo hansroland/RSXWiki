@@ -23,6 +23,8 @@ git submodule update --init --recursive
 git rebase master
 ~~~
 
+On problems with submdules a `git submodule sync && git submodules update` may help.
+
 ### Full build after updating master
 
 ~~~
