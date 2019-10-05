@@ -15,9 +15,9 @@ cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a
 cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin --overwrite-policy=always cabal-install
 rm $HOME/Software/ghc/bin/cabal_old
 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin alex 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin happy  
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin hlint 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin pandoc 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin cabal2nix
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy alex 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy happy  
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy pandoc 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy cabal2nix
 ~~~
