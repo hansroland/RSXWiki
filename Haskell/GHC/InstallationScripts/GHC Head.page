@@ -55,12 +55,8 @@ happy --version
 cd ~/Projekte
 git clone --recursive https://gitlab.haskell.org/ghc/ghc
 cd ghc
-cp mk/build.mk.sample mk/build.mk
-gedit mk/build.mk
+
 ~~~
-
-Remove the comment marker (#) on the line "BuildFlavor = devel2"
-
 
 We have cloned from the gitlab.haskell.org **ghc** user, and not from your private fork. 
 Therefore we have to adjust the *origin* of our local repo, and to set *upstream*. 
@@ -74,14 +70,14 @@ git fetch upstream
 git push origin master
 ~~~
 
+Build the compiler
+
 ~~~
-./boot
-./configure --prefix=/home/roland/Software/ghc-head
-make -j4 install
+hadrian full
 ~~~
 
 ## Using the generated GHC compiler 
 
 ~~~
-switchghc head
+ghchead --version
 ~~~
