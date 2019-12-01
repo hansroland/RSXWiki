@@ -1,0 +1,10 @@
+---
+toc: no
+...
+
+# Listing my commits
+
+
+~~~
+git log --author=rsx@bluewin.ch --format=oneline
+~~~
