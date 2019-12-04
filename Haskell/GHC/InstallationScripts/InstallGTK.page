@@ -26,8 +26,8 @@ sudo apt-get install pkg-config
 ~~~
 
 ~~~
-cabal install gtk2hs-buildtools -j4
-cabal install alex
-cabal install happy
+cabal install gtk2hs-buildtools -j4 --installdir=/home/roland/Software/ghc/bin --install-method=copy
+cabal install alex -j4 --installdir=/home/roland/Software/ghc/bin --install-method=copy
+cabal install happy -j4 --installdir=/home/roland/Software/ghc/bin --install-method=copy
 ~~~
 
