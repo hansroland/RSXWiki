@@ -7,7 +7,7 @@ toc: no
 ## Prerequistes from Debian Ubuntu
 
 ~~~
-sudo apt-get install pkconf
+sudo apt-get install pkgconf
 sudo apt-get install libwebkitgtk-3.0-dev
 ~~~
 
