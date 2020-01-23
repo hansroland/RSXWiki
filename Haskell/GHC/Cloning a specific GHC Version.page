@@ -1,3 +1,16 @@
+---
+toc: no
+...
+
 # Cloning a specific GHC Version
 
-    git clone --recursive --branch ghc-8.6.3-release https://gitlab.haskell.org/ghc/ghc ghc-8.6.3
+List tags to see all tags: 
+
+    list tag 
+
+Clone specific version
+
+    git clone --recursive --branch <TAG> https://gitlab.haskell.org/ghc/ghc <DIRECTORY>
+    cd <DIRECTORY>
+    switchghc <x.y.z>     # switch to a version lower than the specific version 
+    hadrian full
