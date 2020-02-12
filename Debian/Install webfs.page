@@ -5,7 +5,7 @@ toc: no
 
 # Webfs - Web File Server
 
-**NOTE: I replaced this webserver with [Warp Static Webserver]()** 
+**NOTE: I replaced this webserver with [Install Warp Static Webserver]()** 
 
 Simple Web Server to transfer files to an other computer. Specially used to transfer gps tracks to the iPhone
 
