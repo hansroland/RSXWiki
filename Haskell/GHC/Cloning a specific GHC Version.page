@@ -6,6 +6,7 @@ toc: no
 
 List tags to see all tags: 
 
+    git fetch --tag --all
     git tag --list
 
 Clone specific version
