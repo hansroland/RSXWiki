@@ -6,5 +6,5 @@ toc: no
 
 
 ~~~
-git log --author=rsx@bluewin.ch --format=oneline
+git log --author=rsx@bluewin.ch --format='%h (%ai) %s'
 ~~~
