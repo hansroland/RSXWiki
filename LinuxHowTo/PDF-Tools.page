@@ -1,0 +1,15 @@
+---
+toc: no
+...
+
+#PDF-Tools
+
+* `pdf90`, `pdf180`, `pdf270` to rotate *.pdf files
+* `pdftk`  to extract some pages from a pdf file 
+
+Use for all programs the `--help` option.
+
+Rotation angle is anti clockwise
+
+
+ 
