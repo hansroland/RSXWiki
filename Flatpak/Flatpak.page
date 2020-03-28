@@ -1,0 +1,15 @@
+---
+format: Markdown
+toc: no
+...
+
+# Flatpak
+
+Home page: [https://flatpak.org/](https://flatpak.org/)
+
+
+## Installed Packages
+
+* org.gnome.Platform.Locale/x86_64/3.34                                                              
+* org.freedesktop.Platform.openh264/x86_64/2.0 
+* com.github.paolostivanin.OTPClient/x86_64/stable
