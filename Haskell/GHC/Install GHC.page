@@ -27,19 +27,19 @@ In ~/Software/ghc-X.Y.Z/bin do the following:
 
 ~~~
 rsxcabal new-update
-rsxcabal new_install --symlink-bindir=.  cabal-install
+rsxcabal new_install --bindir=.  cabal-install
 rm rsxcabal
 
 cabal new-update
 
-cabal new-install --symlink-bindir=.  alex
-cabal new-install --symlink-bindir=.  cpphs
-cabal new-install --symlink-bindir=.  happy
-cabal new-install --symlink-bindir=.  hlint
-cabal new-install --symlink-bindir=.  hscolour
-cabal new-install --symlink-bindir=.  pandoc
-cabal new-install --symlink-bindir=.  ghc-mod
-cabal new-install --symlink-bindir=.  stylish-haskell
+cabal new-install --bindir=.  alex
+cabal new-install --bindir=.  cpphs
+cabal new-install --bindir=.  happy
+cabal new-install --bindir=.  hlint
+cabal new-install --bindir=.  hscolour
+cabal new-install --bindir=.  pandoc
+cabal new-install --bindir=.  ghc-mod
+cabal new-install --bindir=.  stylish-haskell
 ~~~
 
 If there is an error like *cabal: ghc-pkg dump failed:* and *package.db: getDirectoryContents:openDirStream: does not exist *
