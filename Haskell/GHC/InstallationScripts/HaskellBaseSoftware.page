@@ -4,12 +4,14 @@ toc: no
 
 # Install Haskell base software
 
+## Base Software from Hackage
+
 ~~~
 # Script to install different Haskell packages from Hackage 
 
 switchghc x.y.z     # x.y.z new version
 
-cabal new-update
+cabal update
 
 cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a.b.c = previous GHC version
 cabal_old  new-install --symlink-bindir=$HOME/Software/ghc/bin --overwrite-policy=always cabal-install
@@ -19,5 +21,33 @@ cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --in
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy happy  
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy pandoc 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy cabal2nix
 ~~~
+
+
+## Install ghcide 
+
+
+The different components are downloaded to ~/Software/ghcide
+
+### Install hie-bios
+
+~~~
+cd ~/Software
+git clone https://github.com/mpickering/hie-bios
+cd hie_bios
+cabal install --installdir=$HOME/Software/ghc/bin --install-method=copy all
+~~~
+
+### Install ghcide
+
+~~~
+cd ~/Software
+git clone https://github.com/digital-asset/ghcide
+cd ghcide
+cabal install --installdir=$HOME/Software/ghc/bin --install-method=copy
+~~~
+
+### Language Server
+
+Install and activate the VS code extension: Haskell Language Server from Alan Zimmerman
+
