@@ -47,6 +47,17 @@ cd ghcide
 cabal install --installdir=$HOME/Software/ghc/bin --install-method=copy
 ~~~
 
+### Install haskell-ide-engine
+
+~~~
+cd ~/Software
+git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
+cd haskell-ide-engine
+cabal v2-run ./install.hs --project-file install/shake.project hie
+cabal v2-run ./install.hs --project-file install/shake.project data
+---- > copy hie modules from .cabal/bin to $HOME/Software/ghc/bin
+~~~
+
 ### Language Server
 
 Install and activate the VS code extension: Haskell Language Server from Alan Zimmerman
