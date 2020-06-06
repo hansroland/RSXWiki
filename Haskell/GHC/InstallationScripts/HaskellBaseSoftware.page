@@ -65,6 +65,7 @@ cd ~/Software
 git clone https://github.com/haskell/haskell-language-server --recurse-submodules
 cd haskell-language-server
 ./cabal-hls-install <target>     -- <target> eg: `hls-8.8.3` or `data` for hoogle 
+---- > copy hls modules from .cabal/bin to $HOME/Software/ghc/bin
 ~~~
 
 ### Language Server
