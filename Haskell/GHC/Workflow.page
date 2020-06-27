@@ -7,7 +7,7 @@ toc: no
 ### Update the source tree
 
 ~~~
-cabal v2-update
+cabal update
 
 cd ~/Projekte/ghc
 git checkout master
