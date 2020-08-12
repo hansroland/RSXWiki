@@ -4,14 +4,13 @@ toc: no
 
 # Visual Studio Code
 
-## Aktivate Intero
+## Aktivate GHCIDE
 
-* stack setup
-* stack build
-* stack build intero
-* code .
+* Add a file `hie.yaml` to the home directory of the project
+* Add the line `cradle: {cabal: {component: "MyProject"}}`
+* Replace `MyProject` with the name of the Project (cabal name!)
 
-Now Haskero should be activated, and after some time, ready to use.
+Now `ghcide` should be activated, and after some time, ready to use.
 
 
 ## Preview Markdown Files
