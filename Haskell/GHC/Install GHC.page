@@ -20,32 +20,7 @@ sudo apt-get install haskell-platform
 
 ### Compile additional Haskell Software
 
-In ~/Software/ghc-X.Y.Z/bin do the following:
-
-* copy the *cabal* binary from the previous release and name it *rsxcabal*
-* Run the follwoing commands: 
-
-~~~
-rsxcabal new-update
-rsxcabal new_install --bindir=.  cabal-install
-rm rsxcabal
-
-cabal new-update
-
-cabal new-install --bindir=.  alex
-cabal new-install --bindir=.  cpphs
-cabal new-install --bindir=.  happy
-cabal new-install --bindir=.  hlint
-cabal new-install --bindir=.  hscolour
-cabal new-install --bindir=.  pandoc
-cabal new-install --bindir=.  ghc-mod
-cabal new-install --bindir=.  stylish-haskell
-~~~
-
-If there is an error like *cabal: ghc-pkg dump failed:* and *package.db: getDirectoryContents:openDirStream: does not exist *
-then create one with:
-
-    echo "" | cabal new-repl -w ghc-X.Y.Z --build-dep fail
+* See [../GHC/InstallationScripts/HaskellBaseSoftware]
 
 ### Get rid of the Debian binaries
 
