@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Copy a file and preserve timestamp
+
+This copies mode, ownership and timestamps.
+
+    cp --preserve <source> <target>
+
+    cp -p  <source> <target>
+
+
+If only timestamps should be copied, use
+
+    cp -p=timestamps <source> <target>
