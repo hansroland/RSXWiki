@@ -6,6 +6,9 @@ toc: no
 
 ## Prepare Computer
 
+* sudo apt-get clean
+* sudo apt-get autoclean
+* ./stack directory löschen
 * Delete Browser Cash (Firefox, Chromium etc)
 * Empty "Papierkorb"
 
@@ -13,7 +16,7 @@ toc: no
 ## Backup User Data
 
 
-Go to the TARGET directory to write the data
+Go to the TARGET directory (/media/roland/...) to write the data
 
      cd /media/roland
      cd <Correct Directory>
