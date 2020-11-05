@@ -4,14 +4,7 @@ toc: no
 
 # Install Visual Studio Code
 
-## Delete the installed version
+The following instructions use the apt-get package manager:
 
-    sudo apt-get remove code
+[https://linuxize.com/post/how-to-install-visual-studio-code-on-debian-10/](https://linuxize.com/post/how-to-install-visual-studio-code-on-debian-10/)
 
-## Install the new version
-
-* Download from [https://code.visualstudio.com/](https://code.visualstudio.com/)
-
-~~~
-sudo dpkg -i <downloaded.deb-file>
-~~~
