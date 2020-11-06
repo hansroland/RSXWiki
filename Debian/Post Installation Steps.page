@@ -4,16 +4,6 @@ toc: no
 
 # Debian Post Installation Steps
 
-### Prepare Debian for Packet Installations
-
-~~~
-su -
-<Root Password>
-
-gedit /etc/apt/sources.list
-~~~
-
-comment out the *deb cdrom* line
 
 ### Add user to sudo group
 
@@ -23,8 +13,13 @@ su -
 
 apt-get install sudo
 
-adduser <user> sudo
-exit
+visudo
+~~~
+
+Add the line 
+
+~~~
+roland  ALL=(ALL:ALL) ALL
 ~~~
 
 the *user* should now do a new login
@@ -35,7 +30,7 @@ the *user* should now do a new login
 sudo gedit /etc/apt/sources.list
 ~~~
 
-Add the line and save
+Add ehe line and save
 
     deb http://ftp.de.debian.org/debian jessie main non-free
 
