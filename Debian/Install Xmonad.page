@@ -11,17 +11,21 @@ sudo apt-get install libx11-dev
 sudo apt-get install libxrandr-dev
 sudo apt-gen install suckless-tools
 sudo apt-get install libxpm-dev
+sudo apt-get install feh
+sudo apt-get install libmagic-dev
 ~~~
 
 ### Installation of XMonad
 
-At the moment, we install the XMonad libraries to the user .cabal directory. This should be changed to a sandbox!
+#### Install Xmobar
 
-~~~
-cabal install xmonad
-cabal install xmonad-contrib --flags="-use_xft"
-cabal install xmobar
-~~~ 
+    cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy xmobar
+
+#### Build the xmonad-xconfig project with: 
+
+    cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy
+
+
 
 ### Configuration of the Login Manger
 
@@ -31,28 +35,19 @@ Add the following lines to a file **/usr/share/xsessions/xmonad.desktop**
 [Desktop Entry]
 Name=XMonad
 Comment=Lightweight tiling window manager
-Exec=/usr/local/bin/xmonad
+Exec=xmonad-session
 Icon=xmonad.png
 Type=XSession
 ~~~
 
 ### Add Wallpaper support
 
-Install the necessary libraries
-
-~~~
-sudo apt-get install feh
-sudo apt-get install libmagic-dev
-~~~
-
-Install the Haskell library
-
-~~~
-cabal install xmonad-wallpaper
-~~~
-
 Change xmonad.hs
 
 * import XMonad.Wallpaper
 * setRandomWallpaper [...]
 * change defaultConfg to desktopConfig 
+
+
+
+   
