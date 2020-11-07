@@ -12,6 +12,7 @@ toc: no
 * [Look at new incoming entries of syslog]()
 * [Copy directories without hidden files]()
 * [Copy a file and preserve timestamp]()
+* [Set permissions over directories]()
 
 
 ## Different Topics
