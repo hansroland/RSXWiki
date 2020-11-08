@@ -30,9 +30,12 @@ the *user* should now do a new login
 sudo gedit /etc/apt/sources.list
 ~~~
 
-Add ehe line and save
+Add the lines and save
 
-    deb http://ftp.de.debian.org/debian jessie main non-free
+    deb http://deb.debian.org/debian/ buster main contrib non-free
+    deb-src http://deb.debian.org/debian/ buster main contrib non-free
+
+Install the Realtek firmware:
 
 ~~~
 sudo apt-get update
