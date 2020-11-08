@@ -1,5 +1,4 @@
 
+    find <Directory> -type d -exec chmod 755 {} \;
 
-    find Bilder -type d -exec chmod 755 {} \;
-
-    find .bash_aliases -type d -exec chmod 755 {} \;
+    find <Directory> -type f -exec chmod 644 {} \;
