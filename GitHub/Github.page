@@ -24,6 +24,7 @@ This is the main page about the GitHub service
 * [Connect to an existing own Github repository](ConnectToExisting)
 * [Look at an earlier version](EarlierVersion)
 * [Revert a single file to the last committed version](RevertFileToLastCommittedVersion)
+* [Revert all submodules to the last commited version](RevertSubmodulesToLastCommittedVersion)
 * [Cloning a repository](CloneGitRepo)
 * [Forking a repository](ForkGitRepo)
 * [Add new branch to Repository](NewBranchGitRepo)
