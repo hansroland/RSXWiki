@@ -1,0 +1,9 @@
+---
+toc: no
+...
+
+# Revert all submodules to the last committed version
+
+~~~~
+git submodule foreach --recursive 'git reset --hard'
+~~~~
