@@ -31,6 +31,10 @@ The generated users_guide is in the directory ~/Projekte/ghc/_build/docs
     ./utils/ghc-in-ghci/run.sh -fobject-code -j4
     main
 
+### Testing with third non GHC libraries (eg vector)
+
+hadrian has a `--test-package-db` parameter, which allows to pass packages to the test driver!
+
 
 
 
