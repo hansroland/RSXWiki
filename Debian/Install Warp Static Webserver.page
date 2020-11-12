@@ -1,0 +1,12 @@
+---
+toc: no
+...
+
+# Install a warp Static Webserver
+
+
+    cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy warp-static
+
+
+Start the server from the directory with the documents to download 
+
