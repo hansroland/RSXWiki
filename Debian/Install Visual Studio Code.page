@@ -4,7 +4,16 @@ toc: no
 
 # Install Visual Studio Code
 
+## Installation
+
 The following instructions use the apt-get package manager:
 
 [https://linuxize.com/post/how-to-install-visual-studio-code-on-debian-10/](https://linuxize.com/post/how-to-install-visual-studio-code-on-debian-10/)
 
+## Customization 
+
+Go to the ColorThemePicker: 
+   
+    File -> Preferences -> ColorTheme
+
+Choose: Light (Visual Studio)
