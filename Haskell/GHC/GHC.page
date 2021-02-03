@@ -9,3 +9,5 @@ toc: no
 * [Installation Scripts](InstallationScripts/InstallationScripts)
 * [GHC Internals](GHCInternals/GHCInternals)
 * [Hacking GHC](HackingGHC)
+
+* [Users Guide (HEAD version)](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/index.html)
