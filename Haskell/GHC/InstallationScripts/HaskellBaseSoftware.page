@@ -15,7 +15,11 @@ cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a
 cabal_old update
 cabal_old install --installdir=$HOME/Software/ghc/bin --overwrite-policy=always --install-method=copy cabal-install
 rm $HOME/Software/ghc/bin/cabal_old
+~~~
 
+If the new GHC is not compatible with the old GHC see [http://downloads.haskell.org/debian/]()
+
+~~~
 cabal update
 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy alex 
