@@ -1,0 +1,18 @@
+---
+toc: no
+...
+
+# Haskell 98 
+
+Haskell 98 includes the following extensions 
+
+
+- CUSKs
+- DatatypeContexts
+- FieldSelectors
+- ImplicitPrelude
+- MonomorphismRestriction
+- NPlusKPatterns
+- NondecreasingIndentation
+- StarIsType
+- TraditionalRecordSyntax
