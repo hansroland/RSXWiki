@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# Haskell 2010 
+
+Haskell 2010 includes the following extensions:
+
+
+- CUSKs
+- DatatypeContexts
+- DoAndIfThenElse
+- EmptyDataDecls
+- FieldSelectors
+- ForeignFunctionInterface
+- ImplicitPrelude
+- MonomorphismRestriction
+- PatternGuards
+- RelaxedPolyRec
+- StarIsType
+- TraditionalRecordSyntax
+ 
+
