@@ -4,6 +4,8 @@ toc: no
 
 # Haskell 2021 
 
+Haskell 2021 is the default for GHC >= 9.2.1
+
 Haskell 2021 includes the following extensions:
 
 - BangPatterns
