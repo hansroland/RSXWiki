@@ -1,0 +1,11 @@
+---
+toc: no
+...
+
+# GHC Language Versions
+
+The following GHC language versions have been defined:
+
+- [Haskell 98](Haskell98)
+- [Haskell 2010](Haskell2010)
+- [Haskell 2021](Haskell2021)
