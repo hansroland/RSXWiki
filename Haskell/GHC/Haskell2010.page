@@ -7,17 +7,17 @@ toc: no
 Haskell 2010 includes the following extensions:
 
 
-- CUSKs
-- DatatypeContexts
-- DoAndIfThenElse
-- EmptyDataDecls
-- FieldSelectors
-- ForeignFunctionInterface
-- ImplicitPrelude
-- MonomorphismRestriction
-- PatternGuards
-- RelaxedPolyRec
-- StarIsType
-- TraditionalRecordSyntax
+- [CUSKs](/Haskell/GHCExtensions/CUSKs)
+- [DatatypeContexts](/Haskell/GHCExtensions/DatatypeContexts)
+- [DoAndIfThenElse](/Haskell/GHCExtensions/DoAndIfThenElse)
+- [EmptyDataDecls](/Haskell/GHCExtensions/EmptyDataDecls)
+- [FieldSelectors](/Haskell/GHCExtensions/FieldSelectors)
+- [ForeignFunctionInterface](/Haskell/GHCExtensions/)
+- [ImplicitPrelude](/Haskell/GHCExtensions/)
+- [MonomorphismRestriction](/Haskell/GHCExtensions/)
+- [PatternGuards](/Haskell/GHCExtensions/)
+- [RelaxedPolyRec](/Haskell/GHCExtensions/)
+- [StarIsType](/Haskell/GHCExtensions/)
+- [TraditionalRecordSyntax](/Haskell/GHCExtensions/)
  
 
