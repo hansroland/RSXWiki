@@ -4,6 +4,7 @@ toc: no
 
 # GHC - The Glasgow Haskell Compiler
 
+* [GHC Language Versions and their Extensions](GHCLanguageVersions)
 * [GHC Versions and Library Versions](GHCVersions)
 * [Install GHC](Install GHC)
 * [Installation Scripts](InstallationScripts/InstallationScripts)
