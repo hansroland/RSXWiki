@@ -7,12 +7,12 @@ toc: no
 Haskell 98 includes the following extensions 
 
 
-- CUSKs
-- DatatypeContexts
-- FieldSelectors
-- ImplicitPrelude
-- MonomorphismRestriction
-- NPlusKPatterns
-- NondecreasingIndentation
-- StarIsType
-- TraditionalRecordSyntax
+- [CUSKs](/Haskell/GHCExtensions/CUSKs)
+- [DatatypeContexts](/Haskell/GHCExtensions/DatatypeContexts)
+- [FieldSelectors](/Haskell/GHCExtensions/FieldSelectors)
+- [ImplicitPrelude](/Haskell/GHCExtensions/ImplicitPrelude)
+- [MonomorphismRestriction](/Haskell/GHCExtensions/MonomorphismRestriction)
+- [NPlusKPatterns](/Haskell/GHCExtensions/NPlusKPatterns)
+- [NondecreasingIndentation](/Haskell/GHCExtensions/NondecreasingIndentation)
+- [StarIsType](/Haskell/GHCExtensions/StarIsType)
+- [TraditionalRecordSyntax](/Haskell/GHCExtensions/TraditionalRecordSyntax)
