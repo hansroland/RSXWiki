@@ -15,9 +15,11 @@ toc: no
 
 * Download newest version of *ghcup* from [https://www.haskell.org/ghcup](https://www.haskell.org/ghcup/) 
 
-* Install correct cabal version with 
+* Install correct cabal version with: (Note the blank between *cabal* and the version number.)
 
-    ~/.ghcup/bin/ghcup install cabal-U.V.W.Z --isolate $HOME/Software/ghc/bin
+~~~
+    ~/.ghcup/bin/ghcup install cabal U.V.W.Z --isolate $HOME/Software/ghc/bin
+~~~
 
 ### Other base software
 
