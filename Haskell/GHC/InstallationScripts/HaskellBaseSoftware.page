@@ -6,74 +6,29 @@ toc: no
 
 ## Base Software from Hackage
 
+### Cabal
+
+* Go to the correct GHC directory with 
+
+    switchghc X.Y.Z
+    cp $HOME/Software/ghc-X.Y.Z
+
+* Download newest version of *ghcup* from [https://www.haskell.org/ghcup](https://www.haskell.org/ghcup/) 
+
+* Install correct cabal version with 
+
+    ~/.ghcup/bin/ghcup install cabal-U.V.W.Z --isolate $HOME/Software/ghc/bin
+
+### Other base software
+
 ~~~
 # Script to install different Haskell packages from Hackage 
 
-switchghc x.y.z     # x.y.z new version
-
-cp $HOME/Software/ghc-a.b.c/bin/cabal $HOME/Software/ghc/bin/cabal_old       # a.b.c = previous GHC version
-cabal_old update
-cabal_old install --installdir=$HOME/Software/ghc/bin --overwrite-policy=always --install-method=copy cabal-install
-rm $HOME/Software/ghc/bin/cabal_old
-~~~
-
-If the new GHC is not compatible with the old GHC see [http://downloads.haskell.org/debian/]()
-
-~~~
 cabal update
 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy cabal-install 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy alex 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy happy  
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy pandoc 
 ~~~
-
-
-## Install ghcide 
-
-
-The different components are downloaded to ~/Software/
-
-### Install hie-bios
-
-~~~
-cd ~/Software
-git clone https://github.com/mpickering/hie-bios
-cd hie_bios
-cabal install --installdir=$HOME/Software/ghc/bin --install-method=copy all
-~~~
-
-### Install ghcide
-
-~~~
-cd ~/Software
-git clone https://github.com/digital-asset/ghcide
-cd ghcide
-cabal install --installdir=$HOME/Software/ghc/bin --install-method=copy
-~~~
-
-### Install haskell-ide-engine
-
-~~~
-cd ~/Software
-git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
-cd haskell-ide-engine
-cabal v2-run ./install.hs --project-file install/shake.project hie
-cabal v2-run ./install.hs --project-file install/shake.project data
----- > copy hie modules from .cabal/bin to $HOME/Software/ghc/bin
-~~~
-
-### Install haskell-language-server
-
-~~~
-cd ~/Software
-git clone https://github.com/haskell/haskell-language-server --recurse-submodules
-cd haskell-language-server
-./cabal-hls-install <target>     -- <target> eg: `hls-8.8.3` or `data` for hoogle 
----- > copy hls modules from .cabal/bin to $HOME/Software/ghc/bin
-~~~
-
-### Language Server
-
-Install and activate the VS code extension: Haskell Language Server from Alan Zimmerman
-
