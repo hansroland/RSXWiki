@@ -29,6 +29,5 @@ cabal update
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy cabal-install 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy alex 
 cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy happy  
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy pandoc 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint  
 ~~~
