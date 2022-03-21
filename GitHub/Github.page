@@ -39,3 +39,7 @@ This is the main page about the GitHub service
 ### Print Github *.MD Files
 
 Just replace *github* by *gitprint* in the URL
+
+## Special Installation Steps 
+
+* [Installation of Git Credential Manager]()
