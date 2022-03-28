@@ -4,6 +4,13 @@ toc: no
 
 # Debian HowTo's
 
+### System Utilities
+
+* gnome-system-monitor 
+:    Einstellungen
+* gnome-system-monitor 
+:    System Auslastung
+
 ### List installed packages
 
 ~~~
