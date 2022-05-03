@@ -21,6 +21,14 @@ toc: no
     ~/.ghcup/bin/ghcup install cabal U.V.W.Z --isolate $HOME/Software/ghc/bin
 ~~~
 
+### Haskell Language Server hls 
+
+~~~
+    ~/.ghcup/bin/ghcup install hls
+~~~
+
+Copy the correct hls and hls server wrapper to $HOME/Software/ghc/bin
+
 ### Other base software
 
 ~~~
@@ -28,8 +36,7 @@ toc: no
 
 cabal update
 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy cabal-install 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy alex 
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy happy  
-cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy hlint  
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy -j1 cabal-install 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy -j1 alex 
+cabal install --overwrite-policy=always --installdir=$HOME/Software/ghc/bin --install-method=copy -j1 happy   
 ~~~
