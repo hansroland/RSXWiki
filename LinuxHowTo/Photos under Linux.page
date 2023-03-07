@@ -17,3 +17,12 @@ toc: no
 ### **eog** *Eye of Gnome*
 
 * Allows viewing of all pictures in a dictionary
+
+## Simple Image Stackr
+
+### **chimpstackr** 
+
+* Simple but excellent photo stacker 
+* Source is available under [https://github.com/noah-peeters/ChimpStackr](https://github.com/noah-peeters/ChimpStackr)
+
+    snap run chimpstackr
