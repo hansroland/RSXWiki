@@ -1,0 +1,9 @@
+---
+toc: no
+...
+
+# Print a pdf from the command line 
+
+    lp -o sides=two-sided-long-edge <filename>
+
+Note: Use it for documents from VZ
