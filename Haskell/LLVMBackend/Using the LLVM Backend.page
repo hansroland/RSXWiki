@@ -6,6 +6,6 @@ toc: no
 
 In the .cabal file use the line:
 
-    ghc-options:       -fllvm -pgmlc /usr/lib/llvm-3.9/bin/llc -pgmlo /usr/lib/llvm-3.9/bin/opt
+    ghc-options:       -fllvm -pgmlc /usr/lib/llvm-13/bin/llc -pgmlo /usr/lib/llvm-13/bin/opt
 
-Change 3.9 according the GHC version!
+Change 13 according the GHC version!
