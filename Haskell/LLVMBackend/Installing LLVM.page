@@ -3,14 +3,13 @@ toc: no
 ...
 
 # Installing a LLVM Backend for GHC
-
-* Installing LLVM Backend 
+ 
 
 * Install LLVM from the Debian packages 
 
 ~~~
-     sudo apt-get install llvm-X.Y
+     sudo apt-get install llvm-<X>
 ~~~
 
-where X.Y is the needed version for your GHC release
+where \<X\> is the needed version for your GHC release (eg 13 or so)
 
