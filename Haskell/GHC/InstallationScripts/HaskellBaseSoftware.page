@@ -36,7 +36,7 @@ Copy the correct hls and hls server wrapper to $HOME/Software/ghc/bin
 
 cabal update
 
-cabal install --overwrite-policy=always --installdir=$HOME/roland/.local/bin --install-method=copy -j1 cabal-install 
-cabal install --overwrite-policy=always --installdir=$HOME/roland/.local/bin --install-method=copy -j1 alex 
-cabal install --overwrite-policy=always --installdir=$HOME/roland/.local/bin --install-method=copy -j1 happy   
+cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy -j1 cabal-install 
+cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy -j1 alex 
+cabal install --overwrite-policy=always --installdir=$HOME/.local/bin --install-method=copy -j1 happy   
 ~~~
