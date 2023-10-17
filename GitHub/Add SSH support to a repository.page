@@ -1,0 +1,16 @@
+---
+toc: no
+...
+
+# Add SSH support to a repository
+
+In the `.git` directory of the local repository look at the file config. 
+In the `remote "origin"` section replace the line 
+   
+      url = https://github.com/myName/myRepositoryName.git 
+
+with 
+
+      url = git@github.com:myName/myRepositoryName.git
+
+     
