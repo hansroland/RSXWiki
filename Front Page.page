@@ -22,6 +22,7 @@ in the [Gitit User’s Guide]().
 * [PureScript](PureScript/PureScript)
 * [Idris](Idris/Idris)
 * [x86 Assembler](x86Assembler/x86Assembler)
+* [Scheme](Scheme/Scheme)
 * [Debian (Buster)](Debian/Debian)
 * [Alpine Linux](AlpineLinux/AlpineLinux)
 * [GitHub](GitHub/Github)
