@@ -9,5 +9,5 @@ mkdir <proj>
 cd <proj>
 git init
 git remote add origin https://github.com/hansroland/<repository>
-git pull origin master
+git pull origin main
 ~~~
