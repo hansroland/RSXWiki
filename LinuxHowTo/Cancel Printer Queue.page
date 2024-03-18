@@ -4,10 +4,10 @@ toc: no
 
 # Cancel Printer Queue 
 
-Use `lpstat` and the cancel command:
+Use `lpstat` and the `cancel` command:
 
-* $ lpstat -o
-* > HL2250DN-1138          roland         6191104   Mon Mar 18 10:52:01 2024
-* $ cancel -a HL2250DN-1138
+* $ `lpstat -o`
+* > `HL2250DN-1138          roland         6191104   Mon Mar 18 10:52:01 2024`
+* $ `cancel -a HL2250DN-1138`
 
 An additional `lpstat -o` shows, that the printer queue is now empty
