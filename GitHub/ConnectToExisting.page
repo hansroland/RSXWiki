@@ -8,6 +8,12 @@ toc: no
 mkdir <proj>
 cd <proj>
 git init
-git remote add origin https://github.com/hansroland/<repository>
+git remote add origin git@github.com:myName/myRepositoryName.git
 git pull origin main
+~~~
+
+Old line was
+
+~~~
+git remote add origin https://github.com/hansroland/<repository>
 ~~~
