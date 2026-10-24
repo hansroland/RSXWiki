@@ -1,0 +1,39 @@
+---
+toc: no
+...
+
+# Simple Error Handling
+
+See: [how-to-refactor-this-code-combining-io-and-either](https://discourse.haskell.org/t/how-to-refactor-this-code-combining-io-and-either/14865)
+
+### Original Code
+
+~~~ { .haskell }
+
+handleMakePlaylist :: MakePlaylistOptions -> IO ()
+handleMakePlaylist opts =
+  do
+    lib <- readLibFromFile_ opts.libraryPath
+    case lib of
+      Left e -> print e
+      Right lib' -> do
+        plist <- mkPlaylist lib' opts.firstTrack opts.maxTracks
+        case plist of
+          Left e -> print e
+          Right plist' -> putStr $ renderResolvedPlaylist plist'
+
+~~~
+
+### Improved Code
+
+~~~ { .haskell }
+handleMakePlaylist opts =
+  either print pure =<< runExceptT do
+    lib <- ExceptT $ readLibFromFile_ opts.libraryPath
+    plist <- ExceptT $ mkPlaylist lib opts.firstTrack opts.maxTracks
+    ExceptT $ putStr $ renderResolvedPlaylist plist
+~~~
+
+Use ExceptT only locally
+
+
