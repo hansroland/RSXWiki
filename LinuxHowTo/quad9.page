@@ -18,4 +18,7 @@ The following changes are needed
 * Change Gnome Settings -> Network -> Kabelgebunden -> IPV4 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
 * Change Gnome Settings -> Network -> Kabelgebunden -> IPV6 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
 
+
 ## Check whether active
+
+Use [https://on.quad9.net](https://on.quad9.net/) 
