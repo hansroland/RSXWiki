@@ -8,14 +8,14 @@ toc: no
     
     ssh roland@192.168.1.150
 
-## Multihost Filsysem Session with Goms
+## Multihost Filsystem Session with Goms
 
 Establish session: 
 
     sudo sshfs -o allow-other,default-permissions roland@192.68.1.150/home/roland /mnt/remote_goms
 
 
-### Example copy directory FROM Goms to Binn 
+### Example copy directory/files FROM Goms to Binn 
 
     cp -rp remote_goms/<file-name>  <file-name>
 
