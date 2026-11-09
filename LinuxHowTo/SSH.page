@@ -1,0 +1,23 @@
+---
+toc: no
+...
+
+# SSH Commands
+
+## Connect to a Goms Terminal
+    
+    ssh roland@192.168.1.150
+
+## Multihost Filsysem Session with Goms
+
+Establish session: 
+
+    sudo sshfs -o allow-other,default-permissions roland@192.68.1.150/home/roland /mnt/remote_goms
+
+
+### Example copy directory FROM Goms to Binn 
+
+    cp -rp remote_goms/<file-name>  <file-name>
+
+
+
