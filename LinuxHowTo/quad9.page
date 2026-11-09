@@ -15,6 +15,10 @@ The following changes are needed
 
 * Change Datenschutz/Sicherheit -> Advanced/Erweitert -> DNS über HTTP : Changed from Standard to Off/Aus
 
+### Gnome Settings
+
+The *gnome-control-center* cannot run under sway. Exit sway and start a Gnome session!! (The sway-gnome package is 2026 not yet available for Debian!!!)
+
 * Change Gnome Settings -> Network -> Kabelgebunden -> IPV4 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
 * Change Gnome Settings -> Network -> Kabelgebunden -> IPV6 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
 
