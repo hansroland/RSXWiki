@@ -19,5 +19,9 @@ Establish session:
 
     cp -rp remote_goms/<file-name>  <file-name>
 
+### Disconnect session
+
+    sudo umount /mnt/remote_goms
+
 
 
