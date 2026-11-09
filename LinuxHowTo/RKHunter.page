@@ -1,0 +1,29 @@
+---
+toc: no
+...
+
+# RK Hunter
+
+rkhunter is an root virus scanner
+
+## Installation
+    
+    sudo apt-get update rkhunter
+
+    sudo rkhunter --update
+    sudo rkhunter --propup
+
+### Config File
+    /etc/rkhunter.conf
+
+### Log File
+    /var/log/rkhunger.log
+
+## Usage
+
+### Update Database
+    sudo rkhunter --propup
+
+### Run a check
+    sudo rkhunter --check
+
