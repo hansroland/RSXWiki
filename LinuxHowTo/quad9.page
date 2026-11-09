@@ -1,0 +1,21 @@
+---
+toc: no
+...
+
+# Quad9
+
+## Introduction
+
+[Quad9](https://quad9.net/) is a service to block IP addresses known to distribute mlware
+
+## Installation
+The following changes are needed
+
+### Firefox Settings
+
+* Change Datenschutz/Sicherheit -> Advanced/Erweitert -> DNS über HTTP : Changed from Standard to Off/Aus
+
+* Change Gnome Settings -> Network -> Kabelgebunden -> IPV4 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
+* Change Gnome Settings -> Network -> Kabelgebunden -> IPV6 -> from Automatic to the [quad9 settings](https://quad9.net/de/service/service-addresses-and-features/)
+
+## Check whether active
