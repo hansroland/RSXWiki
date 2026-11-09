@@ -6,18 +6,18 @@ toc: no
 
 ## Connect to a Goms Terminal
     
-    ssh roland@192.168.1.150
+    ssh roland@goms
 
 ## Multihost Filsystem Session with Goms
 
 Establish session: 
 
-    sudo sshfs -o allow-other,default-permissions roland@192.68.1.150/home/roland /mnt/remote_goms
+    sudo sshfs -o allow_other,default_permissions roland@goms:/home/roland /mnt/remote_goms
 
 
 ### Example copy directory/files FROM Goms to Binn 
 
-    cp -rp remote_goms/<file-name>  <file-name>
+    cp -rp /mnt/remote_goms/<file-name>  <file-name>
 
 ### Disconnect session
 
