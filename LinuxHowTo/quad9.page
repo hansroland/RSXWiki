@@ -6,7 +6,7 @@ toc: no
 
 ## Introduction
 
-[Quad9](https://quad9.net/) is a service to block IP addresses known to distribute mlware
+[Quad9](https://quad9.net/) is a service to block IP addresses known to distribute malware
 
 ## Installation
 The following changes are needed
