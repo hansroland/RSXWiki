@@ -4,3 +4,24 @@ toc: no
 
 # Debian Install next Release 
 
+## Remove all non Debian packages
+
+### Install ripgrep
+
+sudo mapt-get install ripgrep
+
+Run the following script:
+
+~~~~
+dpkg --get-selections \
+| grep --extended-regexp $'\tinstall' \
+| cut --fields 1 \
+| xargs --max-args 100 apt-cache policy \
+| rg --multiline --replace $'$1\t$2\n' -- '^(\S+?):(?:.*\n)+?^ \*+.*\n +\d+ (\S+)(?: .*\n)+' \
+| grep --invert-match "$(apt-cache policy linux-base | rg --only-matching --replace '$1' -- ' {8}\d+ (\S+)' | head --lines 1)\$" \
+| sort --key 2 \
+| column --table
+
+~~~~
+
+Remove the packages!
