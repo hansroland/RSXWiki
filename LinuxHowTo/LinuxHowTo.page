@@ -34,6 +34,6 @@ toc: no
 
 Note: Installation How to's have their own sections under the different operating systems
 
-
+* [Sway]()
 * [XMonad]()
 * [Gitit]()
