@@ -1,0 +1,39 @@
+---
+toc:no
+...
+
+# Introduction
+
+# How to use Sway
+
+Sway is a tiling Linux window manager. The layout of the windows is like tiles on a floor. Windows do not overlay. Sway has 10 virtual screens
+
+## Mod key
+
+I use the Window key as so called *Mod* key.
+
+
+## Open and Close windows
+* Open a Terminal: Mod-Return
+* How to close a Window: Mod-Shift-c
+* Start an application: Mod-p to start dmenu application launcher with window application
+ 
+## Managing Panes
+* Switch focus forward: Mod-j
+* Switch focus backwards: Mod-k
+* Move focused pane forwards: Mod Shift-j 
+* Move focused pane backward: Mod Shift-k
+* Rearrange panes: Mod-Space
+* Make current pane Full Screen: Mod-Space Mod-Space
+
+## Managing Workspaces
+* Switch to workspace n: Mod-n 
+* Send current window to workspace n: Mod-Shift-n
+
+## Managing workspace session
+* Exit XMonad: Mod Shift-Q
+* Reload new xmonad.hs configuration: Mod-q
+
+## Configuration Management
+* Recompile xmonad -- recompile
+* Load new config file: Mod-q
