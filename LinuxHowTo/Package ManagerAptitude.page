@@ -29,6 +29,10 @@ A simple command line tool to install linux (debian / ubuntu) software packages.
 
     apt show <packet-name>
 
+## Get a list of all manually installed packages
+
+    zcat -qf /var/log/apt/history.log* | grep " install "
+
 ## Installing 
 
 #### Installation of a packet
