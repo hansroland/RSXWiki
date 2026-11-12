@@ -1,0 +1,7 @@
+---
+toc: no
+...
+
+# Enter BIOS
+
+    sudo systemctl reboot --firmware-setup
