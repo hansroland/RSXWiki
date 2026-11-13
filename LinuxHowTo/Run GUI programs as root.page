@@ -1,0 +1,9 @@
+---
+toc: no
+...
+
+# Run GUI Programs as Root
+
+    sudo -E <program>
+
+*-E* preserves the user environement
