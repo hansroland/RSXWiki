@@ -2,19 +2,70 @@
 toc: no
 ...
 
-# **This must be improved **
-
 
 # Formatting and Using an USB in with a Linux File System
 
 
-### Get Information
+## Get Information
+
+### lsblk
+
+    lsblk
+
+~~~
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0 953.9G  0 disk 
+├─sda1   8:1    0   976M  0 part /boot/efi
+├─sda2   8:2    0  57.2G  0 part /
+├─sda3   8:3    0  31.2G  0 part [SWAP]
+└─sda4   8:4    0 864.5G  0 part /home
+sdb      8:16   0 465.8G  0 disk 
+└─sdb1   8:17   0 465.8G  0 part 
+~~~
+
+### fdisk 
+
+Show all external devices:
+
+    sudo fdisk -ludo  
+
+~~~
+Disk /dev/sda: 953.87 GiB, 1024209543168 bytes, 2000409264 sectors
+Disk model: PNY 1TB SATA SSD
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: BB74138A-7676-4986-A51F-3E195183F13C
+
+Device         Start        End    Sectors   Size Type
+/dev/sda1       2048    2000895    1998848   976M EFI System
+/dev/sda2    2000896  121944063  119943168  57.2G Linux filesystem
+/dev/sda3  121944064  187359231   65415168  31.2G Linux swap
+/dev/sda4  187359232 2000408575 1813049344 864.5G Linux filesystem
+
+
+Disk /dev/sdb: 465.76 GiB, 500107862016 bytes, 976773168 sectors
+Disk model: MHZ2500BT G2    
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x82f6cf23
+
+Device     Boot Start       End   Sectors   Size Id Type
+/dev/sdb1        2048 976773119 976771072 465.8G 83 Linux
+~~~
+
+
+
+### Format the USB stick
 
 Add the USB stick to the computer:
 
 Show all all external devices
 
-    sudo fdisk -l
+    sudo fdisk -ludo
 
 Note the device of the USB: eg /dev/sdg1
 
@@ -31,9 +82,9 @@ Use the one letter subcommands
 
 ###  Format
 
-    sudo mkfs.ext2 -L <label> <device>
+    sudo mkfs.ext4 -L <label> <device>
 
-TheUSB stick is now owned by root.
+The USB stick is now owned by root.
 
 ### Create a directory and change its ownership
 
