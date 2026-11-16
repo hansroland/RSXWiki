@@ -43,6 +43,11 @@ A simple command line tool to install linux (debian / ubuntu) software packages.
 
 Use option *-s* after apt-get or us *--dry-run* option
 
+#### Install packet from local disk
+Go to the directory with the .deb packet
+
+    sudo apt install ./<filename.deb>
+
 #### Removal of a packet
 
     sudo apt remove <packet>
