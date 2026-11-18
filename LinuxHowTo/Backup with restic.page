@@ -1,0 +1,18 @@
+---
+toc: no
+...
+
+# Backup with restic 
+
+## Installation
+ 
+    sudo apt install restic
+
+## Initialize a repository
+
+    restic init --repo /media/roland/Binn-Restic/restic-repo
+
+
+## Backup  
+
+    restic -r /media/roland/Binn-Restic/restic-repo --verbose backup ~
