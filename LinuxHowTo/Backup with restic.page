@@ -12,6 +12,8 @@ toc: no
 
     restic init --repo /media/roland/Binn-Restic/restic-repo
 
+use password of Binn host!
+
 
 ## Backup  
 
