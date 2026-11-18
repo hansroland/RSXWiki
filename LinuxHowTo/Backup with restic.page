@@ -15,4 +15,6 @@ toc: no
 
 ## Backup  
 
-    restic -r /media/roland/Binn-Restic/restic-repo --verbose backup ~
+Use the script in .local/bin
+
+    restic-backup
