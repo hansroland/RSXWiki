@@ -24,7 +24,7 @@ in the [Gitit User’s Guide]().
 * [Idris](Idris/Idris)
 * [x86 Assembler](x86Assembler/x86Assembler)
 * [Scheme](Scheme/Scheme)
-* [Debian (Buster)](Debian/Debian)
+* [Debian (Trixie)](Debian/Debian)
 * [GitHub](GitHub/Github)
 * [Flatpak](Flatpak/Flatpak)
 * [Web Development](WebDev/WebDev)
